@@ -398,10 +398,14 @@ a{ text-decoration:none}
     var quote = quotes[rand1]
     $(".end").html(quote);
 </script>
+
 <script>
-var engine = "https://www.baidu.com/s?wd="
+$(document).ready(function () {
+    engine = "https://www.baidu.com/s?wd=";
+    document.querySelector('.baiduicon').style.filter = "brightness(75%)";
+});
 </script>
-<!-- 有阴影的搜索外框——百度版（默认） -->
+<!-- 搜索框 -->
 <div class="searchbox">
     <!-- 输入框和搜索脚本调用 -->
     <div><input class="keyword" type="text" autocomplete="off" onkeydown="search()" placeholder="search"></div>
