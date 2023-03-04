@@ -110,8 +110,7 @@ a{ text-decoration:none}
     .link2{left:50%;}
     .link3{left:100%;}
     .link:hover{
-        filter: brightness(90%);
-        filter: drop-shadow(0 0 2px #bbbbbb);
+        filter: brightness(90%) drop-shadow(0 0 2px #bbbbbb);
     }
 /* 右上角日期 */
     .datebox{
@@ -210,10 +209,6 @@ a{ text-decoration:none}
 .icon:hover{
     filter: brightness(90%) drop-shadow(0 0 2px #bbbbbb);
 }
-.icon.active{
-    filter: drop-shadow(0 0 2px #bbbbbb);
-    filter: brightness(90%);
-}
 .searchicon{
     position:relative; 
     width: 31px;
@@ -235,9 +230,7 @@ a{ text-decoration:none}
     height: 33px;
     left:35%; 
     top:0%;            
-}
-.googleicon.active{  
-    filter: brightness(0%);        
+    filter: brightness(100%);     
 }
 .bingicon{
     position:absolute; 
@@ -310,9 +303,7 @@ a{ text-decoration:none}
 }
     </style>
 </head>
-
 <body>
-
 <!-- jQuery引入 -->
 <script src="./jquery.min.js"></script>
 <!-- 左上角Logo -->
@@ -377,11 +368,10 @@ a{ text-decoration:none}
     <a class="link link3" href="https://blog.palzs.site/">Blog</a>
 </div>
 <!-- 面板 -->
-<div class="navigation">这里是收藏夹建设用地</div>
+<div class="navigation">收藏夹建设用地</div>
 <div class="toggle">
     <img src="arrow.png" width="19" height="32" alt="arrow">
 </div>
-
 <script>
     const navigation = document.querySelector('.navigation');
     document.querySelector('.toggle').onclick = function(){
@@ -408,12 +398,13 @@ a{ text-decoration:none}
     var quote = quotes[rand1]
     $(".end").html(quote);
 </script>
+<script>
+var engine = "https://www.baidu.com/s?wd="
+</script>
 <!-- 有阴影的搜索外框——百度版（默认） -->
 <div class="searchbox">
     <!-- 输入框和搜索脚本调用 -->
-    <div><input class="keyword keyword-baidu" name="keyword" type="text" autocomplete="off" onkeydown="baidusearch()" placeholder="Search"></div>
-    <div><input class="keyword keyword-google" name="keyword" type="text" autocomplete="off" onkeydown="googlesearch()" placeholder="Search" style="display: none;"></div>
-    <div><input class="keyword keyword-bing" name="keyword" type="text" autocomplete="off" onkeydown="bingsearch()" placeholder="Search" style="display: none;"></div>
+    <div><input class="keyword" type="text" autocomplete="off" onkeydown="search()" placeholder="search"></div>
     <!-- 搜索图标 -->
     <img class="icon searchicon" src="search.png" alt="search">
     <!-- 引擎切换图标 -->
@@ -424,75 +415,50 @@ a{ text-decoration:none}
     </div>
     </div>
 </div>
-<!-- 百度搜索脚本 -->
-<script class="baidu">
-        function baidusearch(){
+<!-- 搜索脚本 -->
+<script>
+    function search(){
         $(".searchicon").click(function(){
-            var key = $(".keyword-baidu").val();
-            window.open("https://www.baidu.com/s?wd="+key);
+            var key = $(".keyword").val();
+            window.open(engine+key);
         });
         var event = window.event || arguments.callee.caller.arguments[0];
         if (event.keyCode == 13)
             {
-            var key = $(".keyword-baidu").val();
-            window.open("https://www.baidu.com/s?wd="+key);
+            var key = $(".keyword").val();
+            window.open(engine+key);
             }
         }
-</script>
-<!-- 谷歌搜索脚本 -->
-<script class="google">
-    function googlesearch(){
-    $(".searchicon").click(function(){
-        var key = $(".keyword-google").val();
-        window.open("https://www.google.com/search?q="+key);
-    });
-    var event = window.event || arguments.callee.caller.arguments[0];
-    if (event.keyCode == 13)
-        {
-        var key = $(".keyword-google").val();
-        window.open("https://www.google.com/search?q="+key);
-        }
-    }
-</script>
-<!-- 必应搜索脚本 -->
-<script class="bing">
-    function bingsearch(){
-    $(".searchicon").click(function(){
-        var key = $(".keyword-bing").val();
-        window.open("https://www.bing.com/search?q="+key);
-    });
-    var event = window.event || arguments.callee.caller.arguments[0];
-    if (event.keyCode == 13)
-        {
-        var key = $(".keyword-bing").val();
-        window.open("https://www.bing.com/search?q="+key);
-        }
-    }
 </script>
 <!-- 搜索引擎切换成谷歌 -->
 <script class="switchgoogle">
 $(".googleicon").click(function(){
-    $(".keyword").hide();
-    $(".keyword-google").show();
+    engine = "https://www.google.com/search?q=";
+    document.querySelector('.googleicon').style.filter = "brightness(75%)";
+    document.querySelector('.baiduicon').style.filter = "";
+    document.querySelector('.bingicon').style.filter = "";
     });
 </script>
 <!-- 搜索引擎切换成百度 -->
 <script class="switchbaidu">
 $(".baiduicon").click(function(){
-    $(".keyword").hide();
-    $(".keyword-baidu").show();
+    engine = "https://www.baidu.com/s?wd=";
+    document.querySelector('.baiduicon').style.filter = "brightness(75%)";
+    document.querySelector('.googleicon').style.filter = "";
+    document.querySelector('.bingicon').style.filter = "";
     });
 </script>
 <!-- 搜索引擎切换成必应 -->
 <script class="switchbing">
 $(".bingicon").click(function(){
-    $(".keyword").hide();
-    $(".keyword-bing").show();
+    engine = "https://www.bing.com/search?q=";
+    document.querySelector('.bingicon').style.filter = "brightness(75%)";
+    document.querySelector('.baiduicon').style.filter = "";
+    document.querySelector('.googleicon').style.filter = "";
     });
 </script>
 
 <!-- 
-    任务 引擎图标可按下
     任务 自适应
 -->
 
