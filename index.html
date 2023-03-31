@@ -770,6 +770,11 @@
     </div>
     <!-- 搜索脚本 -->
     <script>
+        window.onload = function defaultsearch(){
+                    engine = "https://www.baidu.com/s?wd=";
+                    }
+    </script>
+    <script>
         function search(){
                     $(".searchicon").click(function(){
                         var key = $(".keyword").val();
