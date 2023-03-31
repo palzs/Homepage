@@ -1,550 +1,550 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>The Homepage</title>
-	<!-- 标签页小图标 -->
-	<link rel="shortcut icon" href="./favicon.png" type="image/x-ico" />
-	<style type="text/css">
-		/* 主体部分 */
-        body{
-            display: flex;
-            justify-content: center;
-            align-items:center;
-            min-height: 100vh;
-            background: #fafafa;
-            overflow: hidden;
-        }
-        input::-webkit-input-placeholder{
-            color:#e6e6e6
-        }
-        a{
-            text-decoration:none
-        }
-        ::selection {
-            background:rgb(230, 230, 230); 
-        }
-        ::-webkit-scrollbar {
-            width: 10px;
-            height: 0px;
-        }
-        ::-webkit-scrollbar-thumb {
-            border-radius: 10px;
-            background: #dedede;
-        }
-        ::-webkit-scrollbar-track {
-            border-radius: 10px;
-            background: #fdfdfd;
-        }
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        /* 字体 */
-        @font-face { 
-            font-family: 'Questrial';  
-            src: local('Questrial'), 
-            url('Questrial.ttf') format('truetype'), 
-            url('Questrial.svg.Questrial') format('svg'); 
-        } 
-        /* 左上角Logo */
-        .logo{
-            position:absolute; 
-            left:45px; 
-            top:45px;         
-            width:64px; 
-            height:64px;   
-            border:0px;   
-            -moz-user-select: none;
-            -o-user-select:none;
-            -khtml-user-select:none;
-            -webkit-user-select:none;
-            -ms-user-select:none;
-            user-select:none;
-        }
-        .hp1{
-            position:absolute; 
-            left:110px; 
-            top:50px; 
-            font-size:35px;   
-            font-family:'Questrial',sans-serif;
-            color:#aaaaaa;
-            -moz-user-select: none;
-            -o-user-select:none;
-            -khtml-user-select:none;
-            -webkit-user-select:none;
-            -ms-user-select:none;
-            user-select:none;      
-        }
-        .hp2{
-            position:absolute; 
-            left:110px; 
-            top:85px; 
-            font-size:16px;   
-            font-family:'Questrial',sans-serif;
-            color:#aaaaaa;      
-            -moz-user-select: none;
-            -o-user-select:none;
-            -khtml-user-select:none;
-            -webkit-user-select:none;
-            -ms-user-select:none;
-            user-select:none;
-        }
-        /* 右上角链接 */
-        .linkbox{
-            width: 250px;
-            height: 80px;
-            outline-style:none;
-            font-size:150%;
-            font-family: 'Questrial'; 
-            border: 0px;
-            position: absolute;
-            right: 270px;
-            top: 50px;
-            -moz-user-select: none;
-            -o-user-select:none;
-            -khtml-user-select:none;
-            -webkit-user-select:none;
-            -ms-user-select:none;
-            user-select:none;
-        }
-        .bar{
-            position:absolute; 
-            background-color:#aaaaaa;  
-            border-radius: 3px;
-        }
-        .bar1{
-            width:2px;
-            height:20px;
-            left:41%; 
-            top:10%; 
-        }
-        .bar2{
-            width:2px;
-            height:20px;
-            left:89%; 
-            top:10%; 
-        }
-        .link{
-            position:absolute; 
-            top:0%; 
-            font-family:'Questrial',sans-serif;
-            color:#aaaaaa;      
-            font-size:35px;
-            transition: all 0.5s;
-        }
-        .link1{
-            left:0%;
-        }
-        .link2{
-            left:52%;
-        }
-        .link3{
-            left:100%;
-        }
-        .link1:hover{
-            color:#d7cbb6; 
-            filter: brightness(90%) drop-shadow(0 0 2px #d7cbb6);
-        }
-        .link2:hover{
-            color:#b0ccdf; 
-            filter: brightness(90%) drop-shadow(0 0 2px #b0ccdf);
-        }
-        .link3:hover{
-            color:#d4b6d7; 
-            filter: brightness(90%) drop-shadow(0 0 2px #d4b6d7);
-        }
-        /* 右上角日期 */
-        .datebox{
-            position:absolute;
-            right:20px; 
-            top:35px; 
-            width: 155px;
-            height:70px;
-            font-family:'Questrial',sans-serif;
-            color:#aaaaaa;      
-            text-align:center;
-            -moz-user-select: none;
-            -o-user-select:none;
-            -khtml-user-select:none;
-            -webkit-user-select:none;
-            -ms-user-select:none;
-            user-select:none;
-        }
-        .date{
-            position:absolute;
-            left:30px; 
-            top:5%; 
-            font-size:24px;
-        }
-        .year{
-            position:absolute;
-            left:30px; 
-            bottom:5%; 
-            font-size:40px;
-        }
-        .datebar{
-            position:absolute; 
-            width:3px;
-            height:100%;
-            left:10%; 
-            top:0%; 
-            background-color:#ef8787;  
-            border-radius: 3px;
-        }
-        /* 搜索框 */
-        .searchbox{
-            width: 850px;
-            height: 75px;
-            background-color:#ffffff;
-            border: 0px;
-            border-radius: 10px;
-            position: absolute;
-            left: 50%;
-            top: 40%;
-            transform: translate(-50%);
-            box-shadow: 0px 0px 7px 3px #dddddd;
-        }
-        /* 输入框 */
-        .keyword{
-            width: 750px;
-            height: 70px;
-            outline-style:none;
-            background-color:#ffffff;
-            font-size:150%;
-            font-family: 'Questrial'; 
-            color:#aaaaaa;
-            border: 0px;
-            position: relative;
-            left: 47%;
-            top: 2px;
-            transform: translate(-50%);
-        }
-        /* 图标栏 */
-        .switchbar{
-            width: 750px;
-            height: 40px;
-            border: 0px;
-            position: relative;
-            left: 50%;
-            top: 2px;
-            transform: translate(-50%);
-        }
-        /* 图标 */
-        .icon{
-            border: 0px;
-            transform: translate(-50%);
-            cursor: pointer;
-            transition: all 0.5s;
-            -moz-user-select: none;
-            -o-user-select:none;
-            -khtml-user-select:none;
-            -webkit-user-select:none;
-            -ms-user-select:none;
-            user-select:none;
-        }
-        .icon:hover{
-            filter: brightness(90%) drop-shadow(0 0 2px #bbbbbb);
-        }
-        .searchicon{
-            position:relative; 
-            width: 31px;
-            height: 31px;
-            z-index:1;
-            left:95%; 
-            bottom:65%;
-        }
-        .baiduicon{
-            position:absolute; 
-            width: 31px;
-            height: 33px;
-            left:50%; 
-            top:0%;         
-        }
-        .googleicon{
-            position:absolute; 
-            width: 33px;
-            height: 33px;
-            left:35%; 
-            top:0%;            
-            filter: brightness(100%);     
-        }
-        .bingicon{
-            position:absolute; 
-            width: 27px;
-            height: 33px;
-            left:65%; 
-            top:0%;            
-        }
-        /* 面板 */
-        .navigation{
-            position: absolute;
-            width: 35%;
-            height: 80%;
-            bottom: -80%;
-            background: #fdfdfd;
-            display: flex;
-            text-align: center;
-            justify-content: center;
-            z-index: 3;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 0px 15px rgba(0,0,0,0.2);
-            transition: 0.5s;
-        }
-        .bookmarks{
-            position:absolute; 
-            top:6%; 
-            font-size:35px;   
-            font-family:'Questrial',sans-serif;
-            color:#888888;
-            -moz-user-select: none;
-            -o-user-select:none;
-            -khtml-user-select:none;
-            -webkit-user-select:none;
-            -ms-user-select:none;
-            user-select:none;      
-        }
-        .navline{
-            position:absolute; 
-            width: 100px;
-            height: 3px;
-            top:15%; 
-            background: #ef8787;
-            border-radius: 3px;
-            -moz-user-select: none;
-            -o-user-select:none;
-            -khtml-user-select:none;
-            -webkit-user-select:none;
-            -ms-user-select:none;
-            user-select:none;      
-        }
-        .bookmarklist{
-            position:absolute; 
-            width: 85%;
-            height: 77%;
-            bottom:3%; 
-            text-align: left;
-            overflow: scroll;
-            -moz-user-select: none;
-            -o-user-select:none;
-            -khtml-user-select:none;
-            -webkit-user-select:none;
-            -ms-user-select:none;
-            user-select:none;        
-        }
-        .listitle{
-            line-height:50px;
-            font-size:28px;   
-            font-family:'Questrial',sans-serif;
-            color:#888888;
-            position:relative;
-            cursor: pointer;
-            float:left; 
-            width: 100%;  
-            top: 3%;
-        }
-        ul{
-            list-style-type:none;
-            line-height:45px;
-            font-size:24px;   
-            font-family:'Questrial',sans-serif;
-            color:#888888;
-            position:relative;
-            display: flex;
-            flex-direction: column;
-            float:left; 
-            width: 85%;
-            top: 3%;
-            left: 7%;
-        }
-        li{ 
-            margin-top:2px;
-            margin-bottom:2px;
-            border-radius: 7px;
-            background-color:#fdfdfd;
-            cursor:pointer;
-        }
-        li:hover{
-            filter: brightness(90%) ;
-        }
-        li:active{
-            filter: brightness(70%) ;
-        }
-        .entryicon{
-            width: 24px;
-            height: 16px;
-            position:relative;
-            left: 10px;
-            transition: transform 0.3s;
-            transform: rotate(90deg);
-            margin-right: 20px;
-        }
-        .toolsicon{
-            width: 24px;
-            height: 16px;
-            position:relative;
-            left: 10px;
-            transition: transform 0.3s;
-            transform: rotate(90deg);
-            margin-right: 20px;
-        }
-        .acgicon{
-            width: 24px;
-            height: 16px;
-            position:relative;
-            left: 10px;
-            transition: transform 0.3s;
-            transform: rotate(90deg);
-            margin-right: 20px;
-        }
-        .r18icon{
-            width: 24px;
-            height: 16px;
-            position:relative;
-            left: 10px;
-            transition: transform 0.3s;
-            transform: rotate(90deg);
-            margin-right: 20px;
-        }
-        .entrylist {
-            height: 0;
-            opacity: 0;
-            overflow: hidden;
-            transition: all 0.3s;
-        }
-        .toolslist {
-            height: 0;
-            opacity: 0;
-            overflow: hidden;
-            transition: all 0.3s;
-        }
-        .acglist {
-            height: 0;
-            opacity: 0;
-            overflow: hidden;
-            transition: all 0.3s;
-        }
-        .r18list {
-            height: 0;
-            opacity: 0;
-            overflow: hidden;
-            transition: all 0.3s;
-        }
-        .list li {
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-        .show li {
-            opacity: 1;
-            transition: opacity 0.3s;
-        }
-        .listicon {
-            width: 20px;
-            height: 20px;
-            position:relative;
-            left: 10px;
-            margin-top: 15px;
-            margin-right: 25px;
-        }
-        .navigation.active{
-            bottom: 10%;
-        }
-        /* 按钮 */
-        .toggle{
-            position: absolute;
-            bottom: 75px;
-            left: calc(50% - 16px);
-            width: 32px;
-            height: 21px;
-            cursor: pointer;
-            display: flex;
-            justify-content: center;
-            align-items: center; 
-            transform: rotate(0deg);
-            transition: all 0.5s;
-            z-index: 3;
-            -moz-user-select: none;
-            -o-user-select:none;
-            -khtml-user-select:none;
-            -webkit-user-select:none;
-            -ms-user-select:none;
-            user-select:none;
-        }
-        .toggle.active{
-            bottom: 93%;
-            transform: rotate(180deg);
-        }
-        .toggle:hover{
-            filter: brightness(90%);
-            transform: rotate(0deg) scale(1.1);
-        }
-        .toggle.active:hover{
-            filter: brightness(90%);
-            transform: rotate(180deg) scale(1.1);
-        }
-        /* 背景模糊 */
-		.blur{
-            opacity: 0;
-            transition: opacity 0.3s;
-            z-index: 2;
-        }
-        .blur.active{
-            opacity: 1;
-            transition: opacity 0.3s;
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            backdrop-filter: blur(5px);
-        }
-        /* 底部随机句子 */
-        .end{
-            width: 100%;
-            height: 58px;
-            position: absolute;
-            left: 50%;
-            transform: translate(-50%);
-            bottom: 0px;
-            font-family:'Questrial',sans-serif;
-            color:#bbbbbb;      
-            font-size:24px;
-            text-align:center;
-            z-index: 2;
-            -moz-user-select: none;
-            -o-user-select:none;
-            -khtml-user-select:none;
-            -webkit-user-select:none;
-            -ms-user-select:none;
-            user-select:none;
-        }
-        /* 附加类 */
-        .rotate {
-            transform: rotate(180deg);
-        }
-        .show {
-            height:auto;
-            opacity: 1;
-        }
-	</style>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>The Homepage</title>
+    <!-- 标签页小图标 -->
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-ico" />
+    <style type="text/css">
+        /* 主体部分 */
+                body{
+                    display: flex;
+                    justify-content: center;
+                    align-items:center;
+                    min-height: 100vh;
+                    background: #fafafa;
+                    overflow: hidden;
+                }
+                input::-webkit-input-placeholder{
+                    color:#e6e6e6
+                }
+                a{
+                    text-decoration:none
+                }
+                ::selection {
+                    background:rgb(230, 230, 230); 
+                }
+                ::-webkit-scrollbar {
+                    width: 10px;
+                    height: 0px;
+                }
+                ::-webkit-scrollbar-thumb {
+                    border-radius: 10px;
+                    background: #dedede;
+                }
+                ::-webkit-scrollbar-track {
+                    border-radius: 10px;
+                    background: #fdfdfd;
+                }
+                *{
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                }
+                /* 字体 */
+                @font-face { 
+                    font-family: 'Questrial';  
+                    src: local('Questrial'), 
+                    url('Questrial.ttf') format('truetype'), 
+                    url('Questrial.svg.Questrial') format('svg'); 
+                } 
+                /* 左上角Logo */
+                .logo{
+                    position:absolute; 
+                    left:45px; 
+                    top:45px;         
+                    width:64px; 
+                    height:64px;   
+                    border:0px;   
+                    -moz-user-select: none;
+                    -o-user-select:none;
+                    -khtml-user-select:none;
+                    -webkit-user-select:none;
+                    -ms-user-select:none;
+                    user-select:none;
+                }
+                .hp1{
+                    position:absolute; 
+                    left:110px; 
+                    top:50px; 
+                    font-size:35px;   
+                    font-family:'Questrial',sans-serif;
+                    color:#aaaaaa;
+                    -moz-user-select: none;
+                    -o-user-select:none;
+                    -khtml-user-select:none;
+                    -webkit-user-select:none;
+                    -ms-user-select:none;
+                    user-select:none;      
+                }
+                .hp2{
+                    position:absolute; 
+                    left:110px; 
+                    top:85px; 
+                    font-size:16px;   
+                    font-family:'Questrial',sans-serif;
+                    color:#aaaaaa;      
+                    -moz-user-select: none;
+                    -o-user-select:none;
+                    -khtml-user-select:none;
+                    -webkit-user-select:none;
+                    -ms-user-select:none;
+                    user-select:none;
+                }
+                /* 右上角链接 */
+                .linkbox{
+                    width: 250px;
+                    height: 80px;
+                    outline-style:none;
+                    font-size:150%;
+                    font-family: 'Questrial'; 
+                    border: 0px;
+                    position: absolute;
+                    right: 270px;
+                    top: 50px;
+                    -moz-user-select: none;
+                    -o-user-select:none;
+                    -khtml-user-select:none;
+                    -webkit-user-select:none;
+                    -ms-user-select:none;
+                    user-select:none;
+                }
+                .bar{
+                    position:absolute; 
+                    background-color:#aaaaaa;  
+                    border-radius: 3px;
+                }
+                .bar1{
+                    width:2px;
+                    height:20px;
+                    left:41%; 
+                    top:10%; 
+                }
+                .bar2{
+                    width:2px;
+                    height:20px;
+                    left:89%; 
+                    top:10%; 
+                }
+                .link{
+                    position:absolute; 
+                    top:0%; 
+                    font-family:'Questrial',sans-serif;
+                    color:#aaaaaa;      
+                    font-size:35px;
+                    transition: all 0.5s;
+                }
+                .link1{
+                    left:0%;
+                }
+                .link2{
+                    left:52%;
+                }
+                .link3{
+                    left:100%;
+                }
+                .link1:hover{
+                    color:#d7cbb6; 
+                    filter: brightness(90%) drop-shadow(0 0 2px #d7cbb6);
+                }
+                .link2:hover{
+                    color:#b0ccdf; 
+                    filter: brightness(90%) drop-shadow(0 0 2px #b0ccdf);
+                }
+                .link3:hover{
+                    color:#d4b6d7; 
+                    filter: brightness(90%) drop-shadow(0 0 2px #d4b6d7);
+                }
+                /* 右上角日期 */
+                .datebox{
+                    position:absolute;
+                    right:20px; 
+                    top:35px; 
+                    width: 155px;
+                    height:70px;
+                    font-family:'Questrial',sans-serif;
+                    color:#aaaaaa;      
+                    text-align:center;
+                    -moz-user-select: none;
+                    -o-user-select:none;
+                    -khtml-user-select:none;
+                    -webkit-user-select:none;
+                    -ms-user-select:none;
+                    user-select:none;
+                }
+                .date{
+                    position:absolute;
+                    left:30px; 
+                    top:5%; 
+                    font-size:24px;
+                }
+                .year{
+                    position:absolute;
+                    left:30px; 
+                    bottom:5%; 
+                    font-size:40px;
+                }
+                .datebar{
+                    position:absolute; 
+                    width:3px;
+                    height:100%;
+                    left:10%; 
+                    top:0%; 
+                    background-color:#ef8787;  
+                    border-radius: 3px;
+                }
+                /* 搜索框 */
+                .searchbox{
+                    width: 850px;
+                    height: 75px;
+                    background-color:#ffffff;
+                    border: 0px;
+                    border-radius: 10px;
+                    position: absolute;
+                    left: 50%;
+                    top: 40%;
+                    transform: translate(-50%);
+                    box-shadow: 0px 0px 7px 3px #dddddd;
+                }
+                /* 输入框 */
+                .keyword{
+                    width: 750px;
+                    height: 70px;
+                    outline-style:none;
+                    background-color:#ffffff;
+                    font-size:150%;
+                    font-family: 'Questrial'; 
+                    color:#aaaaaa;
+                    border: 0px;
+                    position: relative;
+                    left: 47%;
+                    top: 2px;
+                    transform: translate(-50%);
+                }
+                /* 图标栏 */
+                .switchbar{
+                    width: 750px;
+                    height: 40px;
+                    border: 0px;
+                    position: relative;
+                    left: 50%;
+                    top: 2px;
+                    transform: translate(-50%);
+                }
+                /* 图标 */
+                .icon{
+                    border: 0px;
+                    transform: translate(-50%);
+                    cursor: pointer;
+                    transition: all 0.5s;
+                    -moz-user-select: none;
+                    -o-user-select:none;
+                    -khtml-user-select:none;
+                    -webkit-user-select:none;
+                    -ms-user-select:none;
+                    user-select:none;
+                }
+                .icon:hover{
+                    filter: brightness(90%) drop-shadow(0 0 2px #bbbbbb);
+                }
+                .searchicon{
+                    position:relative; 
+                    width: 31px;
+                    height: 31px;
+                    z-index:1;
+                    left:95%; 
+                    bottom:65%;
+                }
+                .baiduicon{
+                    position:absolute; 
+                    width: 31px;
+                    height: 33px;
+                    left:50%; 
+                    top:0%;         
+                }
+                .googleicon{
+                    position:absolute; 
+                    width: 33px;
+                    height: 33px;
+                    left:35%; 
+                    top:0%;            
+                    filter: brightness(100%);     
+                }
+                .bingicon{
+                    position:absolute; 
+                    width: 27px;
+                    height: 33px;
+                    left:65%; 
+                    top:0%;            
+                }
+                /* 面板 */
+                .navigation{
+                    position: absolute;
+                    width: 35%;
+                    height: 80%;
+                    bottom: -80%;
+                    background: #fdfdfd;
+                    display: flex;
+                    text-align: center;
+                    justify-content: center;
+                    z-index: 3;
+                    border-radius: 10px;
+                    overflow: hidden;
+                    box-shadow: 0 0px 15px rgba(0,0,0,0.2);
+                    transition: 0.5s;
+                }
+                .bookmarks{
+                    position:absolute; 
+                    top:6%; 
+                    font-size:35px;   
+                    font-family:'Questrial',sans-serif;
+                    color:#888888;
+                    -moz-user-select: none;
+                    -o-user-select:none;
+                    -khtml-user-select:none;
+                    -webkit-user-select:none;
+                    -ms-user-select:none;
+                    user-select:none;      
+                }
+                .navline{
+                    position:absolute; 
+                    width: 100px;
+                    height: 3px;
+                    top:15%; 
+                    background: #ef8787;
+                    border-radius: 3px;
+                    -moz-user-select: none;
+                    -o-user-select:none;
+                    -khtml-user-select:none;
+                    -webkit-user-select:none;
+                    -ms-user-select:none;
+                    user-select:none;      
+                }
+                .bookmarklist{
+                    position:absolute; 
+                    width: 85%;
+                    height: 77%;
+                    bottom:3%; 
+                    text-align: left;
+                    overflow: scroll;
+                    -moz-user-select: none;
+                    -o-user-select:none;
+                    -khtml-user-select:none;
+                    -webkit-user-select:none;
+                    -ms-user-select:none;
+                    user-select:none;        
+                }
+                .listitle{
+                    line-height:50px;
+                    font-size:28px;   
+                    font-family:'Questrial',sans-serif;
+                    color:#888888;
+                    position:relative;
+                    cursor: pointer;
+                    float:left; 
+                    width: 100%;  
+                    top: 3%;
+                }
+                ul{
+                    list-style-type:none;
+                    line-height:45px;
+                    font-size:24px;   
+                    font-family:'Questrial',sans-serif;
+                    color:#888888;
+                    position:relative;
+                    display: flex;
+                    flex-direction: column;
+                    float:left; 
+                    width: 85%;
+                    top: 3%;
+                    left: 7%;
+                }
+                li{ 
+                    margin-top:2px;
+                    margin-bottom:2px;
+                    border-radius: 7px;
+                    background-color:#fdfdfd;
+                    cursor:pointer;
+                }
+                li:hover{
+                    filter: brightness(90%) ;
+                }
+                li:active{
+                    filter: brightness(70%) ;
+                }
+                .entryicon{
+                    width: 24px;
+                    height: 16px;
+                    position:relative;
+                    left: 10px;
+                    transition: transform 0.3s;
+                    transform: rotate(90deg);
+                    margin-right: 20px;
+                }
+                .toolsicon{
+                    width: 24px;
+                    height: 16px;
+                    position:relative;
+                    left: 10px;
+                    transition: transform 0.3s;
+                    transform: rotate(90deg);
+                    margin-right: 20px;
+                }
+                .acgicon{
+                    width: 24px;
+                    height: 16px;
+                    position:relative;
+                    left: 10px;
+                    transition: transform 0.3s;
+                    transform: rotate(90deg);
+                    margin-right: 20px;
+                }
+                .r18icon{
+                    width: 24px;
+                    height: 16px;
+                    position:relative;
+                    left: 10px;
+                    transition: transform 0.3s;
+                    transform: rotate(90deg);
+                    margin-right: 20px;
+                }
+                .entrylist {
+                    height: 0;
+                    opacity: 0;
+                    overflow: hidden;
+                    transition: all 0.3s;
+                }
+                .toolslist {
+                    height: 0;
+                    opacity: 0;
+                    overflow: hidden;
+                    transition: all 0.3s;
+                }
+                .acglist {
+                    height: 0;
+                    opacity: 0;
+                    overflow: hidden;
+                    transition: all 0.3s;
+                }
+                .r18list {
+                    height: 0;
+                    opacity: 0;
+                    overflow: hidden;
+                    transition: all 0.3s;
+                }
+                .list li {
+                    opacity: 0;
+                    transition: opacity 0.3s;
+                }
+                .show li {
+                    opacity: 1;
+                    transition: opacity 0.3s;
+                }
+                .listicon {
+                    width: 20px;
+                    height: 20px;
+                    position:relative;
+                    left: 10px;
+                    margin-top: 15px;
+                    margin-right: 25px;
+                }
+                .navigation.active{
+                    bottom: 10%;
+                }
+                /* 按钮 */
+                .toggle{
+                    position: absolute;
+                    bottom: 75px;
+                    left: calc(50% - 16px);
+                    width: 32px;
+                    height: 21px;
+                    cursor: pointer;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center; 
+                    transform: rotate(0deg);
+                    transition: all 0.5s;
+                    z-index: 3;
+                    -moz-user-select: none;
+                    -o-user-select:none;
+                    -khtml-user-select:none;
+                    -webkit-user-select:none;
+                    -ms-user-select:none;
+                    user-select:none;
+                }
+                .toggle.active{
+                    bottom: 93%;
+                    transform: rotate(180deg);
+                }
+                .toggle:hover{
+                    filter: brightness(90%);
+                    transform: rotate(0deg) scale(1.1);
+                }
+                .toggle.active:hover{
+                    filter: brightness(90%);
+                    transform: rotate(180deg) scale(1.1);
+                }
+                /* 背景模糊 */
+        		.blur{
+                    opacity: 0;
+                    transition: opacity 0.3s;
+                    z-index: 2;
+                }
+                .blur.active{
+                    opacity: 1;
+                    transition: opacity 0.3s;
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    backdrop-filter: blur(5px);
+                }
+                /* 底部随机句子 */
+                .end{
+                    width: 100%;
+                    height: 58px;
+                    position: absolute;
+                    left: 50%;
+                    transform: translate(-50%);
+                    bottom: 0px;
+                    font-family:'Questrial',sans-serif;
+                    color:#bbbbbb;      
+                    font-size:24px;
+                    text-align:center;
+                    z-index: 2;
+                    -moz-user-select: none;
+                    -o-user-select:none;
+                    -khtml-user-select:none;
+                    -webkit-user-select:none;
+                    -ms-user-select:none;
+                    user-select:none;
+                }
+                /* 附加类 */
+                .rotate {
+                    transform: rotate(180deg);
+                }
+                .show {
+                    height:auto;
+                    opacity: 1;
+                }
+    </style>
 </head>
 <body>
-	<!-- 库引入 -->
-	<script src="./jquery.min.js"></script>
-	<!-- 左上角Logo -->
-	<img class="logo" src="./logo.png" alt="logo" />
-	<p class="hp1">Palzs HP</p>
-	<p class="hp2">A Personal Homepage</p>
-	<!-- 右上角日期 -->
-	<div class="datebox">
-		<div class="date">
-			Mar.27
-		</div>
-		<div class="year">
-			2023
-		</div>
-		<script class="monthcode">
-			var date = new Date();
+    <!-- 库引入 -->
+    <script src="./jquery.min.js"></script>
+    <!-- 左上角Logo -->
+    <img class="logo" src="./logo.png" alt="logo" />
+    <p class="hp1">Palzs HP</p>
+    <p class="hp2">A Personal Homepage</p>
+    <!-- 右上角日期 -->
+    <div class="datebox">
+        <div class="date">
+            Mar.27
+        </div>
+        <div class="year">
+            2023
+        </div>
+        <script class="monthcode">
+            var date = new Date();
         var monthHtml = "";
         if(date.getMonth()+1==1){
         monthHtml = "Jan.";
@@ -585,32 +585,33 @@
         $(".date").html(monthHtml+date.getDate());
         $(".year").html(date.getFullYear());
     </script>
-		<div class="datebar">
-		</div>
-	</div>
-	<!-- 右上角链接 -->
-	<div class="linkbox">
-		<div class="bar bar1"></div>
-		<div class="bar bar2"></div>
-		<a class="link link1" href="https://drive.palzs.site/">Drive</a>
-		<a class="link link2" href="https://wiki.palzs.site/">Wiki</a>
-		<a class="link link3" href="https://blog.palzs.site/">Blog</a>
-	</div>
-	<!-- 面板 -->
-	<div class="navigation">
-		<p class="bookmarks">Bookmarks</p>
-		<div class="navline"></div>
-		<div class="bookmarklist">
-        <div class="listitle" onclick="showentry()"><img class="entryicon" src="./arrow.png"/>Entry</div>
-			<ul class="entrylist">
-				<li onclick="javascript:window.open('http://www.bilibili.com')">
-					<img class="listicon" src="./bilibili.png" />哔哩哔哩动画</li>
-				<li onclick="javascript:window.open('http://www.youtube.com')">
-					<img class="listicon" src="./youtube.png" />YouTube</li>
-				<li onclick="javascript:window.open('http://sspai.com')">
-					<img class="listicon" src="./sspai.png" />少数派</li>
-				<li onclick="javascript:window.open('https://zh.wikipedia.org/wiki/Wikipedia:首页')">
-					<img class="listicon" src="./wiki.png" />维基百科</li>
+        <div class="datebar">
+        </div>
+    </div>
+    <!-- 右上角链接 -->
+    <div class="linkbox">
+        <div class="bar bar1"></div>
+        <div class="bar bar2"></div>
+        <a class="link link1" href="https://drive.palzs.site/">Drive</a>
+        <a class="link link2" href="https://wiki.palzs.site/">Wiki</a>
+        <a class="link link3" href="https://blog.palzs.site/">Blog</a>
+    </div>
+    <!-- 面板 -->
+    <div class="navigation">
+        <p class="bookmarks">Bookmarks</p>
+        <div class="navline"></div>
+        <div class="bookmarklist">
+            <div class="listitle" onclick="showentry()">
+                <img class="entryicon" src="./arrow.png" />Entry</div>
+            <ul class="entrylist">
+                <li onclick="javascript:window.open('http://www.bilibili.com')">
+                    <img class="listicon" src="./bilibili.png" />哔哩哔哩动画</li>
+                <li onclick="javascript:window.open('http://www.youtube.com')">
+                    <img class="listicon" src="./youtube.png" />YouTube</li>
+                <li onclick="javascript:window.open('http://sspai.com')">
+                    <img class="listicon" src="./sspai.png" />少数派</li>
+                <li onclick="javascript:window.open('https://zh.wikipedia.org/wiki/Wikipedia:首页')">
+                    <img class="listicon" src="./wiki.png" />维基百科</li>
                 <li onclick="javascript:window.open('https://fgo.wiki/w/首页')">
                     <img class="listicon" src="./mooncell.png" />Mooncell</li>
                 <li onclick="javascript:window.open('https://thwiki.cc')">
@@ -626,8 +627,9 @@
                 <li onclick="javascript:window.open('https://www.bibgame.com')">
                     <img class="listicon" src="./bibgame.png" />游戏年轮</li>
             </ul>
-        <div class="listitle" onclick="showtools()"><img class="toolsicon" src="./arrow.png"/>Tools</div>
-			<ul class="toolslist">
+            <div class="listitle" onclick="showtools()">
+                <img class="toolsicon" src="./arrow.png" />Tools</div>
+            <ul class="toolslist">
                 <li onclick="javascript:window.open('https://docs.craft.do')">
                     <img class="listicon" src="./craft.png" />Craft Doc</li>
                 <li onclick="javascript:window.open('https://ikuuu.eu')">
@@ -645,8 +647,9 @@
                 <li onclick="javascript:window.open('https://rank.kkj.cn')">
                     <img class="listicon" src="./kkjtt.png" />快科技天梯</li>
             </ul>
-        <div class="listitle" onclick="showacg()"><img class="acgicon" src="./arrow.png"/>ACG</div>
-			<ul class="acglist">
+            <div class="listitle" onclick="showacg()">
+                <img class="acgicon" src="./arrow.png" />ACG</div>
+            <ul class="acglist">
                 <li onclick="javascript:window.open('https://bbs.acgrip.com')">
                     <img class="listicon" src="./acgrip.png" />Anime字幕论坛</li>
                 <li onclick="javascript:window.open('https://bgm.tv')">
@@ -660,8 +663,9 @@
                 <li onclick="javascript:window.open('https://acg.rip')">
                     <img class="listicon" src="./acg.rip.png" />ACG.RIP</li>
             </ul>
-        <div class="listitle" onclick="showr18()"><img class="r18icon" src="./arrow.png"/>R18</div>
-			<ul class="r18list">
+            <div class="listitle" onclick="showr18()">
+                <img class="r18icon" src="./arrow.png" />R18</div>
+            <ul class="r18list">
                 <li onclick="javascript:window.open('https://gelbooru.com')">
                     <img class="listicon" src="./gelbooru.png" />Gelbooru</li>
                 <li onclick="javascript:window.open('https://www.azure-gallery.net')">
@@ -677,17 +681,17 @@
                 <li onclick="javascript:window.open('https://www.dlsite.com')">
                     <img class="listicon" src="./dlsite.png" />DLsite</li>
             </ul>
-		</div>
+        </div>
     </div>
     <!-- 面板按钮 -->
-	<div class="toggle" onclick="toggleblur()" >
-		<img src="./arrow.png" width="32" height="19" alt="arrow" />
-	</div>
+    <div class="toggle" onclick="toggleblur()">
+        <img src="./arrow.png" width="32" height="19" alt="arrow" />
+    </div>
     <!-- 背景模糊板 -->
-    <div class="blur" ></div>
+    <div class="blur"></div>
     <!-- 面板升起和背景模糊 -->
-<script>
-		const navigation = document.querySelector('.navigation');
+    <script>
+        const navigation = document.querySelector('.navigation');
         const toumei = document.querySelector('.blur');
     document.querySelector('.toggle').onclick = function(){
         this.classList.toggle('active');
@@ -696,44 +700,44 @@
     }
 </script>
     <!-- 二级菜单展示 -->
-<script>
-    function showentry() {
+    <script>
+        function showentry() {
     var entryicon = document.querySelector(".entryicon");
     entryicon.classList.toggle("rotate");
     var entrylist = document.querySelector(".entrylist");
     entrylist.classList.toggle("show");
 }
 </script>
-<script>
-    function showtools() {
+    <script>
+        function showtools() {
     var toolsicon = document.querySelector(".toolsicon");
     toolsicon.classList.toggle("rotate");
     var toolslist = document.querySelector(".toolslist");
     toolslist.classList.toggle("show");
 }
 </script>
-<script>
-    function showacg() {
+    <script>
+        function showacg() {
     var acgicon = document.querySelector(".acgicon");
     acgicon.classList.toggle("rotate");
     var acglist = document.querySelector(".acglist");
     acglist.classList.toggle("show");
 }
 </script>
-<script>
-    function showr18() {
+    <script>
+        function showr18() {
     var r18icon = document.querySelector(".r18icon");
     r18icon.classList.toggle("rotate");
     var r18list = document.querySelector(".r18list");
     r18list.classList.toggle("show");
 }
 </script>
-	<!-- 底部随机句子 -->
-	<div class="end">
-		God's in his heaven, all's right with the world.
-	</div>
-	<script class="quotes">
-		var a = Math.random() + ""
+    <!-- 底部随机句子 -->
+    <div class="end">
+        God's in his heaven, all's right with the world.
+    </div>
+    <script class="quotes">
+        var a = Math.random() + ""
     var rand1 = a.charAt(5)
     quotes = new Array
     quotes[1] = "God's in his heaven, all's right with the world."
@@ -749,64 +753,64 @@
     var quote = quotes[rand1]
     $(".end").html(quote);
 </script>
-	<!-- 搜索框 -->
-	<div class="searchbox">
-		<!-- 输入框和搜索脚本调用 -->
-		<div>
-			<input class="keyword" type="text" autocomplete="off" onkeydown="search()" placeholder="search" />
-		</div>
-		<!-- 搜索图标 -->
-		<img class="icon searchicon" src="./search.png" alt="search" />
-		<!-- 引擎切换图标 -->
-		<div class="switchbar">
-			<img class="icon baiduicon" src="./baidu.png" alt="baidu" style="filter: brightness(75%);" />
-			<img class="icon googleicon" src="./google.png" alt="google" />
-			<img class="icon bingicon" src="./bing.png" alt="bing" />
-		</div>
-	</div>
-	<!-- 搜索脚本 -->
-	<script>
-		function search(){
-            $(".searchicon").click(function(){
-                var key = $(".keyword").val();
-                window.open(engine+key);
-            });
-            var event = window.event || arguments.callee.caller.arguments[0];
-            if (event.keyCode == 13)
-                {
-                var key = $(".keyword").val();
-                window.open(engine+key);
-                }
-            }
-	</script>
-	<!-- 搜索引擎切换成谷歌 -->
-	<script class="switchgoogle">
-		$(".googleicon").click(function(){
-            engine = "https://www.google.com/search?q=";
-            document.querySelector('.googleicon').style.filter = "brightness(75%)";
-            document.querySelector('.baiduicon').style.filter = "";
-            document.querySelector('.bingicon').style.filter = "";
-            });
-	</script>
-	<!-- 搜索引擎切换成百度 -->
-	<script class="switchbaidu">
-		$(".baiduicon").click(function(){
-            engine = "https://www.baidu.com/s?wd=";
-            document.querySelector('.baiduicon').style.filter = "brightness(75%)";
-            document.querySelector('.googleicon').style.filter = "";
-            document.querySelector('.bingicon').style.filter = "";
-            });
-	</script>
-	<!-- 搜索引擎切换成必应 -->
-	<script class="switchbing">
-		$(".bingicon").click(function(){
-            engine = "https://www.bing.com/search?q=";
-            document.querySelector('.bingicon').style.filter = "brightness(75%)";
-            document.querySelector('.baiduicon').style.filter = "";
-            document.querySelector('.googleicon').style.filter = "";
-            });
-	</script>
-	<!-- 
+    <!-- 搜索框 -->
+    <div class="searchbox">
+        <!-- 输入框和搜索脚本调用 -->
+        <div>
+            <input class="keyword" type="text" autocomplete="off" onkeydown="search()" placeholder="search" />
+        </div>
+        <!-- 搜索图标 -->
+        <img class="icon searchicon" src="./search.png" alt="search" />
+        <!-- 引擎切换图标 -->
+        <div class="switchbar">
+            <img class="icon baiduicon" src="./baidu.png" alt="baidu" style="filter: brightness(75%);" />
+            <img class="icon googleicon" src="./google.png" alt="google" />
+            <img class="icon bingicon" src="./bing.png" alt="bing" />
+        </div>
+    </div>
+    <!-- 搜索脚本 -->
+    <script>
+        function search(){
+                    $(".searchicon").click(function(){
+                        var key = $(".keyword").val();
+                        window.open(engine+key);
+                    });
+                    var event = window.event || arguments.callee.caller.arguments[0];
+                    if (event.keyCode == 13)
+                        {
+                        var key = $(".keyword").val();
+                        window.open(engine+key);
+                        }
+                    }
+    </script>
+    <!-- 搜索引擎切换成谷歌 -->
+    <script class="switchgoogle">
+        $(".googleicon").click(function(){
+                    engine = "https://www.google.com/search?q=";
+                    document.querySelector('.googleicon').style.filter = "brightness(75%)";
+                    document.querySelector('.baiduicon').style.filter = "";
+                    document.querySelector('.bingicon').style.filter = "";
+                    });
+    </script>
+    <!-- 搜索引擎切换成百度 -->
+    <script class="switchbaidu">
+        $(".baiduicon").click(function(){
+                    engine = "https://www.baidu.com/s?wd=";
+                    document.querySelector('.baiduicon').style.filter = "brightness(75%)";
+                    document.querySelector('.googleicon').style.filter = "";
+                    document.querySelector('.bingicon').style.filter = "";
+                    });
+    </script>
+    <!-- 搜索引擎切换成必应 -->
+    <script class="switchbing">
+        $(".bingicon").click(function(){
+                    engine = "https://www.bing.com/search?q=";
+                    document.querySelector('.bingicon').style.filter = "brightness(75%)";
+                    document.querySelector('.baiduicon').style.filter = "";
+                    document.querySelector('.googleicon').style.filter = "";
+                    });
+    </script>
+    <!-- 
     任务 自适应
 -->
 </body>
