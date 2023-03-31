@@ -20,7 +20,7 @@
         ::selection { background:rgb(230, 230, 230); }
         ::-webkit-scrollbar {
             width: 10px;
-            height: 10px;
+            height: 0px;
         }
         ::-webkit-scrollbar-thumb {
             border-radius: 10px;
@@ -28,7 +28,7 @@
         }
         ::-webkit-scrollbar-track {
             border-radius: 10px;
-            background: #ffffff;
+            background: #fdfdfd;
         }
         *{
             margin: 0;
@@ -106,6 +106,7 @@
         .bar{
             position:absolute; 
             background-color:#aaaaaa;  
+            border-radius: 3px;
             -moz-user-select: none;
             -o-user-select:none;
             -khtml-user-select:none;
@@ -122,7 +123,7 @@
         .bar2{
             width:2px;
             height:20px;
-            left:90%; 
+            left:88%; 
             top:10%; 
         }
         .link{
@@ -142,8 +143,17 @@
         .link1{left:0%;}
         .link2{left:50%;}
         .link3{left:100%;}
-        .link:hover{
-            filter: brightness(90%) drop-shadow(0 0 2px #bbbbbb);
+        .link1:hover{
+            color:#d7cbb6; 
+            filter: brightness(90%) drop-shadow(0 0 2px #d7cbb6);
+        }
+        .link2:hover{
+            color:#b0ccdf; 
+            filter: brightness(90%) drop-shadow(0 0 2px #b0ccdf);
+        }
+        .link3:hover{
+            color:#d4b6d7; 
+            filter: brightness(90%) drop-shadow(0 0 2px #d4b6d7);
         }
         /* 右上角日期 */
         .datebox{
@@ -180,7 +190,8 @@
             height:100%;
             left:10%; 
             top:0%; 
-            background-color:#aaaaaa;  
+            background-color:#ef8787;  
+            border-radius: 3px;
             -moz-user-select: none;
             -o-user-select:none;
             -khtml-user-select:none;
@@ -278,7 +289,7 @@
             width: 35%;
             height: 80%;
             bottom: -80%;
-            background: #fff;
+            background: #fdfdfd;
             display: flex;
             text-align: center;
             justify-content: center;
@@ -293,7 +304,7 @@
             top:6%; 
             font-size:35px;   
             font-family:'Questrial',sans-serif;
-            color:#aaaaaa;
+            color:#888888;
             -moz-user-select: none;
             -o-user-select:none;
             -khtml-user-select:none;
@@ -302,11 +313,12 @@
             user-select:none;      
         }
         .navline{
-            position:relative; 
-            width: 85px;
-            height: 2px;
+            position:absolute; 
+            width: 100px;
+            height: 3px;
             top:15%; 
-            background: #cccccc;
+            background: #ef8787;
+            border-radius: 3px;
             -moz-user-select: none;
             -o-user-select:none;
             -khtml-user-select:none;
@@ -332,7 +344,7 @@
             line-height:50px;
             font-size:28px;   
             font-family:'Questrial',sans-serif;
-            color:#aaaaaa;
+            color:#888888;
             position:relative;
             cursor: pointer;
             float:left; 
@@ -344,7 +356,7 @@
             line-height:45px;
             font-size:24px;   
             font-family:'Questrial',sans-serif;
-            color:#aaaaaa;
+            color:#888888;
             position:relative;
             display: flex;
             flex-direction: column;
@@ -354,8 +366,10 @@
             left: 7%;
         }
         li{ 
+            margin-top:2px;
+            margin-bottom:2px;
             border-radius: 7px;
-            background-color:#ffffff;
+            background-color:#fdfdfd;
             cursor:pointer;
         }
         li:hover{
@@ -365,24 +379,40 @@
             filter: brightness(70%) ;
         }
         .entryicon {
+            width: 24px;
+            height: 16px;
+            position:relative;
+            left: 10px;
             transition: transform 0.3s;
             transform: rotate(90deg);
-            margin-right: 10px;
+            margin-right: 20px;
         }
         .toolsicon {
+            width: 24px;
+            height: 16px;
+            position:relative;
+            left: 10px;
             transition: transform 0.3s;
             transform: rotate(90deg);
-            margin-right: 10px;
+            margin-right: 20px;
         }
         .acgicon {
+            width: 24px;
+            height: 16px;
+            position:relative;
+            left: 10px;
             transition: transform 0.3s;
             transform: rotate(90deg);
-            margin-right: 10px;
+            margin-right: 20px;
         }
         .r18icon {
+            width: 24px;
+            height: 16px;
+            position:relative;
+            left: 10px;
             transition: transform 0.3s;
             transform: rotate(90deg);
-            margin-right: 10px;
+            margin-right: 20px;
         }
         .rotate {
             transform: rotate(180deg);
@@ -423,8 +453,8 @@
             height: 20px;
             position:relative;
             left: 10px;
+            margin-top: 15px;
             margin-right: 25px;
-            filter: grayscale(100%);
         }
         .navigation.active{
             bottom: 10%;
@@ -487,6 +517,7 @@
             color:#bbbbbb;      
             font-size:24px;
             text-align:center;
+            z-index: 2;
             -moz-user-select: none;
             -o-user-select:none;
             -khtml-user-select:none;
@@ -569,7 +600,7 @@
 		<p class="bookmarks">Bookmarks</p>
 		<div class="navline"></div>
 		<div class="bookmarklist">
-        <div class="listitle" onclick="showentry()"><img class="listicon entryicon" src="./arrow.png"/>Entry</div>
+        <div class="listitle" onclick="showentry()"><img class="entryicon" src="./arrow.png"/>Entry</div>
 			<ul class="entrylist">
 				<li onclick="javascript:window.open('http://www.bilibili.com')">
 					<img class="listicon" src="./bilibili.png" />哔哩哔哩动画</li>
@@ -593,10 +624,8 @@
                     <img class="listicon" src="./wallhaven.png" />Wallhaven</li>
                 <li onclick="javascript:window.open('https://www.bibgame.com')">
                     <img class="listicon" src="./bibgame.png" />游戏年轮</li>
-                <li onclick="javascript:window.open('https://docs.craft.do')">
-                    <img class="listicon" src="./craft.png" />Craft Doc</li>
             </ul>
-        <div class="listitle" onclick="showtools()"><img class="listicon toolsicon" src="./arrow.png"/>Tools</div>
+        <div class="listitle" onclick="showtools()"><img class="toolsicon" src="./arrow.png"/>Tools</div>
 			<ul class="toolslist">
                 <li onclick="javascript:window.open('https://docs.craft.do')">
                     <img class="listicon" src="./craft.png" />Craft Doc</li>
@@ -615,7 +644,7 @@
                 <li onclick="javascript:window.open('https://rank.kkj.cn')">
                     <img class="listicon" src="./kkjtt.png" />快科技天梯</li>
             </ul>
-        <div class="listitle" onclick="showacg()"><img class="listicon acgicon" src="./arrow.png"/>ACG</div>
+        <div class="listitle" onclick="showacg()"><img class="acgicon" src="./arrow.png"/>ACG</div>
 			<ul class="acglist">
                 <li onclick="javascript:window.open('https://bbs.acgrip.com')">
                     <img class="listicon" src="./acgrip.png" />Anime字幕论坛</li>
@@ -630,7 +659,7 @@
                 <li onclick="javascript:window.open('https://acg.rip')">
                     <img class="listicon" src="./acg.rip.png" />ACG.RIP</li>
             </ul>
-        <div class="listitle" onclick="showr18()"><img class="listicon r18icon" src="./arrow.png"/>R18</div>
+        <div class="listitle" onclick="showr18()"><img class="r18icon" src="./arrow.png"/>R18</div>
 			<ul class="r18list">
                 <li onclick="javascript:window.open('https://gelbooru.com')">
                     <img class="listicon" src="./gelbooru.png" />Gelbooru</li>
