@@ -702,7 +702,7 @@
         </div>
     </div>
     <!-- 面板按钮 -->
-    <div class="toggle" onclick="toggleblur()">
+    <div class="toggle">
         <img src="./arrow.png" width="32" height="19" alt="arrow" />
     </div>
     <!-- 背景模糊板 -->
@@ -711,10 +711,16 @@
     <script>
         const navigation = document.querySelector('.navigation');
         const toumei = document.querySelector('.blur');
+        const triangle = document.querySelector('.toggle');
     document.querySelector('.toggle').onclick = function(){
         this.classList.toggle('active');
         navigation.classList.toggle('active');
         toumei.classList.toggle('active');
+    }
+    document.querySelectorAll(".blur.active").onclick = function(){
+        this.classList.toggle('active');
+        navigation.classList.toggle('active');
+        triangle.classList.toggle('active');
     }
 </script>
     <!-- 二级菜单展示 -->
