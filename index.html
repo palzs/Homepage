@@ -14,6 +14,7 @@
                     min-height: 100vh;
                     background: #fafafa;
                     overflow: hidden;
+                    font-family:'Questrial',sans-serif;
                 }
                 input::-webkit-input-placeholder{
                     color:#e6e6e6
@@ -44,9 +45,7 @@
                 /* 字体 */
                 @font-face { 
                     font-family: 'Questrial';  
-                    src: local('Questrial'), 
-                    url('Questrial.ttf') format('truetype'), 
-                    url('Questrial.svg.Questrial') format('svg'); 
+                    src: local('Questrial') format('truetype'); 
                 } 
                 /* 左上角Logo */
                 .logo{
@@ -68,7 +67,6 @@
                     left:110px; 
                     top:50px; 
                     font-size:35px;   
-                    font-family:'Questrial',sans-serif;
                     color:#aaaaaa;
                     -moz-user-select: none;
                     -o-user-select:none;
@@ -82,7 +80,6 @@
                     left:110px; 
                     top:85px; 
                     font-size:16px;   
-                    font-family:'Questrial',sans-serif;
                     color:#aaaaaa;      
                     -moz-user-select: none;
                     -o-user-select:none;
@@ -97,7 +94,6 @@
                     height: 80px;
                     outline-style:none;
                     font-size:150%;
-                    font-family: 'Questrial'; 
                     border: 0px;
                     position: absolute;
                     right: 270px;
@@ -130,7 +126,6 @@
                 .link{
                     position:absolute; 
                     top:0%; 
-                    font-family:'Questrial',sans-serif;
                     color:#aaaaaa;      
                     font-size:35px;
                     transition: all 0.5s;
@@ -163,7 +158,6 @@
                     top:35px; 
                     width: 155px;
                     height:70px;
-                    font-family:'Questrial',sans-serif;
                     color:#aaaaaa;      
                     text-align:center;
                     -moz-user-select: none;
@@ -299,7 +293,6 @@
                     position:absolute; 
                     top:6%; 
                     font-size:35px;   
-                    font-family:'Questrial',sans-serif;
                     color:#888888;
                     -moz-user-select: none;
                     -o-user-select:none;
@@ -339,7 +332,6 @@
                 .listitle{
                     line-height:50px;
                     font-size:28px;   
-                    font-family:'Questrial',sans-serif;
                     color:#888888;
                     position:relative;
                     cursor: pointer;
@@ -351,7 +343,6 @@
                     list-style-type:none;
                     line-height:45px;
                     font-size:24px;   
-                    font-family:'Questrial',sans-serif;
                     color:#888888;
                     position:relative;
                     display: flex;
@@ -524,7 +515,6 @@
                     left: 50%;
                     transform: translate(-50%);
                     bottom: 0px;
-                    font-family:'Questrial',sans-serif;
                     color:#bbbbbb;      
                     font-size:24px;
                     text-align:center;
@@ -712,16 +702,18 @@
         const navigation = document.querySelector('.navigation');
         const toumei = document.querySelector('.blur');
         const triangle = document.querySelector('.toggle');
-    document.querySelector('.toggle').onclick = function(){
+    triangle.onclick = function(){
         this.classList.toggle('active');
         navigation.classList.toggle('active');
         toumei.classList.toggle('active');
     }
-    document.querySelectorAll(".blur.active").onclick = function(){
-        this.classList.toggle('active');
-        navigation.classList.toggle('active');
-        triangle.classList.toggle('active');
-    }
+    $(document).bind("click",function(e){
+        if($(e.target).closest(".navigation").length == 0 && $(e.target).closest(".toggle").length == 0){
+        navigation.classList.remove('active');
+        toumei.classList.remove('active');
+        triangle.classList.remove('active');
+            }
+    })
 </script>
     <!-- 二级菜单展示 -->
     <script>
