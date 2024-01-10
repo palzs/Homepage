@@ -798,11 +798,12 @@
     </script>
     <script>
         var event = window.event || arguments.callee.caller.arguments[0];
-        if (event.keyCode == 13)
-            {
-            var key = $(".keyword").val();
-            window.open(engine+key);
-            }
+        $(".keyword").bind('keypress',function(event){
+		if (event.keyCode == 13){
+			var key = $(".keyword").val();
+			window.open(engine+key);
+		}
+	})
     </script>
     <!-- 搜索引擎切换成谷歌 -->
     <script class="switchgoogle">
