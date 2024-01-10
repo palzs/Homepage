@@ -790,17 +790,17 @@
                     engine = "https://www.baidu.com/s?wd=";
                     }
     </script>
-    <script>                    
-    $(".searchicon").click(function(){
-        var key = $(".keyword").val();
-        window.open(engine+key);
-    });
-    var event = window.event || arguments.callee.caller.arguments[0];
-    if (event.keyCode == 13)
-        {
-        var key = $(".keyword").val();
-        window.open(engine+key);
-
+    <script>
+                    $(".searchicon").click(function(){
+                        var key = $(".keyword").val();
+                        window.open(engine+key);
+                    });
+                    var event = window.event || arguments.callee.caller.arguments[0];
+                    if (event.keyCode == 13)
+                        {
+                        var key = $(".keyword").val();
+                        window.open(engine+key);
+                        }
     </script>
     <!-- 搜索引擎切换成谷歌 -->
     <script class="switchgoogle">
