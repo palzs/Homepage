@@ -795,7 +795,6 @@
             var key = $(".keyword").val();
             window.open(engine+key);
         });
-        var event = window.event || arguments.callee.caller.arguments[0];
         $(".keyword").bind('keypress',function(event){
 		if (event.keyCode == 13){
 			var key = $(".keyword").val();
