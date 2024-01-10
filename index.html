@@ -794,9 +794,7 @@
         $(".searchicon").click(function(){
             var key = $(".keyword").val();
             window.open(engine+key);
-        })
-    </script>
-    <script>
+        });
         var event = window.event || arguments.callee.caller.arguments[0];
         $(".keyword").bind('keypress',function(event){
 		if (event.keyCode == 13){
