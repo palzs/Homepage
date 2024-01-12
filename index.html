@@ -79,8 +79,8 @@
                     position:absolute; 
                     left:110px; 
                     top:85px; 
-                    font-size:16px;   
-                    color:#aaaaaa;      
+                    font-size:18px;   
+                    color:#cccccc;      
                     -moz-user-select: none;
                     -o-user-select:none;
                     -khtml-user-select:none;
@@ -96,7 +96,7 @@
                     font-size:150%;
                     border: 0px;
                     position: absolute;
-                    right: 270px;
+                    right: 250px;
                     top: 50px;
                     z-index: 1;
                     -moz-user-select: none;
@@ -112,13 +112,13 @@
                     border-radius: 3px;
                 }
                 .bar1{
-                    width:2px;
+                    width:3px;
                     height:20px;
                     left:41%; 
                     top:10%; 
                 }
                 .bar2{
-                    width:2px;
+                    width:3px;
                     height:20px;
                     left:89%; 
                     top:10%; 
@@ -131,34 +131,33 @@
                     transition: all 0.5s;
                 }
                 .link1{
+                    color:#b0ccdf;
                     left:0%;
                 }
                 .link2{
+                    color:#d7cbb6; 
                     left:52%;
                 }
                 .link3{
+                    color:#d4b6d7; 
                     left:100%;
                 }
                 .link1:hover{
-                    color:#b0ccdf; 
-                    filter: brightness(90%) drop-shadow(0 0 2px #b0ccdf);
+                    filter: drop-shadow(0 0 2px #b0ccdf);
                 }
-                .link2:hover{
-                    color:#d7cbb6; 
-                    filter: brightness(90%) drop-shadow(0 0 2px #d7cbb6);
+                .link2:hover{ 
+                    filter: drop-shadow(0 0 2px #d7cbb6);
                 }
                 .link3:hover{
-                    color:#d4b6d7; 
-                    filter: brightness(90%) drop-shadow(0 0 2px #d4b6d7);
+                    filter: drop-shadow(0 0 2px #d4b6d7);
                 }
                 /* 右上角日期 */
                 .datebox{
                     position:absolute;
-                    right:20px; 
+                    right:0px; 
                     top:35px; 
                     width: 155px;
-                    height:70px;
-                    color:#aaaaaa;      
+                    height:70px;    
                     text-align:center;
                     -moz-user-select: none;
                     -o-user-select:none;
@@ -169,20 +168,22 @@
                 }
                 .date{
                     position:absolute;
+                    color:#cccccc;  
                     left:30px; 
                     top:5%; 
                     font-size:24px;
                 }
                 .year{
                     position:absolute;
+                    color:#aaaaaa;  
                     left:30px; 
                     bottom:5%; 
                     font-size:40px;
                 }
                 .datebar{
                     position:absolute; 
-                    width:3px;
-                    height:100%;
+                    width:5px;
+                    height:95%;
                     left:10%; 
                     top:0%; 
                     background-color:#c26363;  
@@ -190,8 +191,8 @@
                 }
                 /* 搜索框 */
                 .searchbox{
-                    width: 850px;
-                    height: 75px;
+                    width: 700px;
+                    height: 65px;
                     background-color:#ffffff;
                     border: 0px;
                     border-radius: 10px;
@@ -203,8 +204,8 @@
                 }
                 /* 输入框 */
                 .keyword{
-                    width: 750px;
-                    height: 70px;
+                    width: 600px;
+                    height: 60px;
                     outline-style:none;
                     background-color:#ffffff;
                     font-size:150%;
@@ -223,7 +224,7 @@
                     border: 0px;
                     position: relative;
                     left: 50%;
-                    top: 2px;
+                    top: 15px;
                     transform: translate(-50%);
                 }
                 /* 图标 */
@@ -249,7 +250,6 @@
                     z-index:1;
                     left:95%; 
                     bottom:50px;
-
                 }
                 .baiduicon{
                     position:absolute; 
@@ -276,7 +276,7 @@
                 /* 面板 */
                 .navigation{
                     position: absolute;
-                    width: 35%;
+                    width: 50%;
                     height: 80%;
                     bottom: -80%;
                     background: #fdfdfd;
@@ -291,7 +291,8 @@
                 }
                 .bookmarks{
                     position:absolute; 
-                    top:6%; 
+                    top:50px; 
+                    left:70px;
                     font-size:35px;   
                     color:#888888;
                     -moz-user-select: none;
@@ -303,9 +304,10 @@
                 }
                 .navline{
                     position:absolute; 
-                    width: 100px;
-                    height: 3px;
-                    top:15%; 
+                    left:50px;
+                    width: 5px;
+                    height: 35px;
+                    top:50px; 
                     background: #c26363;
                     border-radius: 3px;
                     -moz-user-select: none;
@@ -321,7 +323,6 @@
                     height: 77%;
                     bottom:3%; 
                     text-align: left;
-                    overflow: scroll;
                     -moz-user-select: none;
                     -o-user-select:none;
                     -khtml-user-select:none;
@@ -488,7 +489,7 @@
                     -webkit-backdrop-filter: blur(50px);
                     backdrop-filter: blur(5px);
                 }
-                @supports (-webkit-backdrop-filter: blur(5px)) or (backdrop-filter:  blur(5px)){
+                @supports (-webkit-backdrop-filter: blur(5px)) or (backdrop-filter: blur(5px)){
                     .blur{
                     opacity: 0;
                     transition: all 0.3s;
@@ -499,13 +500,11 @@
                     -webkit-backdrop-filter: blur(5px);
                     backdrop-filter: blur(5px);
                 }
-
             }
                 .blur.active{
                     opacity: 1;
                     transition: opacity 0.3s;
                     z-index: 2;
-
                 }
                 /* 底部随机句子 */
                 .end{
@@ -608,36 +607,24 @@
     <div class="navigation">
         <p class="bookmarks">Bookmarks</p>
         <div class="navline"></div>
+
         <div class="bookmarklist">
-            <div class="listitle" onclick="showentry()">
-                <img class="entryicon" src="./arrow.png" />Entry</div>
-            <ul class="entrylist">
                 <li onclick="javascript:window.open('http://www.bilibili.com')">
                     <img class="listicon" src="./bilibili.png" />哔哩哔哩动画</li>
                 <li onclick="javascript:window.open('http://www.youtube.com')">
                     <img class="listicon" src="./youtube.png" />YouTube</li>
-                <li onclick="javascript:window.open('http://sspai.com')">
-                    <img class="listicon" src="./sspai.png" />少数派</li>
                 <li onclick="javascript:window.open('https://zh.wikipedia.org/wiki/Wikipedia:首页')">
                     <img class="listicon" src="./wiki.png" />维基百科</li>
                 <li onclick="javascript:window.open('https://fgo.wiki/w/首页')">
-                    <img class="listicon" src="./mooncell.png" />Mooncell</li>
-                <li onclick="javascript:window.open('https://thwiki.cc')">
                     <img class="listicon" src="./thwiki.png" />THBWiki</li>
                 <li onclick="javascript:window.open('http://scp-wiki-cn.wikidot.com')">
                     <img class="listicon" src="./scp.png" />SCP基金会</li>
                 <li onclick="javascript:window.open('https://www.runoob.com')">
                     <img class="listicon" src="./runoob.png" />菜鸟教程</li>
                 <li onclick="javascript:window.open('https://copymanga.site')">
-                    <img class="listicon" src="./copymanga.png" />拷贝漫画</li>
-                <li onclick="javascript:window.open('https://wallhaven.cc')">
                     <img class="listicon" src="./wallhaven.png" />Wallhaven</li>
-                <li onclick="javascript:window.open('https://www.bibgame.com')">
-                    <img class="listicon" src="./bibgame.png" />游戏年轮</li>
-            </ul>
-            <div class="listitle" onclick="showtools()">
-                <img class="toolsicon" src="./arrow.png" />Tools</div>
-            <ul class="toolslist">
+                <li onclick="javascript:window.open('https://sway.cloud.microsoft/1ESaLEE3x47BTgZC')">
+                    <img class="listicon" src="./bibgame.png" />Gamer520</li>
                 <li onclick="javascript:window.open('https://docs.craft.do')">
                     <img class="listicon" src="./craft.png" />Craft Doc</li>
                 <li onclick="javascript:window.open('https://ikuuu.eu')">
@@ -654,34 +641,18 @@
                     <img class="listicon" src="./lilycloud.png" />莉莉云</li>
                 <li onclick="javascript:window.open('https://rank.kkj.cn')">
                     <img class="listicon" src="./kkjtt.png" />快科技天梯</li>
-            </ul>
-            <div class="listitle" onclick="showacg()">
-                <img class="acgicon" src="./arrow.png" />ACG</div>
-            <ul class="acglist">
                 <li onclick="javascript:window.open('https://bbs.acgrip.com')">
                     <img class="listicon" src="./acgrip.png" />Anime字幕论坛</li>
                 <li onclick="javascript:window.open('https://bgm.tv')">
                     <img class="listicon" src="./bangumi.png" />Bangumi番组计划</li>
-                <li onclick="javascript:window.open('https://nyaa.si')">
-                    <img class="listicon" src="./nyaa.png" />Nyaa</li>
                 <li onclick="javascript:window.open('https://www.dmhy.org')">
                     <img class="listicon" src="./dmhy.png" />动漫花园</li>
                 <li onclick="javascript:window.open('https://mikanani.me')">
                     <img class="listicon" src="./mikan.png" />蜜柑计划</li>
-                <li onclick="javascript:window.open('https://acg.rip')">
-                    <img class="listicon" src="./acg.rip.png" />ACG.RIP</li>
-            </ul>
-            <div class="listitle" onclick="showr18()">
-                <img class="r18icon" src="./arrow.png" />R18</div>
-            <ul class="r18list">
                 <li onclick="javascript:window.open('https://gelbooru.com')">
                     <img class="listicon" src="./gelbooru.png" />Gelbooru</li>
-                <li onclick="javascript:window.open('https://www.azure-gallery.net')">
-                    <img class="listicon" src="./souten.png" />苍天画廊</li>
                 <li onclick="javascript:window.open('https://blog.reimu.net')">
                     <img class="listicon" src="./lmys.png" />灵梦御所</li>
-                <li onclick="javascript:window.open('https://www.hacg.me')">
-                    <img class="listicon" src="./ruri.png" />琉璃神社</li>
                 <li onclick="javascript:window.open('https://www.iwara.tv')">
                     <img class="listicon" src="./iwara.png" />Iwara</li>
                 <li onclick="javascript:window.open('https://ecchi.iwara.tv')">
@@ -690,6 +661,7 @@
                     <img class="listicon" src="./dlsite.png" />DLsite</li>
             </ul>
         </div>
+
     </div>
     <!-- 面板按钮 -->
     <div class="toggle">
@@ -718,34 +690,34 @@
     <!-- 二级菜单展示 -->
     <script>
         function showentry() {
-    var entryicon = document.querySelector(".entryicon");
-    entryicon.classList.toggle("rotate");
-    var entrylist = document.querySelector(".entrylist");
-    entrylist.classList.toggle("show");
+            var entryicon = document.querySelector(".entryicon");
+            entryicon.classList.toggle("rotate");
+            var entrylist = document.querySelector(".entrylist");
+            entrylist.classList.toggle("show");
 }
 </script>
     <script>
         function showtools() {
-    var toolsicon = document.querySelector(".toolsicon");
-    toolsicon.classList.toggle("rotate");
-    var toolslist = document.querySelector(".toolslist");
-    toolslist.classList.toggle("show");
+            var toolsicon = document.querySelector(".toolsicon");
+            toolsicon.classList.toggle("rotate");
+            var toolslist = document.querySelector(".toolslist");
+            toolslist.classList.toggle("show");
 }
 </script>
     <script>
         function showacg() {
-    var acgicon = document.querySelector(".acgicon");
-    acgicon.classList.toggle("rotate");
-    var acglist = document.querySelector(".acglist");
-    acglist.classList.toggle("show");
+            var acgicon = document.querySelector(".acgicon");
+            acgicon.classList.toggle("rotate");
+            var acglist = document.querySelector(".acglist");
+            acglist.classList.toggle("show");
 }
 </script>
     <script>
         function showr18() {
-    var r18icon = document.querySelector(".r18icon");
-    r18icon.classList.toggle("rotate");
-    var r18list = document.querySelector(".r18list");
-    r18list.classList.toggle("show");
+            var r18icon = document.querySelector(".r18icon");
+            r18icon.classList.toggle("rotate");
+            var r18list = document.querySelector(".r18list");
+            r18list.classList.toggle("show");
 }
 </script>
     <!-- 底部随机句子 -->
@@ -756,7 +728,7 @@
         var a = Math.random() + ""
     var rand1 = a.charAt(5)
     quotes = new Array
-    quotes[1] = "God's in his heaven, all's right with the world."
+    quotes[1] = "All those moments will be lost in time,like tears in rain."
     quotes[2] = "Der Gott ist tot."
     quotes[3] = "Veni Vidi Vici."
     quotes[4] = "Cogito, ergo sum."
@@ -764,8 +736,8 @@
     quotes[6] = "C'est la vie."
     quotes[7] = "L'enfer, c'est les autres."
     quotes[8] = "Was macht mich nicht umbringt,macht mich stärker."
-    quotes[9] = "Sei alles Wirkliche vernünftig und alles Vernünftige wirklich."
-    quotes[0] = "Wenn du lange in einen Abgrund blickst, blickt der Abgrund auch in dich hinein."
+    quotes[9] = "God's in his heaven, all's right with the world."
+    quotes[0] = "Wenn du lange in einen Abgrund blickst,blickt der Abgrund auch in dich hinein."
     var quote = quotes[rand1]
     $(".end").html(quote);
 </script>
@@ -773,7 +745,7 @@
     <div class="searchbox">
         <!-- 输入框和搜索脚本调用 -->
         <div>
-            <input class="keyword" type="text" autocomplete="off" onkeydown="search()" placeholder="search" />
+            <input class="keyword" type="text" autocomplete="off" placeholder="search" />
         </div>
         <!-- 搜索图标 -->
         <img class="icon searchicon" src="./search.png" alt="search" />
