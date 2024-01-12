@@ -50,9 +50,9 @@
                 /* 左上角Logo */
                 .logo{
                     position:absolute; 
-                    left:45px; 
+                    left:40px; 
                     top:45px;         
-                    width:44px; 
+                    width:64px; 
                     height:64px;   
                     border:0px;   
                     -moz-user-select: none;
@@ -241,7 +241,7 @@
                     user-select:none;
                 }
                 .icon:hover{
-                    filter: brightness(90%) drop-shadow(0 0 2px #bbbbbb);
+                    filter: brightness(110%) drop-shadow(0 0 2px #cccccc);
                 }
                 .searchicon{
                     position:relative; 
@@ -249,27 +249,26 @@
                     height: 31px;
                     z-index:1;
                     left:95%; 
-                    bottom:50px;
+                    bottom:45px;
                 }
                 .baiduicon{
                     position:absolute; 
-                    width: 31px;
-                    height: 33px;
+                    width: 32px;
+                    height: 32px;
                     left:50%; 
                     top:0%;         
                 }
                 .googleicon{
                     position:absolute; 
-                    width: 33px;
-                    height: 33px;
+                    width: 32px;
+                    height: 32px;
                     left:35%; 
-                    top:0%;            
-                    filter: brightness(100%);     
+                    top:0%;               
                 }
                 .bingicon{
                     position:absolute; 
-                    width: 27px;
-                    height: 33px;
+                    width: 32px;
+                    height: 32px;
                     left:65%; 
                     top:0%;            
                 }
@@ -278,7 +277,7 @@
                     position: absolute;
                     width: 50%;
                     height: 80%;
-                    bottom: -80%;
+                    bottom: -85%;
                     background: #fdfdfd;
                     display: flex;
                     text-align: center;
@@ -751,7 +750,7 @@
         <img class="icon searchicon" src="./search.png" alt="search" />
         <!-- 引擎切换图标 -->
         <div class="switchbar">
-            <img class="icon baiduicon" src="./baidu.png" alt="baidu" style="filter: brightness(75%);" />
+            <img class="icon baiduicon" src="./baidu.png" alt="baidu" style="filter: brightness(110%) drop-shadow(0 0 2px #aaaaaa);" />
             <img class="icon googleicon" src="./google.png" alt="google" />
             <img class="icon bingicon" src="./bing.png" alt="bing" />
         </div>
@@ -778,7 +777,7 @@
     <script class="switchgoogle">
         $(".googleicon").click(function(){
                     engine = "https://www.google.com/search?q=";
-                    document.querySelector('.googleicon').style.filter = "brightness(75%)";
+                    document.querySelector('.googleicon').style.filter = "brightness(110%) drop-shadow(0 0 2px #aaaaaa)";
                     document.querySelector('.baiduicon').style.filter = "";
                     document.querySelector('.bingicon').style.filter = "";
                     });
@@ -787,7 +786,7 @@
     <script class="switchbaidu">
         $(".baiduicon").click(function(){
                     engine = "https://www.baidu.com/s?wd=";
-                    document.querySelector('.baiduicon').style.filter = "brightness(75%)";
+                    document.querySelector('.baiduicon').style.filter = "brightness(110%) drop-shadow(0 0 2px #aaaaaa)";
                     document.querySelector('.googleicon').style.filter = "";
                     document.querySelector('.bingicon').style.filter = "";
                     });
@@ -796,7 +795,7 @@
     <script class="switchbing">
         $(".bingicon").click(function(){
                     engine = "https://www.bing.com/search?q=";
-                    document.querySelector('.bingicon').style.filter = "brightness(75%)";
+                    document.querySelector('.bingicon').style.filter = "brightness(110%) drop-shadow(0 0 2px #aaaaaa)";
                     document.querySelector('.baiduicon').style.filter = "";
                     document.querySelector('.googleicon').style.filter = "";
                     });
