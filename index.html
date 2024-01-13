@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Palzs HP</title>
     <!-- 标签页小图标 -->
-    <link rel="shortcut icon" href="./favicon.png" type="image/x-ico" />
+    <link rel="shortcut icon" href="./favicon.svg" type="image/x-ico" />
     <style type="text/css">
         /* 主体部分 */
                 body{
@@ -318,8 +318,8 @@
                 }
                 .bookmarklist{
                     display: grid;
-                    grid-column-gap: 35px;
-                    grid-row-gap: 35px;
+                    grid-column-gap: 48px;
+                    grid-row-gap: 48px;
                     justify-items: center;
                     align-items: center;
                     grid-template-columns: repeat(6, 1fr);
@@ -338,8 +338,8 @@
                 .item{
                     width: 100%;
                     height: 100%;
-                    background: #fdfdfd;
-                    box-shadow: 0 0px 5px rgba(0,0,0,0.2);
+                    background: #ffffff;
+                    box-shadow: 0 0px 10px rgba(0,0,0,0.2);
                     border-radius: 7px;
                     text-align: center;
                     position:relative;
@@ -353,18 +353,19 @@
                 }
                 .itemname{
                     width: 100%;
-                    bottom:5px;
-                    font-size:15px;  
+                    bottom:-24px;
+                    font-size:14px;  
                     color:#aaaaaa;
                     position:absolute;   
                     justify-content: center;
                 }
                 .listicon {
-                    width: 48px;
-                    height: 48px;
+                    width: 60%;
+                    height: 60%;
                     position:absolute;
-                    left: calc(50% - 24px);
-                    top: calc(50% - 36px);
+                    display: block;
+                    margin-left: 20%; 
+                    margin-top: 20%; 
                 }
                 .navigation.active{
                     bottom: 10%;
@@ -463,7 +464,7 @@
     <!-- 库引入 -->
     <script src="./jquery.min.js"></script>
     <!-- 左上角Logo -->
-    <img class="logo" src="./logo.png" alt="logo" />
+    <img class="logo" src="./logo.svg" alt="logo" />
     <p class="hp1">Palzs HP</p>
     <p class="hp2">A Personal Homepage</p>
     <!-- 右上角日期 -->
@@ -533,110 +534,106 @@
         <div class="navline"></div>
         <div class="bookmarklist">
             <div class="item" onclick="javascript:window.open('http://www.bilibili.com')">
-                <img class="listicon" src="./bilibili.png" />
+                <img class="listicon" src="./bilibili.svg" />
                 <p class="itemname">BiliBili</p>
             </div>
             <div class="item" onclick="javascript:window.open('http://www.youtube.com')">
-                <img class="listicon" src="./youtube.png" />
+                <img class="listicon" src="./youtube.svg" />
                 <p class="itemname">YouTube</p>
             </div>
+            <div class="item" onclick="javascript:window.open('https://bgm.tv')">
+                <img class="listicon" src="./bangumi.svg" />
+                <p class="itemname">Bangumi</p>
+            </div>
+            <div class="item" onclick="javascript:window.open('https://bbs.acgrip.com')">
+                <img class="listicon" src="./acgrip.svg" />
+                <p class="itemname">ACG字幕</p>
+            </div>
+            <div class="item" onclick="javascript:window.open('https://mikanani.me')">
+                <img class="listicon" src="./mikan.svg" />
+                <p class="itemname">蜜柑计划</p>
+            </div>
+            <div class="item" onclick="javascript:window.open('https://www.dmhy.org')">
+                <img class="listicon" src="./dmhy.svg" />
+                <p class="itemname">动漫花园</p>
+            </div>
             <div class="item" onclick="javascript:window.open('https://zh.wikipedia.org/wiki/Wikipedia:首页')">
-                <img class="listicon" src="./wiki.png" />
+                <img class="listicon" src="./wiki.svg" />
                 <p class="itemname">维基百科</p>
             </div>
             <div class="item" onclick="javascript:window.open('https://fgo.wiki/w/首页')">
-                <img class="listicon" src="./thwiki.png" />
+                <img class="listicon" src="./mooncell.svg" />
+                <p class="itemname">MoonCell</p>
+            </div>
+            <div class="item" onclick="javascript:window.open('https://thwiki.cc')">
+                <img class="listicon" src="./thwiki.svg" />
                 <p class="itemname">THBWiki</p>
             </div>
             <div class="item" onclick="javascript:window.open('http://scp-wiki-cn.wikidot.com')">
-                <img class="listicon" src="./scp.png" />
+                <img class="listicon" src="./scp.svg" />
                 <p class="itemname">SCP基金会</p>
             </div>
+            <div class="item" onclick="javascript:window.open('https://www.2dfan.com')">
+                <img class="listicon" src="./2dfan.svg" />
+                <p class="itemname">2DFan</p>
+            </div>
             <div class="item" onclick="javascript:window.open('https://www.runoob.com')">
-                <img class="listicon" src="./runoob.png" />
+                <img class="listicon" src="./runoob.svg" />
                 <p class="itemname">菜鸟教程</p>
             </div>
-            <div class="item" onclick="javascript:window.open('https://copymanga.site')">
-                <img class="listicon" src="./wallhaven.png" />
-                <p class="itemname">Wallhaven</p>
-            </div>
-            <div class="item" onclick="javascript:window.open('https://sway.cloud.microsoft/1ESaLEE3x47BTgZC')">
-                <img class="listicon" src="./bibgame.png" />
-                <p class="itemname">Gamer520</p>
-            </div>
             <div class="item" onclick="javascript:window.open('https://docs.craft.do')">
-                <img class="listicon" src="./craft.png" />
-                <p class="itemname">Craft Doc</p>
-            </div>
-            <div class="item" onclick="javascript:window.open('https://ikuuu.eu')">
-                <img class="listicon" src="./ikuuu.png" />
-                <p class="itemname">ikuuu</p>
+                <img class="listicon" src="./craft.svg" />
+                <p class="itemname">Craft</p>
             </div>
             <div class="item" onclick="javascript:window.open('https://judes.me/lrc_editor')">
-                <img class="listicon" src="./lrceditor.png" />
+                <img class="listicon" src="./lrceditor.svg" />
                 <p class="itemname">LRC Editor</p>
             </div>
             <div class="item" onclick="javascript:window.open('https://mail.qq.com')">
-                <img class="listicon" src="./qqmail.png" />
+                <img class="listicon" src="./qqmail.svg" />
                 <p class="itemname">QQ邮箱</p>
             </div>
             <div class="item" onclick="javascript:window.open('https://pan.baidu.com')">
-                <img class="listicon" src="./baidudisk.png" />
+                <img class="listicon" src="./baidudisk.svg" />
                 <p class="itemname">百度网盘</p>
-            </div>
-            <div class="item" onclick="javascript:window.open('https://www.2dfan.com')">
-                <img class="listicon" src="./2dfan.png" />
-                <p class="itemname">2DFan</p>
             </div>
             <div class="item" onclick="javascript:window.open('https://cloud.lilywhite.cc')">
                 <img class="listicon" src="./lilycloud.png" />
                 <p class="itemname">莉莉云</p>
             </div>
-            <div class="item" onclick="javascript:window.open('https://rank.kkj.cn')">
-                <img class="listicon" src="./kkjtt.png" />
-                <p class="itemname">快科技天梯</p>
-            </div>
-            <div class="item" onclick="javascript:window.open('https://bbs.acgrip.com')">
-                <img class="listicon" src="./acgrip.png" />
-                <p class="itemname">ACG字幕</p>
-            </div>
-            <div class="item" onclick="javascript:window.open('https://bgm.tv')">
-                <img class="listicon" src="./bangumi.png" />
-                <p class="itemname">Bangumi</p>
-            </div>
-            <div class="item" onclick="javascript:window.open('https://www.dmhy.org')">
-                <img class="listicon" src="./dmhy.png" />
-                <p class="itemname">动漫花园</p>
-            </div>
-            <div class="item" onclick="javascript:window.open('https://mikanani.me')">
-                <img class="listicon" src="./mikan.png" />
-                <p class="itemname">蜜柑计划</p>
-            </div>
-            <div class="item" onclick="javascript:window.open('https://gelbooru.com')">
-                <img class="listicon" src="./gelbooru.png" />
-                <p class="itemname">Gelbooru</p>
+            <div class="item" onclick="javascript:window.open('https://copymanga.site')">
+                <img class="listicon" src="./wallhaven.svg" />
+                <p class="itemname">Wallhaven</p>
             </div>
             <div class="item" onclick="javascript:window.open('https://blog.reimu.net')">
-                <img class="listicon" src="./lmys.png" />
+                <img class="listicon" src="./lmys.svg" />
                 <p class="itemname">灵梦御所</p>
             </div>
+            <div class="item" onclick="javascript:window.open('https://gelbooru.com')">
+                <img class="listicon" src="./gelbooru.svg" />
+                <p class="itemname">Gelbooru</p>
+            </div>
             <div class="item" onclick="javascript:window.open('https://www.iwara.tv')">
-                <img class="listicon" src="./iwara.png" />
+                <img class="listicon" src="./iwara.svg" />
                 <p class="itemname">Iwara</p>
             </div>
-            <div class="item" onclick="javascript:window.open('https://ecchi.iwara.tv')">
-                <img class="listicon" src="./iwara.png" />
-                <p class="itemname">Ecchi Iwara</p>
-            </div>
             <div class="item" onclick="javascript:window.open('https://www.dlsite.com')">
-                <img class="listicon" src="./dlsite.png" />
+                <img class="listicon" src="./dlsite.svg" />
                 <p class="itemname">DLsite</p>
+            </div>
+            <div class="item" onclick="javascript:window.open('https://www.gamer520.com')">
+                <img class="listicon" src="./520.svg" />
+                <p class="itemname">Gamer520</p>
+            </div>
+            <div class="item" onclick="javascript:window.open('https://steamzg.com')">
+                <img class="listicon" src="./steamzg.png" />
+                <p class="itemname">小叽资源</p>
             </div>
         </div>
     </div>
     <!-- 面板按钮 -->
     <div class="toggle">
-        <img src="./arrow.png" width="32" height="19" alt="arrow" />
+        <img src="./arrow.svg" width="32" height="19" alt="arrow" />
     </div>
     <!-- 背景模糊板 -->
     <div class="blur"></div>
@@ -719,12 +716,12 @@
             <input class="keyword" type="text" autocomplete="off" placeholder="search" />
         </div>
         <!-- 搜索图标 -->
-        <img class="icon searchicon" src="./search.png" alt="search" />
+        <img class="icon searchicon" src="./search.svg" alt="search" />
         <!-- 引擎切换图标 -->
         <div class="switchbar">
-            <img class="icon baiduicon" src="./baidu.png" alt="baidu" style="filter: brightness(110%) drop-shadow(0 0 2px #aaaaaa);" />
-            <img class="icon googleicon" src="./google.png" alt="google" />
-            <img class="icon bingicon" src="./bing.png" alt="bing" />
+            <img class="icon baiduicon" src="./baidu.svg" alt="baidu" style="filter: brightness(110%) drop-shadow(0 0 2px #aaaaaa);" />
+            <img class="icon googleicon" src="./google.svg" alt="google" />
+            <img class="icon bingicon" src="./bing.svg" alt="bing" />
         </div>
     </div>
     <!-- 搜索脚本 -->
