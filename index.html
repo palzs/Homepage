@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Palzs HP</title>
     <!-- 标签页小图标 -->
-    <link rel="shortcut icon" href="./favicon.svg" type="image/x-ico" />
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-ico" />
     <style type="text/css">
         /* 主体部分 */
                 body{
@@ -229,7 +229,6 @@
                 }
                 /* 图标 */
                 .icon{
-                    border: 0px;
                     transform: translate(-50%);
                     cursor: pointer;
                     transition: all 0.5s;
@@ -241,7 +240,7 @@
                     user-select:none;
                 }
                 .icon:hover{
-                    filter: brightness(110%) drop-shadow(0 0 2px #cccccc);
+                    filter: drop-shadow(0 0 5px #f48181);
                 }
                 .searchicon{
                     position:relative; 
@@ -598,7 +597,7 @@
                 <p class="itemname">百度网盘</p>
             </div>
             <div class="item" onclick="javascript:window.open('https://cloud.lilywhite.cc')">
-                <img class="listicon" src="./svg/lilycloud.png" />
+                <img class="listicon" src="./svg/lilycloud.svg" />
                 <p class="itemname">莉莉云</p>
             </div>
             <div class="item" onclick="javascript:window.open('https://copymanga.site')">
@@ -610,7 +609,7 @@
                 <p class="itemname">灵梦御所</p>
             </div>
             <div class="item" onclick="javascript:window.open('https://hxcy.moe')">
-                <img class="listicon" src="./svg/lmys.svg" />
+                <img class="listicon" src="./svg/hxcy.svg" />
                 <p class="itemname">幻想次元</p>
             </div>
             <div class="item" onclick="javascript:window.open('https://gelbooru.com')">
@@ -634,7 +633,7 @@
                 <p class="itemname">Gamer520</p>
             </div>
             <div class="item" onclick="javascript:window.open('https://steamzg.com')">
-                <img class="listicon" src="./svg/steamzg.png" />
+                <img class="listicon" src="./svg/steamzg.svg" />
                 <p class="itemname">小叽资源</p>
             </div>
         </div>
@@ -727,7 +726,7 @@
         <img class="icon searchicon" src="./svg/search.svg" alt="search" />
         <!-- 引擎切换图标 -->
         <div class="switchbar">
-            <img class="icon baiduicon" src="./svg/baidu.svg" alt="baidu" style="filter: brightness(110%) drop-shadow(0 0 2px #aaaaaa);" />
+            <img class="icon baiduicon" src="./svg/baidu.svg" alt="baidu" style="filter:drop-shadow(0 0 5px #f48181);" />
             <img class="icon googleicon" src="./svg/google.svg" alt="google" />
             <img class="icon bingicon" src="./svg/bing.svg" alt="bing" />
         </div>
@@ -754,7 +753,7 @@
     <script class="switchgoogle">
         $(".googleicon").click(function(){
                     engine = "https://www.google.com/search?q=";
-                    document.querySelector('.googleicon').style.filter = "brightness(110%) drop-shadow(0 0 2px #aaaaaa)";
+                    document.querySelector('.googleicon').style.filter = "drop-shadow(0 0 5px #f48181)";
                     document.querySelector('.baiduicon').style.filter = "";
                     document.querySelector('.bingicon').style.filter = "";
                     });
@@ -763,7 +762,7 @@
     <script class="switchbaidu">
         $(".baiduicon").click(function(){
                     engine = "https://www.baidu.com/s?wd=";
-                    document.querySelector('.baiduicon').style.filter = "brightness(110%) drop-shadow(0 0 2px #aaaaaa)";
+                    document.querySelector('.baiduicon').style.filter = "drop-shadow(0 0 5px #f48181)";
                     document.querySelector('.googleicon').style.filter = "";
                     document.querySelector('.bingicon').style.filter = "";
                     });
@@ -772,7 +771,7 @@
     <script class="switchbing">
         $(".bingicon").click(function(){
                     engine = "https://www.bing.com/search?q=";
-                    document.querySelector('.bingicon').style.filter = "brightness(110%) drop-shadow(0 0 2px #aaaaaa)";
+                    document.querySelector('.bingicon').style.filter = "drop-shadow(0 0 5px #f48181)";
                     document.querySelector('.baiduicon').style.filter = "";
                     document.querySelector('.googleicon').style.filter = "";
                     });

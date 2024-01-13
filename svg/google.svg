@@ -1,14 +1,122 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg width="100%" height="100%" viewBox="0 0 34 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
-    <g transform="matrix(1,0,0,1,-1616.4,-528.016)">
-        <g transform="matrix(1,0,0,1,787.075,0)">
-            <g id="path12" transform="matrix(0.476829,0,0,0.464576,829.776,528.422)">
-                <path d="M33.979,30.655l34.102,-0l0.206,1.089c0.324,1.714 0.494,3.741 0.494,5.936c-0,7.37 -2.048,16.469 -8.537,22.965c-6.286,6.54 -14.308,10.05 -24.944,10.05c-19.706,0 -36.251,-16.079 -36.251,-35.785c0,-19.706 16.545,-35.785 36.251,-35.785c10.898,-0 18.66,4.277 24.493,9.85l1.007,0.963l-8.511,8.511l-0.913,-0.856c-3.82,-3.583 -8.996,-6.368 -16.086,-6.368c-13.12,0 -23.389,10.565 -23.389,23.685c-0,13.12 10.269,23.685 23.389,23.685c8.514,-0 13.369,-3.402 16.475,-6.509c2.21,-2.209 3.717,-5.275 4.474,-9.34l-22.26,0.01l0,-12.101Z" style="fill:url(#_Linear1);"/>
+<svg width="100%" height="100%" viewBox="0 0 142 142" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-1742.15,-1964.77)">
+        <g id="clipboard1.svg" transform="matrix(4.16667,0,0,4.16667,1428.19,2437.68)">
+            <g transform="matrix(1,0,0,1,-96.5,-96.5)">
+                <clipPath id="_clip1">
+                    <rect x="0" y="0" width="193" height="193"/>
+                </clipPath>
+                <g clip-path="url(#_clip1)">
+                    <g id="_-bdbdbdbd" serif:id="#bdbdbdbd">
+                    </g>
+                    <g id="_-e5e5e5e5" serif:id="#e5e5e5e5">
+                    </g>
+                    <g id="_-42424243" serif:id="#42424243">
+                    </g>
+                    <g id="_-c5afb2ff" serif:id="#c5afb2ff">
+                    </g>
+                    <g id="_-e1caabff" serif:id="#e1caabff">
+                    </g>
+                    <g id="_-f7e6a6ff" serif:id="#f7e6a6ff">
+                    </g>
+                    <g id="_-f0d5b8ff" serif:id="#f0d5b8ff">
+                    </g>
+                    <g id="_-f8e5a5ff" serif:id="#f8e5a5ff">
+                    </g>
+                    <g id="_-e4cc91ff" serif:id="#e4cc91ff">
+                    </g>
+                    <g id="_-e4d191ff" serif:id="#e4d191ff">
+                    </g>
+                    <g id="_-fff2d5ff" serif:id="#fff2d5ff">
+                    </g>
+                    <g id="_-d9b77eff" serif:id="#d9b77eff">
+                    </g>
+                    <g id="_-fdfcf1ff" serif:id="#fdfcf1ff">
+                    </g>
+                    <g id="_-daac87ff" serif:id="#daac87ff">
+                    </g>
+                    <g id="_-e1c9a1ff" serif:id="#e1c9a1ff">
+                    </g>
+                    <g id="_-fffce8ff" serif:id="#fffce8ff">
+                    </g>
+                    <g id="_-f1d29cff" serif:id="#f1d29cff">
+                    </g>
+                    <g id="_-f2d79eff" serif:id="#f2d79eff">
+                    </g>
+                    <g id="_-d7ba80ff" serif:id="#d7ba80ff">
+                    </g>
+                    <g id="_-e3c08fff" serif:id="#e3c08fff">
+                    </g>
+                    <g id="_-f2dc9fff" serif:id="#f2dc9fff">
+                    </g>
+                    <g id="_-f2dda0ff" serif:id="#f2dda0ff">
+                    </g>
+                    <g id="_-eac0b1ff" serif:id="#eac0b1ff">
+                    </g>
+                    <g id="_-f1de9dff" serif:id="#f1de9dff">
+                    </g>
+                    <g id="_-dec5a9ff" serif:id="#dec5a9ff">
+                    </g>
+                    <g id="_-9d5e51ff" serif:id="#9d5e51ff">
+                    </g>
+                    <g id="_-fefbedff" serif:id="#fefbedff">
+                    </g>
+                    <g id="_-342b29ff" serif:id="#342b29ff">
+                    </g>
+                    <g id="_-a35044ff" serif:id="#a35044ff">
+                    </g>
+                    <g id="_-d8b884ff" serif:id="#d8b884ff">
+                    </g>
+                    <g id="_-f2d69eff" serif:id="#f2d69eff">
+                    </g>
+                    <g id="_-f1dbccff" serif:id="#f1dbccff">
+                    </g>
+                    <g id="_-936d6aff" serif:id="#936d6aff">
+                    </g>
+                    <g id="_-f1d89eff" serif:id="#f1d89eff">
+                    </g>
+                    <g id="_-e8be9dff" serif:id="#e8be9dff">
+                    </g>
+                    <g id="_-ccaca7ff" serif:id="#ccaca7ff">
+                    </g>
+                    <g id="_-f3d7cbff" serif:id="#f3d7cbff">
+                    </g>
+                    <g id="_-fefcf9ff" serif:id="#fefcf9ff">
+                    </g>
+                    <g id="_-dbd2d9ff" serif:id="#dbd2d9ff">
+                    </g>
+                    <g id="_-d9c9adff" serif:id="#d9c9adff">
+                    </g>
+                    <g id="_-fdf8eaff" serif:id="#fdf8eaff">
+                    </g>
+                    <g id="_-f2d0c0ff" serif:id="#f2d0c0ff">
+                    </g>
+                    <g id="_-fdfae8ff" serif:id="#fdfae8ff">
+                    </g>
+                    <g id="_-f3d19fff" serif:id="#f3d19fff">
+                    </g>
+                    <g id="_-dcd4dbff" serif:id="#dcd4dbff">
+                    </g>
+                    <g id="_-c8b0acff" serif:id="#c8b0acff">
+                    </g>
+                </g>
+            </g>
+        </g>
+        <g id="google.svg" transform="matrix(4.16667,0,0,4.16667,1812.99,2035.6)">
+            <g transform="matrix(1,0,0,1,-17,-17)">
+                <clipPath id="_clip2">
+                    <rect x="0" y="0" width="34" height="34"/>
+                </clipPath>
+                <g clip-path="url(#_clip2)">
+                    <g transform="matrix(0.476829,0,0,0.464576,0.451,0.406)">
+                        <path d="M33.979,30.655L68.081,30.655L68.287,31.744C68.611,33.458 68.781,35.485 68.781,37.68C68.781,45.05 66.733,54.149 60.244,60.645C53.958,67.185 45.936,70.695 35.3,70.695C15.594,70.695 -0.951,54.616 -0.951,34.91C-0.951,15.204 15.594,-0.875 35.3,-0.875C46.198,-0.875 53.96,3.402 59.793,8.975L60.8,9.938L52.289,18.449L51.376,17.593C47.556,14.01 42.38,11.225 35.29,11.225C22.17,11.225 11.901,21.79 11.901,34.91C11.901,48.03 22.17,58.595 35.29,58.595C43.804,58.595 48.659,55.193 51.765,52.086C53.975,49.877 55.482,46.811 56.239,42.746L33.979,42.756L33.979,30.655Z" style="fill:url(#_Linear3);"/>
+                    </g>
+                </g>
             </g>
         </g>
     </g>
     <defs>
-        <linearGradient id="_Linear1" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-58.7213,60.27,-58.7213,-60.27,63.3845,5.54865)"><stop offset="0" style="stop-color:rgb(122,169,247);stop-opacity:1"/><stop offset="1" style="stop-color:rgb(167,207,255);stop-opacity:1"/></linearGradient>
+        <linearGradient id="_Linear3" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(52.3722,-48.8486,47.5933,53.7535,8.42781,58.7866)"><stop offset="0" style="stop-color:rgb(215,138,141);stop-opacity:1"/><stop offset="0.53" style="stop-color:rgb(209,97,90);stop-opacity:1"/><stop offset="1" style="stop-color:rgb(207,82,71);stop-opacity:1"/></linearGradient>
     </defs>
 </svg>
