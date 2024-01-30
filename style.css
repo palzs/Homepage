@@ -15,7 +15,7 @@
     /* 字体 */
     @font-face { 
         font-family: 'Questrial';  
-        src: local('./Questrial.ttf') format('truetype'); 
+        src: url('./Questrial.ttf') format('truetype'); 
     } 
     
     /* 标准化兼容 */
