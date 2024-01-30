@@ -25,10 +25,10 @@
         box-sizing: border-box;
     }
 
-    :input-placeholder {
+    ::-webkit-input-placeholder {
         color: #dddddd;
     }
-    
+
     /* 取消文本下划线 */
     a {
         text-decoration:none
@@ -202,7 +202,7 @@
         outline-style:none;
         font-size:150%;
         font-family: 'Questrial'; 
-        color:#dddddd;
+        color:#aaaaaa;
         border: 0px;
         position: relative;
         left: 47%;
