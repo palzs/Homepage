@@ -1,6 +1,6 @@
 /* 全局 */
 
-    /* 页面主体 */
+    /* 页面 */
     body {
         display: flex;
         justify-content: center;
@@ -10,6 +10,7 @@
         background: #fafafa;
         overflow: hidden;
         font-family:'Questrial',sans-serif;
+        user-select:none;
     }
 
     /* 字体 */
@@ -25,6 +26,7 @@
         box-sizing: border-box;
     }
 
+    /* 输入框预置文本颜色 */
     ::-webkit-input-placeholder {
         color: #dddddd;
     }
@@ -54,86 +56,23 @@
     }
 
     
-/* 头部 */
+/* 主体 */
 
     /* LOGO */
     .logo{
         position:absolute; 
         left:50%; 
-        top:15%;         
+        top:-100px;         
         width:188px; 
         height:60px;   
         border:0px;   
         transform: translate(-50%);
-        user-select:none;
     }
-
-    /* 链接区 */
-    .linkbox{
-        width: 250px;
-        height: 80px;
-        outline-style:none;
-        border: 0px;
-        position: absolute;
-        right: 100px;
-        top: 30px;
-        user-select:none;
-    }
-        /* 链接 */
-        .link{
-            position:absolute; 
-            top:0%; 
-            color:#aaaaaa;      
-            font-size:35px;
-            transition: all 0.5s;
-        }
-        .link1{
-            color:#b0ccdf;
-            left:0%;
-        }
-        .link2{
-            color:#d7cbb6; 
-            left:52%;
-        }
-        .link3{
-            color:#d4b6d7; 
-            left:100%;
-        }
-        /* 链接特效 */
-        .link1:hover{
-            filter: drop-shadow(0 0 2px #b0ccdf);
-        }
-        .link2:hover{ 
-            filter: drop-shadow(0 0 2px #d7cbb6);
-        }
-        .link3:hover{
-            filter: drop-shadow(0 0 2px #d4b6d7);
-        }
-        /* 分隔线 */
-        .bar{
-            position:absolute; 
-            background-color:#aaaaaa;  
-            border-radius: 3px;
-        }
-        .bar1{
-            width:3px;
-            height:20px;
-            left:41%; 
-            top:10%; 
-        }
-        .bar2{
-            width:3px;
-            height:20px;
-            left:89%; 
-            top:10%; 
-        }
-
-/* 中部 */
 
     /* 搜索框 */
     .searchbox{
-        width: 700px;
-        height: 65px;
+        width: 600px;
+        height: 55px;
         background-color:#ffffff;
         border: 0px;
         border-radius: 10px;
@@ -146,88 +85,66 @@
 
     /* 输入框 */
     .keyword{
-        width: 600px;
-        height: 60px;
+        width: 500px;
+        height: 50px;
         outline-style:none;
         font-size:150%;
         font-family: 'Questrial'; 
         color:#aaaaaa;
         border: 0px;
         position: relative;
-        left: 47%;
+        left: 46%;
         top: 2px;
         transform: translate(-50%);
     }
-    /* 图标栏 */
-    .switchbar{
-        width: 750px;
-        height: 40px;
-        border: 0px;
-        position: relative;
-        left: 50%;
-        top: 15px;
-        transform: translate(-50%);
-    }
-    /* 图标 */
-    .icon{
+    
+    /* 搜索图标 */
+    .searchicon{
+        position:relative; 
+        width: 28px;
+        height: 28px;
+        left:95%; 
+        bottom:67%;
         transform: translate(-50%);
         cursor: pointer;
         transition: all 0.5s;
-
-        user-select:none;
     }
-    .icon:hover{
+    .searchicon:hover{
         filter: drop-shadow(0 0 5px #f48181);
     }
-    .searchicon{
-        position:relative; 
-        width: 31px;
-        height: 31px;
-        z-index:1;
-        left:95%; 
-        bottom:45px;
-    }
-    .baiduicon{
-        position:absolute; 
-        width: 32px;
-        height: 32px;
-        left:50%; 
-        top:0%;         
-    }
-    .googleicon{
-        position:absolute; 
-        width: 32px;
-        height: 32px;
-        left:35%; 
-        top:0%;               
-    }
-    .bingicon{
-        position:absolute; 
-        width: 32px;
-        height: 32px;
-        left:65%; 
-        top:0%;            
-    }
-    /* 面板 */
-    .bookmarklist{
+
+    /* Grid */
+    .box{
         display: grid;
-        grid-column-gap: 48px;
-        grid-row-gap: 48px;
         justify-items: center;
         align-items: center;
-        grid-template-columns: repeat(6, 1fr);
-        grid-template-rows: repeat(5, 1fr);
         position:absolute; 
-        width: 100%;
-        height: 500px;
-        left:50%; 
-        top:200px; 
-        transform: translate(-50%);
-        user-select:none;        
+        transform: translate(-50%);      
     }
+    /* 引擎Grid */
+    .iconbox{
+        grid-template-columns: repeat(3, 1fr);
+        width: 55%;
+        height: 48px;
+        left:50%; 
+        top:75px; 
+    }
+    /* 书签Grid */
+    .favbox{
+        grid-column-gap: 48px;
+        grid-row-gap: 48px;
+        grid-template-columns: repeat(9, 1fr);
+        width: 150%;
+        height: 250px;
+        left:50%; 
+        top:150px; 
+    }
+
+    /* Grid项目 */
     .item{
         width: 100%;
         height: 100%;
+        aspect-ratio: 1;
         background: #ffffff;
         box-shadow: 0 0px 10px rgba(0,0,0,0.2);
         border-radius: 7px;
@@ -235,12 +152,16 @@
         position:relative;
         cursor: pointer;
     }
+
+    /* Grid项目特效 */
     .item:hover{
         filter: brightness(90%) ;
     }
     .item:active{
         filter: brightness(70%) ;
     }
+
+    /* Grid项目名称 */
     .itemname{
         width: 100%;
         bottom:-24px;
@@ -249,17 +170,28 @@
         position:absolute;   
         justify-content: center;
     }
-    .listicon {
+
+    /* 引擎Grid项目 */
+    .iconitem{
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        position:relative;
+    }
+
+    /* Grid图标 */
+    .itemicon {
         width: 60%;
         height: 60%;
         position:absolute;
         display: block;
         top: 50%;            
         left: 50%;            
-        transform: translate(-50%, -50%);        
+        transform: translate(-50%, -50%);   
+        cursor: pointer;
     }
 
-    /* 底部随机句子 */
+    /* 底部 */
     .end{
         width: 100%;
         height: 58px;
@@ -270,5 +202,4 @@
         color:#bbbbbb;      
         font-size:24px;
         text-align:center;
-        user-select:none;
     }
