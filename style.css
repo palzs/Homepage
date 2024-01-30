@@ -1,0 +1,420 @@
+
+    /* 全局 */
+
+        /* 页面主体 */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            min-height: 100vh;
+            margin: 0;
+            background: #fafafa;
+            overflow: hidden;
+            font-family:'Questrial',sans-serif;
+        }
+
+        /* 字体 */
+        @font-face { 
+            font-family: 'Questrial';  
+            src: local('./Questrial.ttf') format('truetype'); 
+        } 
+        
+        /* 标准化兼容 */
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* 取消文本下划线 */
+        a {
+            text-decoration:none
+        }
+
+        /* 选中颜色 */
+        ::selection {
+            background:#e6e6e6; 
+        }
+
+        /* 滚动条样式 */
+        ::-webkit-scrollbar {
+            width: 10px;
+            height: 0px;
+        }
+        ::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            background: #dedede;
+        }
+        ::-webkit-scrollbar-track {
+            border-radius: 10px;
+            background: #fdfdfd;
+        }
+
+        
+    /* Header */
+
+        /* 左上角Logo */
+        .logo{
+            position:absolute; 
+            left:40px; 
+            top:45px;         
+            width:64px; 
+            height:64px;   
+            border:0px;   
+            user-select:none;
+        }
+        .hp1{
+            position:absolute; 
+            left:110px; 
+            top:50px; 
+            font-size:35px;   
+            color:#aaaaaa;
+            user-select:none;      
+        }
+        .hp2{
+            position:absolute; 
+            left:110px; 
+            top:85px; 
+            font-size:18px;   
+            color:#cccccc;      
+
+            user-select:none;
+        }
+        /* 右上角链接 */
+        .linkbox{
+            width: 250px;
+            height: 80px;
+            outline-style:none;
+            font-size:150%;
+            border: 0px;
+            position: absolute;
+            right: 250px;
+            top: 50px;
+            z-index: 1;
+
+            user-select:none;
+        }
+        .bar{
+            position:absolute; 
+            background-color:#aaaaaa;  
+            border-radius: 3px;
+        }
+        .bar1{
+            width:3px;
+            height:20px;
+            left:41%; 
+            top:10%; 
+        }
+        .bar2{
+            width:3px;
+            height:20px;
+            left:89%; 
+            top:10%; 
+        }
+        .link{
+            position:absolute; 
+            top:0%; 
+            color:#aaaaaa;      
+            font-size:35px;
+            transition: all 0.5s;
+        }
+        .link1{
+            color:#b0ccdf;
+            left:0%;
+        }
+        .link2{
+            color:#d7cbb6; 
+            left:52%;
+        }
+        .link3{
+            color:#d4b6d7; 
+            left:100%;
+        }
+        .link1:hover{
+            filter: drop-shadow(0 0 2px #b0ccdf);
+        }
+        .link2:hover{ 
+            filter: drop-shadow(0 0 2px #d7cbb6);
+        }
+        .link3:hover{
+            filter: drop-shadow(0 0 2px #d4b6d7);
+        }
+        /* 右上角日期 */
+        .datebox{
+            position:absolute;
+            right:0px; 
+            top:35px; 
+            width: 155px;
+            height:70px;    
+            text-align:center;
+
+            user-select:none;
+        }
+        .date{
+            position:absolute;
+            color:#cccccc;  
+            left:30px; 
+            top:5%; 
+            font-size:24px;
+        }
+        .year{
+            position:absolute;
+            color:#aaaaaa;  
+            left:30px; 
+            bottom:5%; 
+            font-size:40px;
+        }
+        .datebar{
+            position:absolute; 
+            width:5px;
+            height:95%;
+            left:10%; 
+            top:0%; 
+            background-color:#c26363;  
+            border-radius: 3px;
+        }
+        /* 搜索框 */
+        .searchbox{
+            width: 700px;
+            height: 65px;
+            background-color:#ffffff;
+            border: 0px;
+            border-radius: 10px;
+            position: absolute;
+            left: 50%;
+            top: 40%;
+            transform: translate(-50%);
+            box-shadow: 0px 0px 7px 3px #dddddd;
+        }
+        /* 输入框 */
+        .keyword{
+            width: 600px;
+            height: 60px;
+            outline-style:none;
+            background-color:#ffffff;
+            font-size:150%;
+            font-family: 'Questrial'; 
+            color:#aaaaaa;
+            border: 0px;
+            position: relative;
+            left: 47%;
+            top: 2px;
+            transform: translate(-50%);
+        }
+        /* 图标栏 */
+        .switchbar{
+            width: 750px;
+            height: 40px;
+            border: 0px;
+            position: relative;
+            left: 50%;
+            top: 15px;
+            transform: translate(-50%);
+        }
+        /* 图标 */
+        .icon{
+            transform: translate(-50%);
+            cursor: pointer;
+            transition: all 0.5s;
+
+            user-select:none;
+        }
+        .icon:hover{
+            filter: drop-shadow(0 0 5px #f48181);
+        }
+        .searchicon{
+            position:relative; 
+            width: 31px;
+            height: 31px;
+            z-index:1;
+            left:95%; 
+            bottom:45px;
+        }
+        .baiduicon{
+            position:absolute; 
+            width: 32px;
+            height: 32px;
+            left:50%; 
+            top:0%;         
+        }
+        .googleicon{
+            position:absolute; 
+            width: 32px;
+            height: 32px;
+            left:35%; 
+            top:0%;               
+        }
+        .bingicon{
+            position:absolute; 
+            width: 32px;
+            height: 32px;
+            left:65%; 
+            top:0%;            
+        }
+        /* 面板 */
+        .navigation{
+            position: absolute;
+            width: 50%;
+            height: 80%;
+            bottom: -85%;
+            background: #fdfdfd;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            z-index: 3;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0px 15px rgba(0,0,0,0.2);
+            transition: 0.5s;
+        }
+        .bookmarks{
+            position:absolute; 
+            top:50px; 
+            left:70px;
+            font-size:35px;   
+            color:#888888;
+
+            user-select:none;      
+        }
+        .navline{
+            position:absolute; 
+            left:50px;
+            width: 5px;
+            height: 35px;
+            top:50px; 
+            background: #c26363;
+            border-radius: 3px;
+
+            user-select:none;      
+        }
+        .bookmarklist{
+            display: grid;
+            grid-column-gap: 48px;
+            grid-row-gap: 48px;
+            justify-items: center;
+            align-items: center;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            position:absolute; 
+            width: calc(100% - 100px);
+            height: 77%;
+            bottom:5%; 
+
+            user-select:none;        
+        }
+        .item{
+            width: 100%;
+            height: 100%;
+            background: #ffffff;
+            box-shadow: 0 0px 10px rgba(0,0,0,0.2);
+            border-radius: 7px;
+            text-align: center;
+            position:relative;
+            cursor: pointer;
+        }
+        .item:hover{
+            filter: brightness(90%) ;
+        }
+        .item:active{
+            filter: brightness(70%) ;
+        }
+        .itemname{
+            width: 100%;
+            bottom:-24px;
+            font-size:14px;  
+            color:#aaaaaa;
+            position:absolute;   
+            justify-content: center;
+        }
+        .listicon {
+            width: 60%;
+            height: 60%;
+            position:absolute;
+            display: block;
+            top: 50%;            
+            left: 50%;            
+            transform: translate(-50%, -50%);        
+        }
+        .navigation.active{
+            bottom: 10%;
+        }
+        /* 按钮 */
+        .toggle{
+            position: absolute;
+            bottom: 75px;
+            left: calc(50% - 16px);
+            width: 32px;
+            height: 21px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+            transform: rotate(0deg);
+            transition: all 0.5s;
+            z-index: 3;
+
+            user-select:none;
+        }
+        .toggle.active{
+            bottom: 93%;
+            transform: rotate(180deg);
+        }
+        .toggle:hover{
+            filter: brightness(90%);
+            transform: rotate(0deg) scale(1.1);
+        }
+        .toggle.active:hover{
+            filter: brightness(90%);
+            transform: rotate(180deg) scale(1.1);
+        }
+        /* 背景模糊 */
+        .blur{
+            opacity: 0;
+            transition: all 0.3s;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            position: absolute;
+            -webkit-backdrop-filter: blur(50px);
+            backdrop-filter: blur(5px);
+        }
+        @supports (-webkit-backdrop-filter: blur(5px)) or (backdrop-filter: blur(5px)){
+            .blur{
+            opacity: 0;
+            transition: all 0.3s;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            position: absolute;
+            -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+        }
+    }
+        .blur.active{
+            opacity: 1;
+            transition: opacity 0.3s;
+            z-index: 2;
+        }
+        /* 底部随机句子 */
+        .end{
+            width: 100%;
+            height: 58px;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+            bottom: 0px;
+            color:#bbbbbb;      
+            font-size:24px;
+            text-align:center;
+            z-index: 2;
+
+            user-select:none;
+        }
+        /* 附加类 */
+        .rotate {
+            transform: rotate(180deg);
+        }
+        .show {
+            height:auto;
+            opacity: 1;
+        }
