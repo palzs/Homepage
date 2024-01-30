@@ -9,190 +9,190 @@
 <body>
     <!-- 库引入 -->
     <script src="./jquery.min.js"></script>
-    
-    <!-- 左上角Logo -->
-    <img class="logo" src="./svg/logo.svg" alt="logo" />
-    <p class="hp1">Palzs HP</p>
-    <p class="hp2">A Personal Homepage</p>
-    <!-- 右上角日期 -->
-    <div class="datebox">
-        <div class="date">
-            Mar.27
+
+    <!-- 头部 -->
+
+        <!-- LOGO -->
+        <img class="logo" src="./svg/logo.svg" alt="logo" />
+        <p class="title">Palzs HP</p>
+        <p class="subtitle">A Personal Homepage</p>
+
+        <!-- 日期 -->
+        <div class="datebox">
+            <div class="date"></div>
+            <div class="year"></div>
+            <div class="datebar"></div>
         </div>
-        <div class="year">
-            2023
+
+        <!-- 链接 -->
+        <div class="linkbox">
+            <div class="bar bar1"></div>
+            <div class="bar bar2"></div>
+            <a class="link link1" href="https://drive.palzs.site/">Drive</a>
+            <a class="link link2" href="https://wiki.palzs.site/">Wiki</a>
+            <a class="link link3" href="https://blog.palzs.site/">Blog</a>
         </div>
-        <script class="monthcode">
-            var date = new Date();
+
+    <!-- 中部 -->
+
+        <!-- 搜索框 -->
+        <div class="searchbox">
+            <!-- 输入框 -->
+            <div>
+                <input class="keyword" type="text" autocomplete="off" placeholder="search" />
+            </div>
+            <!-- 搜索图标 -->
+            <img class="icon searchicon" src="./svg/search.svg" alt="search" />
+            <!-- 引擎切换图标 -->
+            <div class="switchbar">
+                <img class="icon baiduicon" src="./svg/baidu.svg" alt="baidu" style="filter:drop-shadow(0 0 5px #f48181);" />
+                <img class="icon googleicon" src="./svg/google.svg" alt="google" />
+                <img class="icon bingicon" src="./svg/bing.svg" alt="bing" />
+            </div>
+        </div>
+
+        <!-- 面板 -->
+        <div class="navigation">
+            <p class="bookmarks">Bookmarks</p>
+            <div class="navline"></div>
+            <div class="bookmarklist">
+                <div class="item" onclick="javascript:window.open('http://www.bilibili.com')">
+                    <img class="listicon" src="./svg/bilibili.svg" />
+                    <p class="itemname">BiliBili</p>
+                </div>
+                <div class="item" onclick="javascript:window.open('http://www.youtube.com')">
+                    <img class="listicon" src="./svg/youtube.svg" />
+                    <p class="itemname">YouTube</p>
+                </div>
+                <div class="item" onclick="javascript:window.open('https://bgm.tv')">
+                    <img class="listicon" src="./svg/bangumi.svg" />
+                    <p class="itemname">Bangumi</p>
+                </div>
+                <div class="item" onclick="javascript:window.open('https://bbs.acgrip.com')">
+                    <img class="listicon" src="./svg/acgrip.svg" />
+                    <p class="itemname">ACG字幕</p>
+                </div>
+                <div class="item" onclick="javascript:window.open('https://mikanani.me')">
+                    <img class="listicon" src="./svg/mikan.svg" />
+                    <p class="itemname">蜜柑计划</p>
+                </div>
+                <div class="item" onclick="javascript:window.open('https://www.dmhy.org')">
+                    <img class="listicon" src="./svg/dmhy.svg" />
+                    <p class="itemname">动漫花园</p>
+                </div>
+                <div class="item" onclick="javascript:window.open('https://zh.wikipedia.org/wiki/Wikipedia:首页')">
+                    <img class="listicon" src="./svg/wiki.svg" />
+                    <p class="itemname">维基百科</p>
+                </div>
+                <div class="item" onclick="javascript:window.open('https://fgo.wiki/w/首页')">
+                    <img class="listicon" src="./svg/mooncell.svg" />
+                    <p class="itemname">MoonCell</p>
+                </div>
+                <div class="item" onclick="javascript:window.open('https://thwiki.cc')">
+                    <img class="listicon" src="./svg/thwiki.svg" />
+                    <p class="itemname">THBWiki</p>
+                </div>
+                <div class="item" onclick="javascript:window.open('http://scp-wiki-cn.wikidot.com')">
+                    <img class="listicon" src="./svg/scp.svg" />
+                    <p class="itemname">SCP基金会</p>
+                </div>
+                <div class="item" onclick="javascript:window.open('https://www.2dfan.com')">
+                    <img class="listicon" src="./svg/2dfan.svg" />
+                    <p class="itemname">2DFan</p>
+                </div>
+                <div class="item" onclick="javascript:window.open('https://www.runoob.com')">
+                    <img class="listicon" src="./svg/runoob.svg" />
+                    <p class="itemname">菜鸟教程</p>
+                </div>
+                <div class="item" onclick="javascript:window.open('https://docs.craft.do')">
+                    <img class="listicon" src="./svg/craft.svg" />
+                    <p class="itemname">Craft</p>
+                </div>
+                <div class="item" onclick="javascript:window.open('https://judes.me/lrc_editor')">
+                    <img class="listicon" src="./svg/lrceditor.svg" />
+                    <p class="itemname">LRC Editor</p>
+                </div>
+                <div class="item" onclick="javascript:window.open('https://mail.qq.com')">
+                    <img class="listicon" src="./svg/qqmail.svg" />
+                    <p class="itemname">QQ邮箱</p>
+                </div>
+                <div class="item" onclick="javascript:window.open('https://pan.baidu.com')">
+                    <img class="listicon" src="./svg/baidudisk.svg" />
+                    <p class="itemname">百度网盘</p>
+                </div>
+                <div class="item" onclick="javascript:window.open('https://cloud.lilywhite.cc')">
+                    <img class="listicon" src="./svg/lilycloud.svg" />
+                    <p class="itemname">莉莉云</p>
+                </div>
+                <div class="item" onclick="javascript:window.open('https://copymanga.site')">
+                    <img class="listicon" src="./svg/wallhaven.svg" />
+                    <p class="itemname">Wallhaven</p>
+                </div>
+                <div class="item" onclick="javascript:window.open('https://blog.reimu.net')">
+                    <img class="listicon" src="./svg/lmys.svg" />
+                    <p class="itemname">灵梦御所</p>
+                </div>
+                <div class="item" onclick="javascript:window.open('https://hxcy.moe')">
+                    <img class="listicon" src="./svg/hxcy.svg" />
+                    <p class="itemname">幻想次元</p>
+                </div>
+                <div class="item" onclick="javascript:window.open('https://gelbooru.com')">
+                    <img class="listicon" src="./svg/gelbooru.svg" />
+                    <p class="itemname">Gelbooru</p>
+                </div>
+                <div class="item" onclick="javascript:window.open('https://exhentai.org')">
+                    <img class="listicon" src="./svg/exhentai.svg" />
+                    <p class="itemname">ExHentai</p>
+                </div>
+                <div class="item" onclick="javascript:window.open('https://www.iwara.tv')">
+                    <img class="listicon" src="./svg/iwara.svg" />
+                    <p class="itemname">Iwara</p>
+                </div>
+                <div class="item" onclick="javascript:window.open('https://www.dlsite.com')">
+                    <img class="listicon" src="./svg/dlsite.svg" />
+                    <p class="itemname">DLsite</p>
+                </div>
+                <div class="item" onclick="javascript:window.open('https://www.gamer520.com')">
+                    <img class="listicon" src="./svg/520.svg" />
+                    <p class="itemname">Gamer520</p>
+                </div>
+                <div class="item" onclick="javascript:window.open('https://steamzg.com')">
+                    <img class="listicon" src="./svg/steamzg.svg" />
+                    <p class="itemname">小叽资源</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 面板按钮 -->
+        <div class="toggle">
+            <img src="./svg/arrow.svg" width="32" height="19" alt="arrow" />
+        </div>
+
+    <!-- 底部 -->
+    <div class="end"></div>
+
+    <!-- 脚本部分 -->
+
+    <!-- 日期获取 -->
+    <script class="monthcode">
+        var date = new Date();
         var monthHtml = "";
-        if(date.getMonth()+1==1){
-        monthHtml = "Jan.";
-        }
-        if(date.getMonth()+1==2){
-        monthHtml = "Feb.";
-        }
-        if(date.getMonth()+1==3){
-        monthHtml = "Mar.";
-        }
-        if(date.getMonth()+1==4){
-        monthHtml = "Apr.";
-        }
-        if(date.getMonth()+1==5){
-        monthHtml = "May.";
-        }
-        if(date.getMonth()+1==6){
-        monthHtml = "Jun.";
-        }
-        if(date.getMonth()+1==7){
-        monthHtml = "Jul.";
-        }
-        if(date.getMonth()+1==8){
-        monthHtml = "Aug.";
-        }
-        if(date.getMonth()+1==9){
-        monthHtml = "Sept.";
-        }
-        if(date.getMonth()+1==10){
-        monthHtml = "Oct.";
-        }
-        if(date.getMonth()+1==11){
-        monthHtml = "Nov.";
-        }
-        if(date.getMonth()+1==12){
-        monthHtml = "Dec.";
-        }
+        if(date.getMonth()+1==1){monthHtml = "Jan.";}
+        if(date.getMonth()+1==2){monthHtml = "Feb.";}
+        if(date.getMonth()+1==3){monthHtml = "Mar.";}
+        if(date.getMonth()+1==4){monthHtml = "Apr.";}
+        if(date.getMonth()+1==5){monthHtml = "May.";}
+        if(date.getMonth()+1==6){monthHtml = "Jun.";}
+        if(date.getMonth()+1==7){monthHtml = "Jul.";}
+        if(date.getMonth()+1==8){monthHtml = "Aug.";}
+        if(date.getMonth()+1==9){monthHtml = "Sept.";}
+        if(date.getMonth()+1==10){monthHtml = "Oct.";}
+        if(date.getMonth()+1==11){monthHtml = "Nov.";}
+        if(date.getMonth()+1==12){monthHtml = "Dec.";}
         $(".date").html(monthHtml+date.getDate());
         $(".year").html(date.getFullYear());
     </script>
-        <div class="datebar">
-        </div>
-    </div>
-    <!-- 右上角链接 -->
-    <div class="linkbox">
-        <div class="bar bar1"></div>
-        <div class="bar bar2"></div>
-        <a class="link link1" href="https://drive.palzs.site/">Drive</a>
-        <a class="link link2" href="https://wiki.palzs.site/">Wiki</a>
-        <a class="link link3" href="https://blog.palzs.site/">Blog</a>
-    </div>
-    <!-- 面板 -->
-    <div class="navigation">
-        <p class="bookmarks">Bookmarks</p>
-        <div class="navline"></div>
-        <div class="bookmarklist">
-            <div class="item" onclick="javascript:window.open('http://www.bilibili.com')">
-                <img class="listicon" src="./svg/bilibili.svg" />
-                <p class="itemname">BiliBili</p>
-            </div>
-            <div class="item" onclick="javascript:window.open('http://www.youtube.com')">
-                <img class="listicon" src="./svg/youtube.svg" />
-                <p class="itemname">YouTube</p>
-            </div>
-            <div class="item" onclick="javascript:window.open('https://bgm.tv')">
-                <img class="listicon" src="./svg/bangumi.svg" />
-                <p class="itemname">Bangumi</p>
-            </div>
-            <div class="item" onclick="javascript:window.open('https://bbs.acgrip.com')">
-                <img class="listicon" src="./svg/acgrip.svg" />
-                <p class="itemname">ACG字幕</p>
-            </div>
-            <div class="item" onclick="javascript:window.open('https://mikanani.me')">
-                <img class="listicon" src="./svg/mikan.svg" />
-                <p class="itemname">蜜柑计划</p>
-            </div>
-            <div class="item" onclick="javascript:window.open('https://www.dmhy.org')">
-                <img class="listicon" src="./svg/dmhy.svg" />
-                <p class="itemname">动漫花园</p>
-            </div>
-            <div class="item" onclick="javascript:window.open('https://zh.wikipedia.org/wiki/Wikipedia:首页')">
-                <img class="listicon" src="./svg/wiki.svg" />
-                <p class="itemname">维基百科</p>
-            </div>
-            <div class="item" onclick="javascript:window.open('https://fgo.wiki/w/首页')">
-                <img class="listicon" src="./svg/mooncell.svg" />
-                <p class="itemname">MoonCell</p>
-            </div>
-            <div class="item" onclick="javascript:window.open('https://thwiki.cc')">
-                <img class="listicon" src="./svg/thwiki.svg" />
-                <p class="itemname">THBWiki</p>
-            </div>
-            <div class="item" onclick="javascript:window.open('http://scp-wiki-cn.wikidot.com')">
-                <img class="listicon" src="./svg/scp.svg" />
-                <p class="itemname">SCP基金会</p>
-            </div>
-            <div class="item" onclick="javascript:window.open('https://www.2dfan.com')">
-                <img class="listicon" src="./svg/2dfan.svg" />
-                <p class="itemname">2DFan</p>
-            </div>
-            <div class="item" onclick="javascript:window.open('https://www.runoob.com')">
-                <img class="listicon" src="./svg/runoob.svg" />
-                <p class="itemname">菜鸟教程</p>
-            </div>
-            <div class="item" onclick="javascript:window.open('https://docs.craft.do')">
-                <img class="listicon" src="./svg/craft.svg" />
-                <p class="itemname">Craft</p>
-            </div>
-            <div class="item" onclick="javascript:window.open('https://judes.me/lrc_editor')">
-                <img class="listicon" src="./svg/lrceditor.svg" />
-                <p class="itemname">LRC Editor</p>
-            </div>
-            <div class="item" onclick="javascript:window.open('https://mail.qq.com')">
-                <img class="listicon" src="./svg/qqmail.svg" />
-                <p class="itemname">QQ邮箱</p>
-            </div>
-            <div class="item" onclick="javascript:window.open('https://pan.baidu.com')">
-                <img class="listicon" src="./svg/baidudisk.svg" />
-                <p class="itemname">百度网盘</p>
-            </div>
-            <div class="item" onclick="javascript:window.open('https://cloud.lilywhite.cc')">
-                <img class="listicon" src="./svg/lilycloud.svg" />
-                <p class="itemname">莉莉云</p>
-            </div>
-            <div class="item" onclick="javascript:window.open('https://copymanga.site')">
-                <img class="listicon" src="./svg/wallhaven.svg" />
-                <p class="itemname">Wallhaven</p>
-            </div>
-            <div class="item" onclick="javascript:window.open('https://blog.reimu.net')">
-                <img class="listicon" src="./svg/lmys.svg" />
-                <p class="itemname">灵梦御所</p>
-            </div>
-            <div class="item" onclick="javascript:window.open('https://hxcy.moe')">
-                <img class="listicon" src="./svg/hxcy.svg" />
-                <p class="itemname">幻想次元</p>
-            </div>
-            <div class="item" onclick="javascript:window.open('https://gelbooru.com')">
-                <img class="listicon" src="./svg/gelbooru.svg" />
-                <p class="itemname">Gelbooru</p>
-            </div>
-            <div class="item" onclick="javascript:window.open('https://exhentai.org')">
-                <img class="listicon" src="./svg/exhentai.svg" />
-                <p class="itemname">ExHentai</p>
-            </div>
-            <div class="item" onclick="javascript:window.open('https://www.iwara.tv')">
-                <img class="listicon" src="./svg/iwara.svg" />
-                <p class="itemname">Iwara</p>
-            </div>
-            <div class="item" onclick="javascript:window.open('https://www.dlsite.com')">
-                <img class="listicon" src="./svg/dlsite.svg" />
-                <p class="itemname">DLsite</p>
-            </div>
-            <div class="item" onclick="javascript:window.open('https://www.gamer520.com')">
-                <img class="listicon" src="./svg/520.svg" />
-                <p class="itemname">Gamer520</p>
-            </div>
-            <div class="item" onclick="javascript:window.open('https://steamzg.com')">
-                <img class="listicon" src="./svg/steamzg.svg" />
-                <p class="itemname">小叽资源</p>
-            </div>
-        </div>
-    </div>
-    <!-- 面板按钮 -->
-    <div class="toggle">
-        <img src="./svg/arrow.svg" width="32" height="19" alt="arrow" />
-    </div>
-    <!-- 背景模糊板 -->
-    <div class="blur"></div>
-    <!-- 面板升起和背景模糊 -->
+
     <script>
         const navigation = document.querySelector('.navigation');
         const toumei = document.querySelector('.blur');
@@ -207,84 +207,31 @@
         navigation.classList.remove('active');
         toumei.classList.remove('active');
         triangle.classList.remove('active');
-            }
+        }
     })
-</script>
-    <!-- 二级菜单展示 -->
-    <script>
-        function showentry() {
-            var entryicon = document.querySelector(".entryicon");
-            entryicon.classList.toggle("rotate");
-            var entrylist = document.querySelector(".entrylist");
-            entrylist.classList.toggle("show");
-}
-</script>
-    <script>
-        function showtools() {
-            var toolsicon = document.querySelector(".toolsicon");
-            toolsicon.classList.toggle("rotate");
-            var toolslist = document.querySelector(".toolslist");
-            toolslist.classList.toggle("show");
-}
-</script>
-    <script>
-        function showacg() {
-            var acgicon = document.querySelector(".acgicon");
-            acgicon.classList.toggle("rotate");
-            var acglist = document.querySelector(".acglist");
-            acglist.classList.toggle("show");
-}
-</script>
-    <script>
-        function showr18() {
-            var r18icon = document.querySelector(".r18icon");
-            r18icon.classList.toggle("rotate");
-            var r18list = document.querySelector(".r18list");
-            r18list.classList.toggle("show");
-}
-</script>
-    <!-- 底部随机句子 -->
-    <div class="end">
-        God's in his heaven, all's right with the world.
-    </div>
+    </script>
+
+    <!-- 随机句子 -->
     <script class="quotes">
         var a = Math.random() + ""
-    var rand1 = a.charAt(5)
-    quotes = new Array
-    quotes[1] = "All those moments will be lost in time,like tears in rain."
-    quotes[2] = "Der Gott ist tot."
-    quotes[3] = "Veni Vidi Vici."
-    quotes[4] = "Cogito, ergo sum."
-    quotes[5] = "Je pense, donc je suis."
-    quotes[6] = "C'est la vie."
-    quotes[7] = "L'enfer, c'est les autres."
-    quotes[8] = "Was macht mich nicht umbringt,macht mich stärker."
-    quotes[9] = "God's in his heaven, all's right with the world."
-    quotes[0] = "Wenn du lange in einen Abgrund blickst,blickt der Abgrund auch in dich hinein."
-    var quote = quotes[rand1]
-    $(".end").html(quote);
-</script>
-    <!-- 搜索框 -->
-    <div class="searchbox">
-        <!-- 输入框和搜索脚本调用 -->
-        <div>
-            <input class="keyword" type="text" autocomplete="off" placeholder="search" />
-        </div>
-        <!-- 搜索图标 -->
-        <img class="icon searchicon" src="./svg/search.svg" alt="search" />
-        <!-- 引擎切换图标 -->
-        <div class="switchbar">
-            <img class="icon baiduicon" src="./svg/baidu.svg" alt="baidu" style="filter:drop-shadow(0 0 5px #f48181);" />
-            <img class="icon googleicon" src="./svg/google.svg" alt="google" />
-            <img class="icon bingicon" src="./svg/bing.svg" alt="bing" />
-        </div>
-    </div>
-    <!-- 搜索脚本 -->
-    <script>
-        window.onload = function defaultsearch(){
-                    engine = "https://www.baidu.com/s?wd=";
-                    }
+        var rand1 = a.charAt(5)
+        quotes = new Array
+        quotes[1] = "All those moments will be lost in time,like tears in rain."
+        quotes[2] = "Der Gott ist tot."
+        quotes[3] = "Veni Vidi Vici."
+        quotes[4] = "Cogito, ergo sum."
+        quotes[5] = "Je pense, donc je suis."
+        quotes[6] = "C'est la vie."
+        quotes[7] = "L'enfer, c'est les autres."
+        quotes[8] = "Was macht mich nicht umbringt,macht mich stärker."
+        quotes[9] = "God's in his heaven, all's right with the world."
+        quotes[0] = "Wenn du lange in einen Abgrund blickst,blickt der Abgrund auch in dich hinein."
+        var quote = quotes[rand1]
+        $(".end").html(quote);
     </script>
+
+    <!-- 搜索脚本 -->
+    <script>window.onload = function defaultsearch(){engine = "https://www.baidu.com/s?wd=";}</script>
     <script>
         $(".searchicon").click(function(){
             var key = $(".keyword").val();
@@ -297,7 +244,8 @@
 		}
 	})
     </script>
-    <!-- 搜索引擎切换成谷歌 -->
+
+    <!-- 切换谷歌 -->
     <script class="switchgoogle">
         $(".googleicon").click(function(){
                     engine = "https://www.google.com/search?q=";
@@ -306,7 +254,7 @@
                     document.querySelector('.bingicon').style.filter = "";
                     });
     </script>
-    <!-- 搜索引擎切换成百度 -->
+    <!-- 切换百度 -->
     <script class="switchbaidu">
         $(".baiduicon").click(function(){
                     engine = "https://www.baidu.com/s?wd=";
@@ -315,7 +263,7 @@
                     document.querySelector('.bingicon').style.filter = "";
                     });
     </script>
-    <!-- 搜索引擎切换成必应 -->
+    <!-- 切换必应 -->
     <script class="switchbing">
         $(".bingicon").click(function(){
                     engine = "https://www.bing.com/search?q=";
@@ -324,8 +272,6 @@
                     document.querySelector('.googleicon').style.filter = "";
                     });
     </script>
-    <!-- 
-    任务 自适应
--->
+
 </body>
 </html>
