@@ -17,7 +17,6 @@ $(".end").html(quote);
 
 // 搜索脚本
 window.onload = function defaultsearch(){engine = "https://www.baidu.com/s?wd=";}
-
 $(".searchicon").click(function(){
     var key = $(".keyword").val();
     window.open(engine+key);
@@ -36,19 +35,17 @@ $(".googleicon").click(function(){
     document.querySelector('.baiduicon').style.filter = "";
     document.querySelector('.bingicon').style.filter = "";
     });
-
 // 切换百度
 $(".baiduicon").click(function(){
     engine = "https://www.baidu.com/s?wd=";
-    document.querySelector('.baiduicon').style.filter = "drop-shadow(0 0 5px #f48181)";
     document.querySelector('.googleicon').style.filter = "";
+    document.querySelector('.baiduicon').style.filter = "drop-shadow(0 0 5px #f48181)";
     document.querySelector('.bingicon').style.filter = "";
     });
-    
 // 切换必应
 $(".bingicon").click(function(){
     engine = "https://www.bing.com/search?q=";
-    document.querySelector('.bingicon').style.filter = "drop-shadow(0 0 5px #f48181)";
-    document.querySelector('.baiduicon').style.filter = "";
     document.querySelector('.googleicon').style.filter = "";
+    document.querySelector('.baiduicon').style.filter = "";
+    document.querySelector('.bingicon').style.filter = "drop-shadow(0 0 5px #f48181)";
     });
