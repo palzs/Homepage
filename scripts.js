@@ -25,13 +25,13 @@ $(".keyword").bind('keypress',function(event){
 if (event.keyCode == 13){
     var key = $(".keyword").val();
     window.open(engine+key);
-}
+    }
 })
 
 // 切换谷歌
 $(".googleicon").click(function(){
     engine = "https://www.google.com/search?q=";
-    document.querySelector('.googleicon').style.filter = "drop-shadow(0 0 5px #f48181)";
+    document.querySelector('.googleicon').style.filter = "drop-shadow(0 0 2px #aaaaaa)";
     document.querySelector('.baiduicon').style.filter = "";
     document.querySelector('.bingicon').style.filter = "";
     });
@@ -39,7 +39,7 @@ $(".googleicon").click(function(){
 $(".baiduicon").click(function(){
     engine = "https://www.baidu.com/s?wd=";
     document.querySelector('.googleicon').style.filter = "";
-    document.querySelector('.baiduicon').style.filter = "drop-shadow(0 0 5px #f48181)";
+    document.querySelector('.baiduicon').style.filter = "drop-shadow(0 0 2px #aaaaaa)";
     document.querySelector('.bingicon').style.filter = "";
     });
 // 切换必应
@@ -47,5 +47,5 @@ $(".bingicon").click(function(){
     engine = "https://www.bing.com/search?q=";
     document.querySelector('.googleicon').style.filter = "";
     document.querySelector('.baiduicon').style.filter = "";
-    document.querySelector('.bingicon').style.filter = "drop-shadow(0 0 5px #f48181)";
+    document.querySelector('.bingicon').style.filter = "drop-shadow(0 0 2px #aaaaaa)";
     });
