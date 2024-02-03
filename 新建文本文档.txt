@@ -1,0 +1,39 @@
+@media基本格式：
+
+@media not|only mediatype and (mediafeature and|or|not mediafeature) {
+  CSS-Code;
+}
+
+not：取非判断
+only：旧浏览器兼容用
+mediatype：通常使用screen|all
+mediafeature：
+	max-：值以下
+	min-：值以上
+	aspect-ratio：宽高比
+	orientation：横竖判断
+		landscape：横屏
+		portrait：竖屏
+
+
+
+目标：
+1. 
+	书签上边 贴靠 搜索下边 
+	缩放 不影响 上下间距
+2. 
+	书签项目 充满 书签容器 
+	尺寸&宽高比 恒定 
+	容器尺寸变化时 自动调整列数 维持充满
+	容器超大尺寸时 指定最大列数
+	容器超小尺寸时 指定最小列数
+3.
+	书签容器 内部滚动 不显示滚动条
+4. 
+	书签项目 分组
+5. 
+	小尺寸&竖屏模式时 缩小 左右空间
+	小尺寸&竖屏模式时 调整 搜索框长宽
+	小尺寸&竖屏模式时 调整 LOGO长宽
+6. 
+	小尺寸&竖屏模式时 链接 显示为 菜单
