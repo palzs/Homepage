@@ -206,7 +206,7 @@ a {text-decoration:none}
             filter:grayscale(0.2);
             transition: all 0.3s;
         }
-        .fav-grid > div:hover {transform:scaleX(1.2);}
+        .fav-grid > div:hover {transform:scale(1.2);}
         /* 书签项目图标 */
         .fav-icon {
             width: 60%;
