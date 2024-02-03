@@ -133,7 +133,7 @@ a {text-decoration:none}
             .keyword{
                 width: 525px;
                 height: 40px;
-                color:#aaaaaa;
+                color:#a0a0a0;
                 background-color: #fafafa;
                 font-family: 'Questrial'; 
                 font-size: 1rem;
@@ -148,6 +148,8 @@ a {text-decoration:none}
                 cursor: pointer;
                 transition: all 0.5s;
             }
+            /* 搜索图标特效 */
+            .s-icon:hover{filter: drop-shadow(0 0 1.5px #cccccc)}
         /* 搜索引擎切换内嵌Grid */
         .search-grid { 
             width: 300px;
@@ -202,7 +204,9 @@ a {text-decoration:none}
             text-align: center;
             cursor: pointer;
             filter:grayscale(0.2);
+            transition: all 0.3s;
         }
+        .fav-grid > div:hover {transform:scaleX(1.2);}
         /* 书签项目图标 */
         .fav-icon {
             width: 60%;
