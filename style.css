@@ -125,7 +125,7 @@ a {text-decoration:none}
             align-items: center;
             justify-content: center;
             margin: 20px;
-            background-color: #fafafa;
+            background-color: #eeeeee;
             border-radius: 10px;
             box-shadow: inset 0px 0px 7px #dddddd;
         }
@@ -133,8 +133,8 @@ a {text-decoration:none}
             .keyword{
                 width: 525px;
                 height: 40px;
-                color:#a0a0a0;
-                background-color: #fafafa;
+                color:#aaaaaa;
+                background-color: #eeeeee;
                 font-family: 'Questrial'; 
                 font-size: 1rem;
                 border: 0px;
@@ -149,7 +149,7 @@ a {text-decoration:none}
                 transition: all 0.5s;
             }
             /* 搜索图标特效 */
-            .s-icon:hover{filter: drop-shadow(0 0 1.5px #cccccc)}
+            .s-icon:hover{filter: drop-shadow(0 0 1.5px #bbbbbb)}
         /* 搜索引擎切换内嵌Grid */
         .search-grid { 
             width: 300px;
@@ -178,9 +178,9 @@ a {text-decoration:none}
                 transition: all 0.5s;
             }
             /* 引擎图标特效 */
-            .google-icon:hover{filter: drop-shadow(0 0 1.5px #cccccc)}
-            .baidu-icon:hover{filter: drop-shadow(0 0 1.5px #cccccc)}
-            .bing-icon:hover{filter: drop-shadow(0 0 1.5px #cccccc)}
+            .google-icon:hover{filter: drop-shadow(0 0 1.5px #bbbbbb)}
+            .baidu-icon:hover{filter: drop-shadow(0 0 1.5px #bbbbbb)}
+            .bing-icon:hover{filter: drop-shadow(0 0 1.5px #bbbbbb)}
 
     /* 书签区域 */
     .fav {grid-area: 书签;}
