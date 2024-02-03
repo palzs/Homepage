@@ -61,7 +61,7 @@ a {text-decoration:none}
     }
     .bar { 
         height:17%;
-        width: 2px;
+        width: 1.5px;
         align-self: center;
         background-color:#cccccc;  
         border-radius: 2px;
