@@ -36,6 +36,8 @@ a {text-decoration:none}
     height: 100vh;
     width: 100vw;
     display: grid;
+    align-items: center;
+    justify-content: center;
     grid-row-gap: 10px;
     grid-template-rows: 60px 200px auto 40px;
     grid-template-areas:
@@ -185,7 +187,7 @@ a {text-decoration:none}
             display: grid;
             grid-column-gap: 40px;
             grid-row-gap: 40px;
-            grid-template-columns: repeat(9, 50px);
+            grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
         }
         /* 书签区域项目属性 */
         .fav-grid > div {
