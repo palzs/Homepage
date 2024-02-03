@@ -4,7 +4,7 @@ body {
     justify-content: center;
     align-items:center;
     min-height: 100vh;
-    margin: 0;
+    min-width: 100vw;
     background: #fafafa;
     overflow: hidden;
     font-family:'Questrial',sans-serif;
@@ -37,13 +37,12 @@ a {text-decoration:none}
     width: 100vw;
     display: grid;
     grid-row-gap: 10px;
-    grid-template-columns: 200px auto 200px;
     grid-template-rows: 60px 200px auto 40px;
     grid-template-areas:
-    '左空格 中空格 链接'
-    '左空格 搜索 右空格'
-    '左空格 书签 右空格'
-    '左空格 页尾 右空格';
+    '链接'
+    '搜索'
+    '书签'
+    '页尾';
 }
 /* 总项目属性 */
 .container > div {
@@ -55,12 +54,12 @@ a {text-decoration:none}
     .link {grid-area: 链接}
     /* 链接区域内嵌Grid */
     .link-grid { 
-        height: 100%;
-        width: 100%;
+        height: 60px;
+        width: 300px;
         display: grid;
-        grid-template-columns: 1fr 2px 1fr 2px 1fr;
+        grid-template-columns: 1fr 2px 1fr 2px 1fr 2px 1fr;
         grid-template-areas:
-        'drive bar1 wiki bar2 blog';
+        'drive bar1 wiki bar2 blog bar3 video';
     }
     /* 链接区域项目属性 */
     .link-grid > div {
@@ -73,16 +72,24 @@ a {text-decoration:none}
         .drive {grid-area: drive}
         .wiki {grid-area: wiki}
         .blog {grid-area: blog}
+        .video {grid-area: video}
         .bar1 { 
             grid-area: bar1;
-            height:20%;
+            height:17%;
             align-self: center;
             background-color:#cccccc;  
             border-radius: 3px;
         }
         .bar2 { 
             grid-area: bar2;
-            height:20%;
+            height:17%;
+            align-self: center;
+            background-color:#cccccc;  
+            border-radius: 3px;
+        }
+        .bar3 { 
+            grid-area: bar3;
+            height:17%;
             align-self: center;
             background-color:#cccccc;  
             border-radius: 3px;
@@ -91,9 +98,11 @@ a {text-decoration:none}
         .link1{color:#b0ccdf;transition: all 0.5s;}
         .link2{color:#d7cbb6;transition: all 0.5s;}
         .link3{color:#d4b6d7;transition: all 0.5s;}
+        .link4{color:#b6d7c9;transition: all 0.5s;}
         .link1:hover{filter: drop-shadow(0 0 2px #b0ccdf)}
         .link2:hover{filter: drop-shadow(0 0 2px #d7cbb6)}
         .link3:hover{filter: drop-shadow(0 0 2px #d4b6d7)}
+        .link4:hover{filter: drop-shadow(0 0 2px #b6d7c9)}
 
     /* 搜索区域 */
     .search {
