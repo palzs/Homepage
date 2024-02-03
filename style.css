@@ -125,7 +125,7 @@ a {text-decoration:none}
             align-items: center;
             justify-content: center;
             margin: 20px;
-            background-color: #eeeeee;
+            background-color: #f5f5f5;
             border-radius: 10px;
             box-shadow: inset 0px 0px 7px #dddddd;
         }
@@ -134,7 +134,7 @@ a {text-decoration:none}
                 width: 525px;
                 height: 40px;
                 color:#aaaaaa;
-                background-color: #eeeeee;
+                background-color: #f5f5f5;
                 font-family: 'Questrial'; 
                 font-size: 1rem;
                 border: 0px;
@@ -206,7 +206,7 @@ a {text-decoration:none}
             filter:grayscale(0.2);
             transition: all 0.3s;
         }
-        .fav-grid > div:hover {transform:scale(1.2);}
+        .fav-grid > div:hover {transform:scale(1.1);}
         /* 书签项目图标 */
         .fav-icon {
             width: 60%;
