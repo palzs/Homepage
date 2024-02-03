@@ -1,7 +1,7 @@
 // 搜索功能
 window.onload = function defaultsearch()
     {engine = "https://www.baidu.com/s?wd=";
-    document.querySelector('.baidu-icon').style.filter = "drop-shadow(0 0 1.5px #bbbbbb) brightness(95%)";
+    document.querySelector('.baidu-icon').style.filter = "drop-shadow(0 0 1.5px #bbbbbb) brightness(90%)";
     }
 $(".s-icon").click(function(){
     var key = $(".keyword").val();
@@ -16,21 +16,21 @@ if (event.keyCode == 13){
 // 引擎切换
 $(".google-icon").click(function(){
     engine = "https://www.google.com/search?q=";
-    document.querySelector('.google-icon').style.filter = "drop-shadow(0 0 1.5px #bbbbbb) brightness(95%)";
+    document.querySelector('.google-icon').style.filter = "drop-shadow(0 0 1.5px #bbbbbb) brightness(90%)";
     document.querySelector('.baidu-icon').style.filter = "";
     document.querySelector('.bing-icon').style.filter = "";
     });
 $(".baidu-icon").click(function(){
     engine = "https://www.baidu.com/s?wd=";
     document.querySelector('.google-icon').style.filter = "";
-    document.querySelector('.baidu-icon').style.filter = "drop-shadow(0 0 1.5px #bbbbbb) brightness(95%)";
+    document.querySelector('.baidu-icon').style.filter = "drop-shadow(0 0 1.5px #bbbbbb) brightness(90%)";
     document.querySelector('.bing-icon').style.filter = "";
     });
 $(".bing-icon").click(function(){
     engine = "https://www.bing.com/search?q=";
     document.querySelector('.google-icon').style.filter = "";
     document.querySelector('.baidu-icon').style.filter = "";
-    document.querySelector('.bing-icon').style.filter = "drop-shadow(0 0 1.5px #bbbbbb) brightness(95%)";
+    document.querySelector('.bing-icon').style.filter = "drop-shadow(0 0 1.5px #bbbbbb) brightness(90%)";
     });
 // 随机句子
 var a = Math.random() + ""

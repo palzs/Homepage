@@ -39,76 +39,49 @@ a {text-decoration:none}
     align-items: center;
     justify-content: center;
     grid-row-gap: 10px;
-    grid-template-rows: 60px 200px auto 40px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 45px 240px auto 40px;
     grid-template-areas:
     '链接'
     '搜索'
     '书签'
     '页尾';
 }
-/* 总项目属性 */
-.container > div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
     /* 链接区域 */
-    .link {grid-area: 链接}
-    /* 链接区域内嵌Grid */
-    .link-grid { 
+    .link {grid-area: 链接;}
+    /* 链接区域内容 */
+    .linkbox { 
         height: 60px;
-        width: 300px;
-        display: grid;
-        grid-template-columns: 1fr 2px 1fr 2px 1fr 2px 1fr;
-        grid-template-areas:
-        'drive bar1 wiki bar2 blog bar3 video';
-    }
-    /* 链接区域项目属性 */
-    .link-grid > div {
+        width: 230px;
+        margin-left: 15px;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         font-size: 1.2rem;
     }
-        /* 链接区域项目 */
-        .drive {grid-area: drive}
-        .wiki {grid-area: wiki}
-        .blog {grid-area: blog}
-        .video {grid-area: video}
-        .bar1 { 
-            grid-area: bar1;
-            height:17%;
-            align-self: center;
-            background-color:#cccccc;  
-            border-radius: 3px;
-        }
-        .bar2 { 
-            grid-area: bar2;
-            height:17%;
-            align-self: center;
-            background-color:#cccccc;  
-            border-radius: 3px;
-        }
-        .bar3 { 
-            grid-area: bar3;
-            height:17%;
-            align-self: center;
-            background-color:#cccccc;  
-            border-radius: 3px;
-        }
-        /* 链接区域项目特效 */
-        .link1{color:#b0ccdf;transition: all 0.5s;}
-        .link2{color:#d7cbb6;transition: all 0.5s;}
-        .link3{color:#d4b6d7;transition: all 0.5s;}
-        .link4{color:#b6d7c9;transition: all 0.5s;}
-        .link1:hover{filter: drop-shadow(0 0 2px #b0ccdf)}
-        .link2:hover{filter: drop-shadow(0 0 2px #d7cbb6)}
-        .link3:hover{filter: drop-shadow(0 0 2px #d4b6d7)}
-        .link4:hover{filter: drop-shadow(0 0 2px #b6d7c9)}
+    .bar { 
+        height:17%;
+        width: 2px;
+        align-self: center;
+        background-color:#cccccc;  
+        border-radius: 2px;
+    }
+    /* 链接特效 */
+    .link1{color:#b0ccdf;transition: all 0.5s;}
+    .link2{color:#d7cbb6;transition: all 0.5s;}
+    .link3{color:#d4b6d7;transition: all 0.5s;}
+    .link4{color:#b6d7c9;transition: all 0.5s;}
+    .link1:hover{filter: drop-shadow(0 0 2px #b0ccdf)}
+    .link2:hover{filter: drop-shadow(0 0 2px #d7cbb6)}
+    .link3:hover{filter: drop-shadow(0 0 2px #d4b6d7)}
+    .link4:hover{filter: drop-shadow(0 0 2px #b6d7c9)}
 
     /* 搜索区域 */
     .search {
         grid-area: 搜索;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         flex-direction: column;
     }
         /* LOGO */
@@ -150,26 +123,13 @@ a {text-decoration:none}
             }
             /* 搜索图标特效 */
             .s-icon:hover{filter: drop-shadow(0 0 1.5px #bbbbbb)}
-        /* 搜索引擎切换内嵌Grid */
-        .search-grid { 
-            width: 300px;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-areas:
-            'google baidu bing';
-        }
-        /* 引擎切换项目属性 */
-        .search-grid > div {
+        /* 搜索引擎切换 */
+        .searchbox { 
+            width: 200px;
             display: flex;
-            align-items: center;
-            justify-content: center;
+            justify-content: space-between;
             transition: all 0.5s;
         }
-            /* 引擎切换项目 */
-            .google {grid-area: google}
-            .baidu {grid-area: baidu}
-            .bing {grid-area: bing}
-
             /* 引擎图标 */
             .ss-icon{
                 width: 28px;
@@ -178,18 +138,22 @@ a {text-decoration:none}
                 transition: all 0.5s;
             }
             /* 引擎图标特效 */
-            .google-icon:hover{filter: drop-shadow(0 0 1.5px #bbbbbb) brightness(95%)}
-            .baidu-icon:hover{filter: drop-shadow(0 0 1.5px #bbbbbb) brightness(95%)}
-            .bing-icon:hover{filter: drop-shadow(0 0 1.5px #bbbbbb) brightness(95%)}
+            .google-icon:hover{filter: drop-shadow(0 0 1.5px #bbbbbb) brightness(90%)}
+            .baidu-icon:hover{filter: drop-shadow(0 0 1.5px #bbbbbb) brightness(90%)}
+            .bing-icon:hover{filter: drop-shadow(0 0 1.5px #bbbbbb) brightness(90%)}
 
     /* 书签区域 */
-    .fav {grid-area: 书签;}
+    .fav {
+        grid-area: 书签;
+        display: flex;
+        justify-content: center;
+    }
         /* 书签区域内嵌Grid */
         .fav-grid{
             display: grid;
             grid-column-gap: 40px;
             grid-row-gap: 40px;
-            grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+            grid-template-columns: repeat(9, 50px);
         }
         /* 书签区域项目属性 */
         .fav-grid > div {
@@ -226,7 +190,8 @@ a {text-decoration:none}
     /* 页尾区域 */
     .end {
         grid-area: 页尾;
-        text-align:center;
-        text-justify:center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         color:#dddddd;
     }
