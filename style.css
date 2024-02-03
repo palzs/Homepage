@@ -176,9 +176,9 @@ a {text-decoration:none}
                 transition: all 0.5s;
             }
             /* 引擎图标特效 */
-            .google-icon:hover{filter: drop-shadow(0 0 2px #aaaaaa)}
-            .baidu-icon:hover{filter: drop-shadow(0 0 2px #aaaaaa)}
-            .bing-icon:hover{filter: drop-shadow(0 0 2px #aaaaaa)}
+            .google-icon:hover{filter: drop-shadow(0 0 1px #cccccc)}
+            .baidu-icon:hover{filter: drop-shadow(0 0 1px #cccccc)}
+            .bing-icon:hover{filter: drop-shadow(0 0 1px #cccccc)}
 
     /* 书签区域 */
     .fav {grid-area: 书签;}
