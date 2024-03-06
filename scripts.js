@@ -1,7 +1,8 @@
 // 搜索功能
-window.onload = function defaultsearch()
+window.onload = function()
     {engine = "https://www.baidu.com/s?wd=";
-    document.querySelector('.baidu-icon').style.filter = "drop-shadow(0 0 1.5px #bbbbbb) brightness(90%)";
+    document.querySelector('.baidu-icon.light').style.filter = "drop-shadow(0 0 1.5px #bbbbbb) brightness(90%)";
+    document.querySelector('.baidu-icon.dark').style.filter = "drop-shadow(0 0 1.5px #9D2222) brightness(120%)";
     }
 $(".s-icon").click(function(){
     var key = $(".keyword").val();
@@ -11,26 +12,34 @@ $(".keyword").bind('keypress',function(event){
 if (event.keyCode == 13){
     var key = $(".keyword").val();
     window.open(engine+key);
-    }
-})
+    }})
 // 引擎切换
 $(".google-icon").click(function(){
     engine = "https://www.google.com/search?q=";
-    document.querySelector('.google-icon').style.filter = "drop-shadow(0 0 1.5px #bbbbbb) brightness(90%)";
-    document.querySelector('.baidu-icon').style.filter = "";
-    document.querySelector('.bing-icon').style.filter = "";
+    document.querySelector('.google-icon.light').style.filter = "drop-shadow(0 0 1.5px #bbbbbb) brightness(90%)";
+    document.querySelector('.google-icon.dark').style.filter = "drop-shadow(0 0 1.5px #9D2222) brightness(120%)";
+    document.querySelector('.baidu-icon.light').style.filter = "";
+    document.querySelector('.baidu-icon.dark').style.filter = "";
+    document.querySelector('.bing-icon.light').style.filter = "";
+    document.querySelector('.bing-icon.dark').style.filter = "";
     });
 $(".baidu-icon").click(function(){
     engine = "https://www.baidu.com/s?wd=";
-    document.querySelector('.google-icon').style.filter = "";
-    document.querySelector('.baidu-icon').style.filter = "drop-shadow(0 0 1.5px #bbbbbb) brightness(90%)";
-    document.querySelector('.bing-icon').style.filter = "";
+    document.querySelector('.google-icon.light').style.filter = "";
+    document.querySelector('.google-icon.dark').style.filter = "";
+    document.querySelector('.baidu-icon.light').style.filter = "drop-shadow(0 0 1.5px #bbbbbb) brightness(90%)";
+    document.querySelector('.baidu-icon.dark').style.filter = "drop-shadow(0 0 1.5px #9D2222) brightness(120%)";
+    document.querySelector('.bing-icon.light').style.filter = "";
+    document.querySelector('.bing-icon.dark').style.filter = "";
     });
 $(".bing-icon").click(function(){
     engine = "https://www.bing.com/search?q=";
-    document.querySelector('.google-icon').style.filter = "";
-    document.querySelector('.baidu-icon').style.filter = "";
-    document.querySelector('.bing-icon').style.filter = "drop-shadow(0 0 1.5px #bbbbbb) brightness(90%)";
+    document.querySelector('.google-icon.light').style.filter = "";
+    document.querySelector('.google-icon.dark').style.filter = "";
+    document.querySelector('.baidu-icon.light').style.filter = "";
+    document.querySelector('.baidu-icon.dark').style.filter = "";
+    document.querySelector('.bing-icon.light').style.filter = "drop-shadow(0 0 1.5px #bbbbbb) brightness(90%)";
+    document.querySelector('.bing-icon.dark').style.filter = "drop-shadow(0 0 1.5px #9D2222) brightness(120%)";
     });
 // 随机句子
 var a = Math.random() + ""

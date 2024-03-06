@@ -4,8 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Palzs HP | A personal Homepage</title>
     <link rel="shortcut icon" href="./svg/favicon.ico" type="image/x-ico" />
-    <link href="./style.css" rel="stylesheet" type="text/css"/ title="light">
-    <link href="./style-dark.css" rel="stylesheet alternative" type="text/css"/ title="dark" disabled>
+    <link href="./style.css" rel="stylesheet" type="text/css"/>
 </head>
 <body> 
     <!-- 页面总布局Grid -->
@@ -29,7 +28,7 @@
             <!-- LOGO --> 
             <div>
                 <img class="logo light" src="./svg/logo.svg" />
-                <img class="logo dark" src="./svg/logo-dark.svg" style="display: none;"/>
+                <img class="logo dark" src="./svg/logo-dark.svg"/>
             </div>
             <!-- 搜索外框 -->
             <div class="s-outbox">
@@ -37,22 +36,22 @@
                 <input class="keyword" type="text" autocomplete="off" placeholder="search" />
                 <!-- 搜索图标 -->
                 <img class="s-icon light" src="./svg/search.svg" />
-                <img class="s-icon dark" src="./svg/search-dark.svg" style="display: none;"/>
+                <img class="s-icon dark" src="./svg/search-dark.svg"/>
             </div>
             <!-- 搜索引擎切换 -->
             <div class="searchbox">
                 <!-- 项目 -->
                 <div class="google">
                     <img class="ss-icon google-icon light" src="./svg/google.svg" />
-                    <img class="ss-icon google-icon dark" src="./svg/google-dark.svg" style="display: none;"/>
+                    <img class="ss-icon google-icon dark" src="./svg/google-dark.svg"/>
                 </div>
                 <div class="baidu">
                     <img class="ss-icon baidu-icon light" src="./svg/baidu.svg"/>
-                    <img class="ss-icon baidu-icon dark" src="./svg/baidu-dark.svg" style="display: none;"/>
+                    <img class="ss-icon baidu-icon dark" src="./svg/baidu-dark.svg"/>
                 </div>
                 <div class="bing">
                     <img class="ss-icon bing-icon light" src="./svg/bing.svg" />
-                    <img class="ss-icon bing-icon dark" src="./svg/bing-dark.svg" style="display: none;"/>
+                    <img class="ss-icon bing-icon dark" src="./svg/bing-dark.svg"/>
                 </div>
             </div>
         </div>
@@ -129,7 +128,7 @@
                     <img class="fav-icon" src="./svg/lilycloud.svg" />
                     <p class="fav-name">莉莉云</p>
                 </div>
-                <div onclick="javascript:window.open('https://copymanga.site')">
+                <div onclick="javascript:window.open('https://wallhaven.cc/')">
                     <img class="fav-icon" src="./svg/wallhaven.svg" />
                     <p class="fav-name">Wallhaven</p>
                 </div>
@@ -169,49 +168,9 @@
         </div>
         <!-- 页尾区域 -->
         <div class="end"></div>
-        <div class="theme">
-            <img class="theme-icon light" src="./svg/to-night.svg" />
-            <img class="theme-icon dark" src="./svg/to-day.svg" style="display: none; width: 22px; height: 22px;"/>
-        </div>
-        <div class="theme-dark" style="display: none;"></div>
     </div>
     <!-- JS引入 -->
     <script src="./jquery.min.js"></script>
     <script src="./scripts.js"></script>
-    <script>
-        function trans() {
-        $('.link1').css("transition","all 0.5s");
-        $('.link2').css("transition","all 0.5s");
-        $('.link3').css("transition","all 0.5s");
-        $('.link4').css("transition","all 0.5s");
-        $('.fav-grid > div').css("transition","all 0.5s");
-        }
-        </script>
-    <script>
-        $(".theme").click(function(){
-            if($(".dark").css('display')=='none'){
-                document.querySelector('link[title="dark"]').disabled = false;
-                $(".dark").css("display","");
-                $(".light").css("display","none");
-                $('.link1').css("transition","none");
-                $('.link2').css("transition","none");
-                $('.link3').css("transition","none");
-                $('.link4').css("transition","none");
-                $('.fav-grid > div').css("transition","none");
-                setTimeout(trans, 20);
-			}else{
-                document.querySelector('link[title="dark"]').disabled = true;
-                $(".dark").css("display","none");
-                $(".light").css("display","");
-                $('.link1').css("transition","none");
-                $('.link2').css("transition","none");
-                $('.link3').css("transition","none");
-                $('.link4').css("transition","none");
-                $('.fav-grid > div').css("transition","none");
-                setTimeout(trans, 20);
-			    }
-            });
-      </script>
-
 </body>
 </html>

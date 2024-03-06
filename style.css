@@ -10,6 +10,8 @@ body {
     font-family:'Questrial',sans-serif;
     user-select:none;
 }
+.dark {display: none;}
+
 /* 标准化兼容 */
 *{
     margin: 0;
@@ -24,6 +26,8 @@ body {
 } 
 /* 取消文本下划线 */
 a {text-decoration:none}
+/* 输入框预置文本颜色 */
+::-webkit-input-placeholder {color: #dddddd}
 /* 选中颜色 */
 ::selection {background:#e6e6e6}
 /* 滚动条样式 */
@@ -65,10 +69,10 @@ a {text-decoration:none}
         border-radius: 2px;
     }
     /* 链接特效 */
-    .link1{color:#b0ccdf;transition: all 0.5s;}
-    .link2{color:#d7cbb6;transition: all 0.5s;}
-    .link3{color:#d4b6d7;transition: all 0.5s;}
-    .link4{color:#b6d7c9;transition: all 0.5s;}
+    .link1{color:#b0ccdf;transition: all 0.3s;}
+    .link2{color:#d7cbb6;transition: all 0.3s;}
+    .link3{color:#d4b6d7;transition: all 0.3s;}
+    .link4{color:#b6d7c9;transition: all 0.3s;}
     .link1:hover{filter: drop-shadow(0 0 2px #b0ccdf)}
     .link2:hover{filter: drop-shadow(0 0 2px #d7cbb6)}
     .link3:hover{filter: drop-shadow(0 0 2px #d4b6d7)}
@@ -117,7 +121,7 @@ a {text-decoration:none}
                 height: 28px;
                 margin-left: 10px;
                 cursor: pointer;
-                transition: all 0.5s;
+                transition: all 0.3s;
             }
             /* 搜索图标特效 */
             .s-icon:hover{filter: drop-shadow(0 0 1.5px #bbbbbb)}
@@ -126,14 +130,14 @@ a {text-decoration:none}
             width: 200px;
             display: flex;
             justify-content: space-between;
-            transition: all 0.5s;
+            transition: all 0.3s;
         }
             /* 引擎图标 */
             .ss-icon{
                 width: 28px;
                 height: 28px;
                 cursor: pointer;
-                transition: all 0.5s;
+                transition: all 0.3s;
             }
             /* 引擎图标特效 */
             .google-icon:hover{filter: drop-shadow(0 0 1.5px #bbbbbb) brightness(90%)}
@@ -207,4 +211,50 @@ a {text-decoration:none}
         align-items: center;
         width: 16px;
         height: 16px;
+    }
+    @media (prefers-color-scheme: dark) {
+    /* 页面 */
+    body {background: #282828;}
+    /* 输入框预置文本颜色 */
+    ::-webkit-input-placeholder {color: #282828}
+    /* 选中颜色 */
+    ::selection {background:#9D2222}
+    /* 链接区域内容 */
+    .bar {background-color:#404040}
+    .light {display:none}
+    .dark {display:unset}
+    /* 链接特效 */
+    .link1{color:#3F5768;}
+    .link2{color:#5E4D31}
+    .link3{color:#5F3B63}
+    .link4{color:#446557}
+    .link1:hover{filter: drop-shadow(0 0 2px #3F5768);transition: all 0.3s}
+    .link2:hover{filter: drop-shadow(0 0 2px #5E4D31);transition: all 0.3s}
+    .link3:hover{filter: drop-shadow(0 0 2px #5F3B63);transition: all 0.3s}
+    .link4:hover{filter: drop-shadow(0 0 2px #446557);transition: all 0.3s}
+    /* 搜索外框 */
+    .s-outbox{
+        background-color: #404040;
+        box-shadow: 0 0px 6px #00000050;
+    }
+    /* 搜索内框 */
+    .keyword{
+        color:#999999;
+        background-color: #404040;
+    }
+    /* 搜索图标特效 */
+    .s-icon:hover{filter: drop-shadow(0 0 1.5px #bbbbbb)}
+    /* 引擎图标特效 */
+    .google-icon:hover{filter: drop-shadow(0 0 1.5px #9D2222) brightness(120%)}
+    .baidu-icon:hover{filter: drop-shadow(0 0 1.5px #9D2222) brightness(120%)}
+    .bing-icon:hover{filter: drop-shadow(0 0 1.5px #9D2222) brightness(120%)}
+    /* 书签区域项目属性 */
+    .fav-grid > div {
+        background: #404040;
+        box-shadow: 0 0px 6px #00000050;
+    }
+    /* 书签项目名称 */
+    .fav-name{color:#999999;}
+    /* 页尾区域 */
+    .end {color:#404040;}
     }
