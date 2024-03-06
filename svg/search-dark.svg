@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-4013.24,-281.334)">
+        <g transform="matrix(1,0,0,1,2785.07,0)">
+            <g transform="matrix(1,0,0,1,-787.075,0)">
+                <path d="M2025.07,281.334C2030.5,281.334 2034.91,285.74 2034.91,291.167C2034.91,296.594 2030.5,301 2025.07,301C2019.65,301 2015.24,296.594 2015.24,291.167C2015.24,285.74 2019.65,281.334 2025.07,281.334ZM2025.07,284.334C2021.3,284.334 2018.24,287.396 2018.24,291.167C2018.24,294.938 2021.3,298 2025.07,298C2028.85,298 2031.91,294.938 2031.91,291.167C2031.91,287.396 2028.85,284.334 2025.07,284.334Z" style="fill:rgb(40,40,40);"/>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,2785.07,0)">
+            <g transform="matrix(0.705431,-0.294569,-0.294569,0.705431,-72.4989,587.743)">
+                <path d="M2057.72,448.292L2065.39,455.954C2066.97,457.537 2067.73,459.35 2067.07,460.001C2066.43,460.651 2064.61,459.894 2063.03,458.311L2055.37,450.649C2056.47,450.194 2057.27,449.396 2057.72,448.292Z" style="fill:rgb(91,35,35);"/>
+            </g>
+        </g>
+    </g>
+</svg>
