@@ -1,176 +1,181 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Palzs HP | A personal Homepage</title>
-    <link rel="shortcut icon" href="./svg/favicon.ico" type="image/x-ico" />
-    <link href="./style.css" rel="stylesheet" type="text/css"/>
+<head lang="zh-Hans">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Palzs HP | A personal Homepage</title>
+	<link rel="shortcut icon" href="./svg/favicon.ico" type="image/x-ico" />
+	<link href="./style.css" rel="stylesheet" type="text/css" />
+	<link href="https://fonts.font.im/css?family=Questrial" rel="stylesheet">
 </head>
-<body> 
-    <!-- 页面总布局Grid -->
-    <div class="container">
-        <!-- 链接区域 -->
-        <div class="link">
-            <!-- 链接内嵌内容 -->
-            <div class="linkbox">
-                <!-- 项目 -->
-                <div class="drive"><a class="link1" href="http://drive.palzs.site/">Drive</a></div>
-                <div class="bar"></div>
-                <div class="wiki"><a class="link2" href="https://wiki.palzs.site/">Wiki</a></div>
-                <div class="bar"></div>
-                <div class="blog"><a class="link3" href="https://blog.palzs.site/">Blog</a></div>
-                <div class="bar"></div>
-                <div class="video"><a class="link4" href="http://video.palzs.site/">Video</a></div>
-            </div>
-        </div>
-        <!-- 搜索区域 -->    
-        <div class="search">
-            <!-- LOGO --> 
-            <div>
-                <img class="logo light" src="./svg/logo.svg" />
-                <img class="logo dark" src="./svg/logo-dark.svg"/>
-            </div>
-            <!-- 搜索外框 -->
-            <div class="s-outbox">
-                <!-- 搜索内框 -->
-                <input class="keyword" type="text" autocomplete="off" placeholder="search" />
-                <!-- 搜索图标 -->
-                <img class="s-icon light" src="./svg/search.svg" />
-                <img class="s-icon dark" src="./svg/search-dark.svg"/>
-            </div>
-            <!-- 搜索引擎切换 -->
-            <div class="searchbox">
-                <!-- 项目 -->
-                <div class="google">
-                    <img class="ss-icon google-icon light" src="./svg/google.svg" />
-                    <img class="ss-icon google-icon dark" src="./svg/google-dark.svg"/>
-                </div>
-                <div class="baidu">
-                    <img class="ss-icon baidu-icon light" src="./svg/baidu.svg"/>
-                    <img class="ss-icon baidu-icon dark" src="./svg/baidu-dark.svg"/>
-                </div>
-                <div class="bing">
-                    <img class="ss-icon bing-icon light" src="./svg/bing.svg" />
-                    <img class="ss-icon bing-icon dark" src="./svg/bing-dark.svg"/>
-                </div>
-            </div>
-        </div>
-        <!-- 书签区域 -->
-        <div class="fav">
-            <!-- 书签内嵌Grid -->
-            <div class="fav-grid">
-                <!-- 内嵌Grid项目 -->
-                <div onclick="javascript:window.open('http://www.bilibili.com')">
-                    <img class="fav-icon" src="./svg/bilibili.svg" />
-                    <p class="fav-name">BiliBili</p>
-                </div>
-                <div onclick="javascript:window.open('http://www.youtube.com')">
-                    <img class="fav-icon" src="./svg/youtube.svg" />
-                    <p class="fav-name">YouTube</p>
-                </div>
-                <div onclick="javascript:window.open('https://bgm.tv')">
-                    <img class="fav-icon" src="./svg/bangumi.svg" />
-                    <p class="fav-name">Bangumi</p>
-                </div>
-                <div onclick="javascript:window.open('https://bbs.acgrip.com')">
-                    <img class="fav-icon" src="./svg/acgrip.svg" />
-                    <p class="fav-name">ACG字幕</p>
-                </div>
-                <div onclick="javascript:window.open('https://mikanani.me')">
-                    <img class="fav-icon" src="./svg/mikan.svg" />
-                    <p class="fav-name">蜜柑计划</p>
-                </div>
-                <div onclick="javascript:window.open('https://www.dmhy.org')">
-                    <img class="fav-icon" src="./svg/dmhy.svg" />
-                    <p class="fav-name">动漫花园</p>
-                </div>
-                <div onclick="javascript:window.open('https://zh.wikipedia.org/wiki/Wikipedia:首页')">
-                    <img class="fav-icon" src="./svg/wiki.svg" />
-                    <p class="fav-name">维基百科</p>
-                </div>
-                <div onclick="javascript:window.open('https://fgo.wiki/w/首页')">
-                    <img class="fav-icon" src="./svg/mooncell.svg" />
-                    <p class="fav-name">MoonCell</p>
-                </div>
-                <div onclick="javascript:window.open('https://thwiki.cc')">
-                    <img class="fav-icon" src="./svg/thwiki.svg" />
-                    <p class="fav-name">THBWiki</p>
-                </div>
-                <div onclick="javascript:window.open('http://scp-wiki-cn.wikidot.com')">
-                    <img class="fav-icon" src="./svg/scp.svg" />
-                    <p class="fav-name">SCP基金会</p>
-                </div>
-                <div onclick="javascript:window.open('https://www.2dfan.com')">
-                    <img class="fav-icon" src="./svg/2dfan.svg" />
-                    <p class="fav-name">2DFan</p>
-                </div>
-                <div onclick="javascript:window.open('https://www.runoob.com')">
-                    <img class="fav-icon" src="./svg/runoob.svg" />
-                    <p class="fav-name">菜鸟教程</p>
-                </div>
-                <div onclick="javascript:window.open('https://docs.craft.do')">
-                    <img class="fav-icon" src="./svg/craft.svg" />
-                    <p class="fav-name">Craft</p>
-                </div>
-                <div onclick="javascript:window.open('https://judes.me/lrc_editor')">
-                    <img class="fav-icon" src="./svg/lrceditor.svg" />
-                    <p class="fav-name">LRC Editor</p>
-                </div>
-                <div onclick="javascript:window.open('https://mail.qq.com')">
-                    <img class="fav-icon" src="./svg/qqmail.svg" />
-                    <p class="fav-name">QQ邮箱</p>
-                </div>
-                <div onclick="javascript:window.open('https://pan.baidu.com')">
-                    <img class="fav-icon" src="./svg/baidudisk.svg" />
-                    <p class="fav-name">百度网盘</p>
-                </div>
-                <div onclick="javascript:window.open('https://cloud.lilywhite.cc')">
-                    <img class="fav-icon" src="./svg/lilycloud.svg" />
-                    <p class="fav-name">莉莉云</p>
-                </div>
-                <div onclick="javascript:window.open('https://wallhaven.cc/')">
-                    <img class="fav-icon" src="./svg/wallhaven.svg" />
-                    <p class="fav-name">Wallhaven</p>
-                </div>
-                <div onclick="javascript:window.open('https://blog.reimu.net')">
-                    <img class="fav-icon" src="./svg/lmys.svg" />
-                    <p class="fav-name">灵梦御所</p>
-                </div>
-                <div onclick="javascript:window.open('https://hxcy.moe')">
-                    <img class="fav-icon" src="./svg/hxcy.svg" />
-                    <p class="fav-name">幻想次元</p>
-                </div>
-                <div onclick="javascript:window.open('https://gelbooru.com')">
-                    <img class="fav-icon" src="./svg/gelbooru.svg" />
-                    <p class="fav-name">Gelbooru</p>
-                </div>
-                <div onclick="javascript:window.open('https://exhentai.org')">
-                    <img class="fav-icon" src="./svg/exhentai.svg" />
-                    <p class="fav-name">ExHentai</p>
-                </div>
-                <div onclick="javascript:window.open('https://www.iwara.tv')">
-                    <img class="fav-icon" src="./svg/iwara.svg" />
-                    <p class="fav-name">Iwara</p>
-                </div>
-                <div onclick="javascript:window.open('https://www.dlsite.com')">
-                    <img class="fav-icon" src="./svg/dlsite.svg" />
-                    <p class="fav-name">DLsite</p>
-                </div>
-                <div onclick="javascript:window.open('https://www.gamer520.com')">
-                    <img class="fav-icon" src="./svg/520.svg" />
-                    <p class="fav-name">Gamer520</p>
-                </div>
-                <div onclick="javascript:window.open('https://steamzg.com')">
-                    <img class="fav-icon" src="./svg/steamzg.svg" />
-                    <p class="fav-name">小叽资源</p>
-                </div>
-            </div>
-        </div>
-        <!-- 页尾区域 -->
-        <div class="end"></div>
-    </div>
-    <!-- JS引入 -->
-    <script src="./jquery.min.js"></script>
-    <script src="./scripts.js"></script>
+<body>
+	<!-- 页面总布局Grid -->
+	<div class="container">
+		<!-- 链接区域 -->
+		<div class="link">
+			<!-- 链接内嵌内容 -->
+			<div class="linkbox">
+				<!-- 项目 -->
+				<div class="drive">
+					<a class="link1" href="http://drive.palzs.site/">Drive</a>
+				</div>
+				<div class="bar"></div>
+				<div class="wiki">
+					<a class="link2" href="https://wiki.palzs.site/">Wiki</a>
+				</div>
+				<div class="bar"></div>
+				<div class="blog">
+					<a class="link3" href="https://blog.palzs.site/">Blog</a>
+				</div>
+				<div class="bar"></div>
+				<div class="video">
+					<a class="link4" href="http://video.palzs.site/">Video</a>
+				</div>
+			</div>
+		</div>
+		<!-- 搜索区域 -->
+		<div class="search">
+			<!-- LOGO -->
+			<div>
+				<img class="logo light" src="./svg/logo.svg" />
+				<img class="logo dark" src="./svg/logo-dark.svg" />
+			</div>
+			<!-- 搜索外框 -->
+			<div class="s-outbox">
+				<!-- 搜索内框 -->
+				<input class="keyword" type="text" autocomplete="off" placeholder="search" />
+				<!-- 搜索图标 -->
+				<img class="s-icon light" src="./svg/search.svg" />
+				<img class="s-icon dark" src="./svg/search-dark.svg" />
+			</div>
+			<!-- 搜索引擎切换 -->
+			<div class="searchbox">
+				<!-- 项目 -->
+				<div class="google">
+					<img class="ss-icon google-icon light" src="./svg/google.svg" />
+					<img class="ss-icon google-icon dark" src="./svg/google-dark.svg" />
+				</div>
+				<div class="baidu">
+					<img class="ss-icon baidu-icon light" src="./svg/baidu.svg" />
+					<img class="ss-icon baidu-icon dark" src="./svg/baidu-dark.svg" />
+				</div>
+				<div class="bing">
+					<img class="ss-icon bing-icon light" src="./svg/bing.svg" />
+					<img class="ss-icon bing-icon dark" src="./svg/bing-dark.svg" />
+				</div>
+			</div>
+		</div>
+		<!-- 书签区域 -->
+		<div class="fav">
+			<!-- 书签内嵌Grid -->
+			<div class="fav-grid">
+				<!-- 内嵌Grid项目 -->
+				<div onclick="javascript:window.open('http://www.bilibili.com')">
+					<img class="fav-icon" src="./svg/bilibili.svg" />
+					<p class="fav-name">BiliBili</p>
+				</div>
+				<div onclick="javascript:window.open('http://www.youtube.com')">
+					<img class="fav-icon" src="./svg/youtube.svg" />
+					<p class="fav-name">YouTube</p>
+				</div>
+				<div onclick="javascript:window.open('https://bgm.tv')">
+					<img class="fav-icon" src="./svg/bangumi.svg" />
+					<p class="fav-name">Bangumi</p>
+				</div>
+				<div onclick="javascript:window.open('https://bbs.acgrip.com')">
+					<img class="fav-icon" src="./svg/acgrip.svg" />
+					<p class="fav-name">ACG字幕</p>
+				</div>
+				<div onclick="javascript:window.open('https://mikanani.me')">
+					<img class="fav-icon" src="./svg/mikan.svg" />
+					<p class="fav-name">蜜柑计划</p>
+				</div>
+				<div onclick="javascript:window.open('https://www.dmhy.org')">
+					<img class="fav-icon" src="./svg/dmhy.svg" />
+					<p class="fav-name">动漫花园</p>
+				</div>
+				<div onclick="javascript:window.open('https://www.2dfan.com')">
+					<img class="fav-icon" src="./svg/2dfan.svg" />
+					<p class="fav-name">2DFan</p>
+				</div>
+				<div onclick="javascript:window.open('https://zh.wikipedia.org/wiki/Wikipedia:首页')">
+					<img class="fav-icon" src="./svg/wiki.svg" />
+					<p class="fav-name">维基百科</p>
+				</div>
+				<div onclick="javascript:window.open('http://scp-wiki-cn.wikidot.com')">
+					<img class="fav-icon" src="./svg/scp.svg" />
+					<p class="fav-name">SCP基金会</p>
+				</div>
+				<div onclick="javascript:window.open('https://fgo.wiki/w/首页')">
+					<img class="fav-icon" src="./svg/mooncell.svg" />
+					<p class="fav-name">MoonCell</p>
+				</div>
+				<div onclick="javascript:window.open('https://thwiki.cc')">
+					<img class="fav-icon" src="./svg/thwiki.svg" />
+					<p class="fav-name">THBWiki</p>
+				</div>
+				<div onclick="javascript:window.open('https://blog.reimu.net')">
+					<img class="fav-icon" src="./svg/lmys.svg" />
+					<p class="fav-name">灵梦御所</p>
+				</div>
+				<div onclick="javascript:window.open('https://hxcy.top')">
+					<img class="fav-icon" src="./svg/hxcy.svg" />
+					<p class="fav-name">幻想次元</p>
+				</div>
+				<div onclick="javascript:window.open('https://hacg.mov/')">
+					<img class="fav-icon" src="./svg/hacg.svg" />
+					<p class="fav-name">琉璃神社</p>
+				</div>
+				<div onclick="javascript:window.open('https://www.ttloli.com/')">
+					<img class="fav-icon" src="./svg/ttloli.png" />
+					<p class="fav-name">忧郁的loli</p>
+				</div>
+				<div onclick="javascript:window.open('https://steamzg.com')">
+					<img class="fav-icon" src="./svg/steamzg.webp" />
+					<p class="fav-name">小叽资源</p>
+				</div>
+				<div onclick="javascript:window.open('https://www.dlsite.com')">
+					<img class="fav-icon" src="./svg/dlsite.svg" />
+					<p class="fav-name">DLsite</p>
+				</div>
+				<div onclick="javascript:window.open('https://gelbooru.com')">
+					<img class="fav-icon" src="./svg/gelbooru.svg" />
+					<p class="fav-name">Gelbooru</p>
+				</div>
+				<div onclick="javascript:window.open('https://exhentai.org')">
+					<img class="fav-icon" src="./svg/exhentai.svg" />
+					<p class="fav-name">ExHentai</p>
+				</div>
+				<div onclick="javascript:window.open('https://www.iwara.tv')">
+					<img class="fav-icon" src="./svg/iwara.svg" />
+					<p class="fav-name">Iwara</p>
+				</div>
+				<div onclick="javascript:window.open('https://judes.me/lrc_editor')">
+					<img class="fav-icon" src="./svg/lrceditor.svg" />
+					<p class="fav-name">LRC Editor</p>
+				</div>
+				<div onclick="javascript:window.open('https://mail.qq.com')">
+					<img class="fav-icon" src="./svg/qqmail.svg" />
+					<p class="fav-name">QQ邮箱</p>
+				</div>
+				<div onclick="javascript:window.open('https://pan.baidu.com')">
+					<img class="fav-icon" src="./svg/baidudisk.svg" />
+					<p class="fav-name">百度网盘</p>
+				</div>
+				<div onclick="javascript:window.open('https://wallhaven.cc/')">
+					<img class="fav-icon" src="./svg/wallhaven.svg" />
+					<p class="fav-name">Wallhaven</p>
+				</div>
+				<div onclick="javascript:window.open('https://www.runoob.com')">
+					<img class="fav-icon" src="./svg/runoob.svg" />
+					<p class="fav-name">菜鸟教程</p>
+				</div>
+			</div>
+		</div>
+		<!-- 页尾区域 -->
+		<div class="end"></div>
+	</div>
+	<!-- JS引入 -->
+	<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="./scripts.js"></script>
 </body>
 </html>
