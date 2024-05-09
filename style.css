@@ -243,13 +243,16 @@ a {text-decoration: none}
     }
 
     /* 搜索图标特效 */
-    .s-icon:hover {filter: drop-shadow(0 0 3px #9D2222)}
+    .s-icon:hover {filter: drop-shadow(0 0 2px #9D2222)}
 
     /* 引擎图标特效 */
     .google-icon:hover {filter: drop-shadow(0 0 1.5px #9D2222) brightness(120%)}
     .baidu-icon:hover {filter: drop-shadow(0 0 1.5px #9D2222) brightness(120%)}
     .bing-icon:hover {filter: drop-shadow(0 0 1.5px #9D2222) brightness(120%)}
 
+    .navigation {
+        background-color: #282828;
+    }
     /* 按钮特效 */
     .toggle:hover {transform: rotate(0deg) scale(1.2);}
     .toggle.active:hover {transform: rotate(180deg) scale(1.2);}
