@@ -12,8 +12,7 @@ $(".keyword").bind('keypress', function (event) {
     if (event.keyCode == 13) {
         var key = $(".keyword").val();
         window.open(engine + key);
-    }
-})
+}})
 // 引擎切换
 $(".google-icon").click(function () {
     engine = "https://www.google.com/search?q=";
@@ -58,3 +57,9 @@ quotes[9] = "God's in his heaven, all's right with the world."
 quotes[0] = "Wenn du lange in einen Abgrund blickst, blickt der Abgrund auch in dich hinein."
 var quote = quotes[rand1]
 $(".end").html(quote);
+// 面板伸缩
+const navigation = document.querySelector('.navigation');
+document.querySelector('.toggle').onclick = function () {
+    this.classList.toggle('active');
+    navigation.classList.toggle('active');
+}

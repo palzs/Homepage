@@ -11,11 +11,8 @@ body {
     user-select: none;
 }
 
-.dark {
-    display: none;
-}
+.dark {display: none;}
 
-/* 标准化兼容 */
 * {
     margin: 0;
     padding: 0;
@@ -24,24 +21,16 @@ body {
 }
 
 /* 取消文本下划线 */
-a {
-    text-decoration: none
-}
+a {text-decoration: none}
 
 /* 输入框预置文本颜色 */
-::-webkit-input-placeholder {
-    color: #d8dbdd
-}
+::-webkit-input-placeholder {color: #d8dbdd}
 
 /* 选中颜色 */
-::selection {
-    background: #eeeeee
-}
+::selection {background: #eeeeee}
 
 /* 滚动条样式 */
-::-webkit-scrollbar {
-    display: none
-}
+::-webkit-scrollbar {display: none}
 
 /* 页面总布局Grid */
 .container {
@@ -52,28 +41,25 @@ a {
     justify-content: center;
     grid-row-gap: 10px;
     grid-template-columns: 1fr;
-    grid-template-rows: 45px 240px max-content auto;
+    grid-template-rows: 50px 60% auto;
     grid-template-areas:
         '链接'
         '搜索'
-        '书签'
         '页尾';
 }
 
 /* 链接区域 */
-.link {
-    grid-area: 链接;
-}
+.link {grid-area: 链接;}
 
-/* 链接区域内容 */
 .linkbox {
     height: 60px;
     width: 230px;
-    margin-left: 15px;
+    margin-left: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-size: 1.2rem;
+    color: #c0c0c0;
 }
 
 .bar {
@@ -85,41 +71,11 @@ a {
 }
 
 /* 链接特效 */
-.link1 {
-    color: #b0ccdf;
-    transition: all 0.3s;
-}
-
-.link2 {
-    color: #d7cbb6;
-    transition: all 0.3s;
-}
-
-.link3 {
-    color: #d4b6d7;
-    transition: all 0.3s;
-}
-
-.link4 {
-    color: #b6d7c9;
-    transition: all 0.3s;
-}
-
-.link1:hover {
-    filter: drop-shadow(0 0 2px #b0ccdf)
-}
-
-.link2:hover {
-    filter: drop-shadow(0 0 2px #d7cbb6)
-}
-
-.link3:hover {
-    filter: drop-shadow(0 0 2px #d4b6d7)
-}
-
-.link4:hover {
-    filter: drop-shadow(0 0 2px #b6d7c9)
-}
+.links {color: #c0c0c0; transition: all 0.3s;}
+.link1:hover {color: #b0ccdf; filter: drop-shadow(0 0 2px #b0ccdf)}
+.link2:hover {color: #d7cbb6; filter: drop-shadow(0 0 2px #d7cbb6)}
+.link3:hover {color: #d4b6d7; filter: drop-shadow(0 0 2px #d4b6d7)}
+.link4:hover {color: #b6d7c9; filter: drop-shadow(0 0 2px #b6d7c9)}
 
 /* 搜索区域 */
 .search {
@@ -135,6 +91,7 @@ a {
     width: 188px;
     height: 60px;
     border: 0px;
+    margin: 10px;
 }
 
 /* 搜索外框 */
@@ -144,7 +101,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 20px;
+    margin: 30px;
     background-color: #f8f8f8;
     border-radius: 10px;
     box-shadow: inset 0px 0px 7px #dddddd;
@@ -172,9 +129,7 @@ a {
 }
 
 /* 搜索图标特效 */
-.s-icon:hover {
-    filter: drop-shadow(0 0 3px #00000022) brightness(200%)
-}
+.s-icon:hover {filter: drop-shadow(0 0 3px #00000022) brightness(200%)}
 
 /* 搜索引擎切换 */
 .searchbox {
@@ -193,69 +148,9 @@ a {
 }
 
 /* 引擎图标特效 */
-.google-icon:hover {
-    filter: drop-shadow(0 0 3px #00000022) brightness(200%)
-}
-
-.baidu-icon:hover {
-    filter: drop-shadow(0 0 3px #00000022) brightness(200%)
-}
-
-.bing-icon:hover {
-    filter: drop-shadow(0 0 3px #00000022) brightness(200%)
-}
-
-/* 书签区域 */
-.fav {
-    grid-area: 书签;
-    display: flex;
-    justify-content: center;
-}
-
-/* 书签区域内嵌Grid */
-.fav-grid {
-    display: grid;
-    grid-column-gap: 40px;
-    grid-row-gap: 40px;
-    grid-template-columns: repeat(9, 50px);
-}
-
-/* 书签区域项目属性 */
-.fav-grid>div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    aspect-ratio: 1;
-    background: #fcfcfc;
-    box-shadow: 0 0px 6px #00000022;
-    border-radius: 7px;
-    text-align: center;
-    cursor: pointer;
-    filter: grayscale(0.4);
-    transition: all 0.3s;
-}
-
-.fav-grid>div:hover {
-    transform: scale(1.1);
-}
-
-/* 书签项目图标 */
-.fav-icon {
-    width: 60%;
-    height: 60%;
-}
-
-/* 书签项目名称 */
-.fav-name {
-    position: absolute;
-    align-self: center;
-    justify-self: center;
-    font-size: 0.6rem;
-    bottom: -20px;
-    width: 100%;
-    color: #aaaaaa;
-}
+.google-icon:hover {filter: drop-shadow(0 0 3px #00000022) brightness(200%)}
+.baidu-icon:hover {filter: drop-shadow(0 0 3px #00000022) brightness(200%)}
+.bing-icon:hover {filter: drop-shadow(0 0 3px #00000022) brightness(200%)}
 
 /* 页尾区域 */
 .end {
@@ -268,86 +163,69 @@ a {
     color: #dddddd;
 }
 
-.theme {
-    grid-area: 页尾;
-    display: flex;
-    margin-bottom: 10px;
-    margin-right: 15px;
-    align-self: flex-end;
-    align-items: center;
-    justify-self: flex-end;
-    justify-content: center;
-    align-items: center;
-    width: 16px;
-    height: 16px;
+/* 书签 */
+.navigation {
+    position: absolute;
+    width: 200px;
+    right: -310px;
+    filter: drop-shadow(0 0 3px #00000022) brightness(98%);
+    transition: 0.5s;
+    overflow: hidden;
 }
 
+/* 书签特效 */
+.navigation.active {right: 10px;}
+
+.fav {
+    border: 0;
+    width: 210px;
+    height: calc(100vh - 20px);
+}
+/* 按钮 */
+.toggle {
+    position: absolute;
+    top: calc(50% - 20px);
+    right: 10px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(0deg);
+    transition: all 0.5s;
+}
+
+/* 按钮特效 */
+.toggle.active {right: 220px; transform: rotate(180deg);}
+.toggle:hover {filter: drop-shadow(0 0 3px #00000022); transform: rotate(0deg) scale(1.1);}
+.toggle.active:hover {filter: drop-shadow(0 0 3px #00000022); transform: rotate(180deg) scale(1.1);}
+
+/* 深色模式 */
 @media (prefers-color-scheme: dark) {
 
     /* 页面 */
-    body {
-        background: #282828;
-    }
+    body {background: #282828;}
 
     /* 输入框预置文本颜色 */
-    ::-webkit-input-placeholder {
-        color: #282828
-    }
+    ::-webkit-input-placeholder {color: #282828}
 
     /* 选中颜色 */
-    ::selection {
-        background: #9D2222
-    }
+    ::selection {background: #9D2222}
 
     /* 链接区域内容 */
-    .bar {
-        background-color: #404040
-    }
+    .bar {background-color: #404040}
 
-    .light {
-        display: none
-    }
-
-    .dark {
-        display: unset
-    }
+    /* 深色切换 */
+    .light {display: none}
+    .dark {display: unset}
 
     /* 链接特效 */
-    .link1 {
-        color: #3F5768;
-    }
-
-    .link2 {
-        color: #5E4D31
-    }
-
-    .link3 {
-        color: #5F3B63
-    }
-
-    .link4 {
-        color: #446557
-    }
-
-    .link1:hover {
-        filter: drop-shadow(0 0 2px #3F5768);
-        transition: all 0.3s
-    }
-
-    .link2:hover {
-        filter: drop-shadow(0 0 2px #5E4D31);
-        transition: all 0.3s
-    }
-
-    .link3:hover {
-        filter: drop-shadow(0 0 2px #5F3B63);
-        transition: all 0.3s
-    }
-
-    .link4:hover {
-        filter: drop-shadow(0 0 2px #446557);
-        transition: all 0.3s
-    }
+    .links {color: #505050}
+    .link1:hover {color: #3F5768; filter: drop-shadow(0 0 2px #3F5768); transition: all 0.3s}
+    .link2:hover {color: #5E4D31; filter: drop-shadow(0 0 2px #5E4D31); transition: all 0.3s}
+    .link3:hover {color: #5F3B63; filter: drop-shadow(0 0 2px #5F3B63); transition: all 0.3s}
+    .link4:hover {color: #446557; filter: drop-shadow(0 0 2px #446557); transition: all 0.3s}
 
     /* 搜索外框 */
     .s-outbox {
@@ -362,36 +240,15 @@ a {
     }
 
     /* 搜索图标特效 */
-    .s-icon:hover {
-        filter: drop-shadow(0 0 1.5px #bbbbbb)
-    }
+    .s-icon:hover {filter: drop-shadow(0 0 1.5px #bbbbbb)}
 
     /* 引擎图标特效 */
-    .google-icon:hover {
-        filter: drop-shadow(0 0 1.5px #9D2222) brightness(120%)
-    }
+    .google-icon:hover {filter: drop-shadow(0 0 1.5px #9D2222) brightness(120%)}
+    .baidu-icon:hover {filter: drop-shadow(0 0 1.5px #9D2222) brightness(120%)}
+    .bing-icon:hover {filter: drop-shadow(0 0 1.5px #9D2222) brightness(120%)}
 
-    .baidu-icon:hover {
-        filter: drop-shadow(0 0 1.5px #9D2222) brightness(120%)
-    }
-
-    .bing-icon:hover {
-        filter: drop-shadow(0 0 1.5px #9D2222) brightness(120%)
-    }
-
-    /* 书签区域项目属性 */
-    .fav-grid>div {
-        background: #404040;
-        box-shadow: 0 0px 6px #00000050;
-    }
-
-    /* 书签项目名称 */
-    .fav-name {
-        color: #999999;
-    }
-
-    /* 页尾区域 */
-    .end {
-        color: #404040;
-    }
+    /* 按钮特效 */
+    .toggle.active {right: 220px; transform: rotate(180deg);}
+    .toggle:hover {filter: drop-shadow(0 0 1.5px #9D2222) brightness(120%); transform: rotate(0deg) scale(1.1);}
+    .toggle.active:hover {filter: drop-shadow(0 0 1.5px #9D2222) brightness(120%); transform: rotate(180deg) scale(1.1);}
 }
