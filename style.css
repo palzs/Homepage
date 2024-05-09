@@ -259,5 +259,5 @@ a {text-decoration: none}
     .toggle.active:hover {transform: rotate(180deg) scale(1.2);}
 }
     .end {
-        color: #666666;
+        color: #505050;
     }
