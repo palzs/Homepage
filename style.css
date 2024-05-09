@@ -167,6 +167,7 @@ a {text-decoration: none}
 .navigation {
     position: absolute;
     width: 200px;
+    height: calc(100vh - 20px);
     right: -310px;
     background-color: #ffffff;
     border-radius: 10px;
@@ -181,7 +182,7 @@ a {text-decoration: none}
 .fav {
     border: 0;
     width: 210px;
-    height: calc(100vh - 20px);
+    height: 100%;
     filter: opacity(0.5);
 }
 /* 按钮 */
