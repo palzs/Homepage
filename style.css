@@ -160,7 +160,7 @@ a {text-decoration: none}
     align-self: flex-end;
     align-items: center;
     justify-content: center;
-    color: #aaaaaa;
+    color: #dddddd;
 }
 
 /* 书签 */
@@ -243,7 +243,7 @@ a {text-decoration: none}
     }
 
     /* 搜索图标特效 */
-    .s-icon:hover {filter: drop-shadow(0 0 1.5px #bbbbbb)}
+    .s-icon:hover {filter: drop-shadow(0 0 1.5px #9D2222)}
 
     /* 引擎图标特效 */
     .google-icon:hover {filter: drop-shadow(0 0 1.5px #9D2222) brightness(120%)}
@@ -251,7 +251,9 @@ a {text-decoration: none}
     .bing-icon:hover {filter: drop-shadow(0 0 1.5px #9D2222) brightness(120%)}
 
     /* 按钮特效 */
-    .toggle.active {right: 220px; transform: rotate(180deg);}
     .toggle:hover {filter: drop-shadow(0 0 1.5px #9D2222) brightness(120%); transform: rotate(0deg) scale(1.1);}
     .toggle.active:hover {filter: drop-shadow(0 0 1.5px #9D2222) brightness(120%); transform: rotate(180deg) scale(1.1);}
 }
+    .end {
+        color: #aaaaaa;
+    }
