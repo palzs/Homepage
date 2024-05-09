@@ -35,7 +35,7 @@ a {
 
 /* 选中颜色 */
 ::selection {
-    background: #e1e4e6
+    background: #eeeeee
 }
 
 /* 滚动条样式 */
@@ -145,7 +145,7 @@ a {
     align-items: center;
     justify-content: center;
     margin: 20px;
-    background-color: #f3f5f8;
+    background-color: #f8f8f8;
     border-radius: 10px;
     box-shadow: inset 0px 0px 7px #dddddd;
 }
@@ -155,7 +155,7 @@ a {
     width: 525px;
     height: 40px;
     color: #aaaaaa;
-    background-color: #f3f5f8;
+    background-color: #f8f8f8;
     font-family: 'Questrial';
     font-size: 1rem;
     border: 0px;
