@@ -64,4 +64,3 @@ document.querySelector('.toggle').onclick = function () {
     navigation.classList.toggle('active');
 }
 // 面板赋值
-$(".fav").attr("src","https://raindrop.io/617985487/bookmarks-16689664/embed/hide=header%2Cadd");
