@@ -103,7 +103,7 @@ a {text-decoration: none}
     align-items: center;
     justify-content: center;
     margin: 20px;
-    background-color: #f8f8f8;
+    background-color: #f6f6f6;
     border-radius: 10px;
     box-shadow: inset 0px 0px 7px #dddddd;
 }
@@ -113,7 +113,7 @@ a {text-decoration: none}
     width: 525px;
     height: 40px;
     color: #aaaaaa;
-    background-color: #f8f8f8;
+    background-color: #f6f6f6;
     font-family: 'Questrial';
     font-size: 1rem;
     border: 0px;
