@@ -41,29 +41,30 @@ a {text-decoration: none}
     justify-content: center;
     grid-row-gap: 10px;
     grid-template-columns: 1fr;
-    grid-template-rows: 50px 60% auto;
+    grid-template-rows: 200px 240px max-content auto;
     grid-template-areas:
         '链接'
         '搜索'
+        '书签'
         '页尾';
 }
 
 /* 链接区域 */
-.link {grid-area: 链接;}
+.link {grid-area: 链接;place-self: start start;}
 
+/* 链接区域内容 */
 .linkbox {
-    height: 60px;
+    height: 50px;
     width: 230px;
-    margin-left: 20px;
+    margin-left: 15px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-size: 1.2rem;
-    color: #c0c0c0;
 }
 
 .bar {
-    height: 17%;
+    height: 20%;
     width: 1.5px;
     align-self: center;
     background-color: #cccccc;
@@ -101,8 +102,8 @@ a {text-decoration: none}
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 30px;
-    background-color: #f6f6f6;
+    margin: 20px;
+    background-color: #f8f8f8;
     border-radius: 10px;
     box-shadow: inset 0px 0px 7px #dddddd;
 }
@@ -112,7 +113,7 @@ a {text-decoration: none}
     width: 525px;
     height: 40px;
     color: #aaaaaa;
-    background-color: #f6f6f6;
+    background-color: #f8f8f8;
     font-family: 'Questrial';
     font-size: 1rem;
     border: 0px;
@@ -163,47 +164,58 @@ a {text-decoration: none}
     color: #dddddd;
 }
 
-/* 书签 */
-.navigation {
-    position: absolute;
-    width: 200px;
-    height: calc(100vh - 20px);
-    right: -300px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    filter: drop-shadow(0 0 3px #00000022);
-    transition: 0.5s;
-    overflow: hidden;
-}
-
-/* 书签特效 */
-.navigation.active {right: 10px;}
-
+/* 书签区域 */
 .fav {
-    border: 0;
-    width: 210px;
-    height: 100%;
-    filter: opacity(0.5);
-}
-/* 按钮 */
-.toggle {
-    position: absolute;
-    top: calc(50% - 20px);
-    right: 10px;
-    width: 16px;
-    height: 16px;
-    cursor: pointer;
+    grid-area: 书签;
     display: flex;
     justify-content: center;
-    align-items: center;
-    transform: rotate(0deg);
-    transition: all 0.5s;
 }
 
-/* 按钮特效 */
-.toggle.active {right: 220px; transform: rotate(180deg);}
-.toggle:hover {filter: drop-shadow(0 0 3px #00000022); transform: rotate(0deg) scale(1.1);}
-.toggle.active:hover {filter: drop-shadow(0 0 3px #00000022); transform: rotate(180deg) scale(1.1);}
+/* 书签区域内嵌Grid */
+.fav-grid {
+    display: grid;
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+    grid-template-columns: repeat(8, 50px);
+    margin: 10px;
+}
+
+/* 书签区域项目属性 */
+.fav-grid>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1;
+    background: #fcfcfc;
+    box-shadow: 0 0px 6px #00000022;
+    border-radius: 7px;
+    text-align: center;
+    cursor: pointer;
+    filter: grayscale(0.4);
+    transition: all 0.3s;
+}
+
+.fav-grid>div:hover {
+    transform: scale(1.1);
+}
+
+/* 书签项目图标 */
+.fav-icon {
+    width: 60%;
+    height: 60%;
+}
+
+/* 书签项目名称 */
+.fav-name {
+    position: absolute;
+    align-self: center;
+    justify-self: center;
+    font-size: 0.6rem;
+    bottom: -20px;
+    width: 100%;
+    color: #aaaaaa;
+}
 
 /* 深色模式 */
 @media (prefers-color-scheme: dark) {
@@ -251,15 +263,15 @@ a {text-decoration: none}
     .baidu-icon:hover {filter: drop-shadow(0 0 1.5px #9D2222) brightness(120%)}
     .bing-icon:hover {filter: drop-shadow(0 0 1.5px #9D2222) brightness(120%)}
 
-    .navigation {
-        background-color: #666666;
+    /* 书签区域项目属性 */
+    .fav-grid>div {
+        background: #404040;
+        box-shadow: 0 0px 6px #00000050;
     }
-    /* 按钮特效 */
-    .toggle:hover {transform: rotate(0deg) scale(1.2);}
-    .toggle.active:hover {transform: rotate(180deg) scale(1.2);}
 
-    .end {
-        color: #505050;
-    }
+    /* 书签项目名称 */
+    .fav-name {color: #999999;}
+
+    .end {color: #505050;}
 }
 

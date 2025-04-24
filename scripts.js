@@ -57,9 +57,3 @@ quotes[9] = "God's in his heaven, all's right with the world."
 quotes[0] = "Wenn du lange in einen Abgrund blickst, blickt der Abgrund auch in dich hinein."
 var quote = quotes[rand1]
 $(".end").html(quote);
-// 面板伸缩
-const navigation = document.querySelector('.navigation');
-document.querySelector('.toggle').onclick = function () {
-    this.classList.toggle('active');
-    navigation.classList.toggle('active');
-}
