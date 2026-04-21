@@ -5,10 +5,17 @@ body {
     align-items: center;
     min-height: 100vh;
     min-width: 100vw;
-    background: #fafafa;
+    background: #F7F8F9;
     overflow: hidden;
-    font-family: 'Questrial', sans-serif;
+    font-family: 'Outfit', sans-serif;
     user-select: none;
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url('./Outfit-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 .dark {display: none;}
@@ -103,7 +110,7 @@ a {text-decoration: none}
     align-items: center;
     justify-content: center;
     margin: 20px;
-    background-color: #f6f6f6;
+    background-color: #f6f7f8;
     border-radius: 10px;
     box-shadow: inset 0px 0px 7px #dddddd;
 }
@@ -113,7 +120,7 @@ a {text-decoration: none}
     width: 525px;
     height: 40px;
     color: #aaaaaa;
-    background-color: #f6f6f6;
+    background-color: #f6f7f8;
     font-family: 'Questrial';
     font-size: 1rem;
     border: 0px;
@@ -161,7 +168,7 @@ a {text-decoration: none}
     align-self: flex-end;
     align-items: center;
     justify-content: center;
-    color: #dddddd;
+    color: #cccccc;
 }
 
 /* 书签区域 */

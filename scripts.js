@@ -1,9 +1,9 @@
 // 搜索功能
-window.onload = function () {
-    engine = "https://www.baidu.com/s?wd=";
+
+engine = "https://www.baidu.com/s?wd=";
     document.querySelector('.baidu-icon.light').style.filter = "drop-shadow(0 0 3px #00000022) brightness(200%)";
     document.querySelector('.baidu-icon.dark').style.filter = "drop-shadow(0 0 1.5px #9D2222) brightness(120%)";
-}
+
 $(".s-icon").click(function () {
     var key = $(".keyword").val();
     window.open(engine + key);
