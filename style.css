@@ -50,13 +50,13 @@ a {text-decoration: none}
     justify-content: center;
     grid-row-gap: 30px;
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto 1fr;
+    grid-template-rows: 1fr auto auto 1.2fr;
     grid-template-areas:
         '链接'
         '搜索'
         '书签'
         '页尾';
-    padding: 30px 0;
+    padding: 5px 0 30px 0;
 }
 
 /* 链接区域 */
@@ -127,7 +127,7 @@ a {text-decoration: none}
     height: 40px;
     color: #aaaaaa;
     background-color: transparent;
-    font-family: 'Questrial';
+    font-family: 'Outfit', sans-serif;
     font-size: 1rem;
     border: 0px;
     outline-style: none;
@@ -135,8 +135,8 @@ a {text-decoration: none}
 
 /* 搜索图标 */
 .s-icon {
-    width: 28px;
-    height: 28px;
+    width: 24px;
+    height: 24px;
     margin-left: 10px;
     cursor: pointer;
     transition: all 0.3s;
@@ -251,18 +251,24 @@ a {text-decoration: none}
         margin-left: 0;
     }
     .fav-grid {
-        gap: 25px;
+        gap: 45px 25px;
+        max-width: 480px; /* 限制最大宽度，保证不超过6列，增加自动换行 */
+    }
+    .fav-grid>div {
+        width: 55px;
+        height: 55px;
     }
 }
 
 @media (max-width: 480px) {
     .fav-grid {
-        gap: 20px;
+        gap: 40px 20px;
+        max-width: 380px; /* 在手机上进一步限制宽度，利用更多纵向空间 */
     }
     .fav-grid>div {
-        width: 45px;
-        height: 45px;
-        border-radius: 5px;
+        width: 55px;
+        height: 55px;
+        border-radius: 6px;
     }
     .logo {
         width: 150px;
@@ -272,7 +278,7 @@ a {text-decoration: none}
         width: 180px;
     }
     .fav-name {
-        bottom: -15px;
+        bottom: -18px;
     }
 }
 
