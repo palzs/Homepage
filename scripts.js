@@ -1,59 +1,69 @@
-// 搜索功能
+// 使用 let 声明变量，防止隐式全局变量污染
+let engine = "https://www.baidu.com/s?wd=";
 
-engine = "https://www.baidu.com/s?wd=";
-    document.querySelector('.baidu-icon.light').style.filter = "drop-shadow(0 0 3px #00000022) brightness(200%)";
-    document.querySelector('.baidu-icon.dark').style.filter = "drop-shadow(0 0 1.5px #9D2222) brightness(120%)";
+// 封装一个更新图标样式的通用函数，减少代码重复
+function updateIconStyle(activeEngine) {
+    // 1. 先清空所有图标的样式
+    const allIcons = document.querySelectorAll('.ss-icon');
+    allIcons.forEach(icon => {
+        if (icon) icon.style.filter = "";
+    });
 
-$(".s-icon").click(function () {
-    var key = $(".keyword").val();
-    window.open(engine + key);
+    // 2. 为当前选中的图标添加高亮
+    const activeLight = document.querySelector(`.${activeEngine}-icon.light`);
+    const activeDark = document.querySelector(`.${activeEngine}-icon.dark`);
+
+    if (activeLight) activeLight.style.filter = "drop-shadow(0 0 3px #00000022) brightness(200%)";
+    if (activeDark) activeDark.style.filter = "drop-shadow(0 0 1.5px #9D2222) brightness(120%)";
+}
+
+// 初始化状态
+updateIconStyle('baidu');
+
+// 搜索功能 (使用 .on 代替废弃的 .bind)
+$(".s-icon").on('click', function () {
+    const key = $(".keyword").val();
+    if (key) window.open(engine + key);
 });
-$(".keyword").bind('keypress', function (event) {
-    if (event.keyCode == 13) {
-        var key = $(".keyword").val();
-        window.open(engine + key);
-}})
+
+$(".keyword").on('keypress', function (event) {
+    // 兼容 event.key 和过时的 event.keyCode
+    if (event.key === 'Enter' || event.keyCode === 13) {
+        const key = $(".keyword").val();
+        if (key) window.open(engine + key);
+    }
+});
+
 // 引擎切换
-$(".google-icon").click(function () {
+$(".google-icon").on('click', function () {
     engine = "https://www.google.com/search?q=";
-    document.querySelector('.google-icon.light').style.filter = "drop-shadow(0 0 3px #00000022) brightness(200%)";
-    document.querySelector('.google-icon.dark').style.filter = "drop-shadow(0 0 1.5px #9D2222) brightness(120%)";
-    document.querySelector('.baidu-icon.light').style.filter = "";
-    document.querySelector('.baidu-icon.dark').style.filter = "";
-    document.querySelector('.bing-icon.light').style.filter = "";
-    document.querySelector('.bing-icon.dark').style.filter = "";
+    updateIconStyle('google');
 });
-$(".baidu-icon").click(function () {
+
+$(".baidu-icon").on('click', function () {
     engine = "https://www.baidu.com/s?wd=";
-    document.querySelector('.google-icon.light').style.filter = "";
-    document.querySelector('.google-icon.dark').style.filter = "";
-    document.querySelector('.baidu-icon.light').style.filter = "drop-shadow(0 0 3px #00000022) brightness(200%)";
-    document.querySelector('.baidu-icon.dark').style.filter = "drop-shadow(0 0 1.5px #9D2222) brightness(120%)";
-    document.querySelector('.bing-icon.light').style.filter = "";
-    document.querySelector('.bing-icon.dark').style.filter = "";
+    updateIconStyle('baidu');
 });
-$(".bing-icon").click(function () {
+
+$(".bing-icon").on('click', function () {
     engine = "https://www.bing.com/search?q=";
-    document.querySelector('.google-icon.light').style.filter = "";
-    document.querySelector('.google-icon.dark').style.filter = "";
-    document.querySelector('.baidu-icon.light').style.filter = "";
-    document.querySelector('.baidu-icon.dark').style.filter = "";
-    document.querySelector('.bing-icon.light').style.filter = "drop-shadow(0 0 3px #00000022) brightness(200%)";
-    document.querySelector('.bing-icon.dark').style.filter = "drop-shadow(0 0 1.5px #9D2222) brightness(120%)";
+    updateIconStyle('bing');
 });
-// 随机句子
-var a = Math.random() + ""
-var rand1 = a.charAt(5)
-quotes = new Array
-quotes[1] = "All those moments will be lost in time, like tears in rain."
-quotes[2] = "Der Gott ist tot."
-quotes[3] = "Veni Vidi Vici."
-quotes[4] = "Cogito, ergo sum."
-quotes[5] = "Je pense, donc je suis."
-quotes[6] = "C'est la vie."
-quotes[7] = "L'enfer, c'est les autres."
-quotes[8] = "Was macht mich nicht umbringt, macht mich stärker."
-quotes[9] = "God's in his heaven, all's right with the world."
-quotes[0] = "Wenn du lange in einen Abgrund blickst, blickt der Abgrund auch in dich hinein."
-var quote = quotes[rand1]
-$(".end").html(quote);
+
+// 随机句子 (使用现代 const 数组字面量写法)
+const quotes = [
+    "Wenn du lange in einen Abgrund blickst, blickt der Abgrund auch in dich hinein.",
+    "All those moments will be lost in time, like tears in rain.",
+    "Der Gott ist tot.",
+    "Veni Vidi Vici.",
+    "Cogito, ergo sum.",
+    "Je pense, donc je suis.",
+    "C'est la vie.",
+    "L'enfer, c'est les autres.",
+    "Was macht mich nicht umbringt, macht mich stärker.",
+    "God's in his heaven, all's right with the world."
+];
+
+// 正确、安全的获取 0 到 quotes.length - 1 的随机数
+const randIndex = Math.floor(Math.random() * quotes.length);
+$(".end").html(quotes[randIndex]);

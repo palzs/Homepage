@@ -4,11 +4,13 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    min-width: 100vw;
+    width: 100%;
+    margin: 0;
+    padding: 0;
     background: #F7F8F9;
-    overflow: hidden;
     font-family: 'Outfit', sans-serif;
     user-select: none;
+    overflow-x: hidden;
 }
 
 @font-face {
@@ -41,29 +43,30 @@ a {text-decoration: none}
 
 /* 页面总布局Grid */
 .container {
-    height: 100vh;
-    width: 100vw;
+    min-height: 100vh;
+    width: 100%;
     display: grid;
     align-items: center;
     justify-content: center;
-    grid-row-gap: 10px;
+    grid-row-gap: 30px;
     grid-template-columns: 1fr;
-    grid-template-rows: 200px 240px max-content auto;
+    grid-template-rows: auto auto auto 1fr;
     grid-template-areas:
         '链接'
         '搜索'
         '书签'
         '页尾';
+    padding: 30px 0;
 }
 
 /* 链接区域 */
-.link {grid-area: 链接;place-self: start start;}
+.link {grid-area: 链接; place-self: start start;}
 
 /* 链接区域内容 */
 .linkbox {
     height: 50px;
     width: 230px;
-    margin-left: 15px;
+    margin-left: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -92,6 +95,7 @@ a {text-decoration: none}
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    width: 100%;
 }
 
 /* LOGO */
@@ -104,12 +108,14 @@ a {text-decoration: none}
 
 /* 搜索外框 */
 .s-outbox {
-    width: 600px;
+    width: 90%;
+    max-width: 600px;
     height: 55px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     margin: 20px;
+    padding: 0 15px;
     background-color: #f6f7f8;
     border-radius: 10px;
     box-shadow: inset 0px 0px 7px #dddddd;
@@ -117,10 +123,10 @@ a {text-decoration: none}
 
 /* 搜索内框 */
 .keyword {
-    width: 525px;
+    flex: 1;
     height: 40px;
     color: #aaaaaa;
-    background-color: #f6f7f8;
+    background-color: transparent;
     font-family: 'Questrial';
     font-size: 1rem;
     border: 0px;
@@ -164,11 +170,13 @@ a {text-decoration: none}
 .end {
     grid-area: 页尾;
     display: flex;
-    margin-bottom: 10px;
+    margin-top: 40px;
     align-self: flex-end;
     align-items: center;
     justify-content: center;
     color: #cccccc;
+    text-align: center;
+    padding: 0 20px;
 }
 
 /* 书签区域 */
@@ -176,24 +184,28 @@ a {text-decoration: none}
     grid-area: 书签;
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
 /* 书签区域内嵌Grid */
 .fav-grid {
-    display: grid;
-    grid-column-gap: 40px;
-    grid-row-gap: 40px;
-    grid-template-columns: repeat(8, 50px);
-    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+    justify-content: center;
+    width: 90%;
+    max-width: 800px;
+    margin: 10px auto;
 }
 
 /* 书签区域项目属性 */
 .fav-grid>div {
+    width: 50px;
+    height: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    aspect-ratio: 1;
     background: #fcfcfc;
     box-shadow: 0 0px 6px #00000022;
     border-radius: 7px;
@@ -201,6 +213,7 @@ a {text-decoration: none}
     cursor: pointer;
     filter: grayscale(0.4);
     transition: all 0.3s;
+    position: relative;
 }
 
 .fav-grid>div:hover {
@@ -220,8 +233,47 @@ a {text-decoration: none}
     justify-self: center;
     font-size: 0.6rem;
     bottom: -20px;
-    width: 100%;
+    width: 200%;
     color: #aaaaaa;
+}
+
+/* 响应式设计 (移动端适配) */
+@media (max-width: 768px) {
+    .container {
+        grid-template-rows: auto auto auto 1fr;
+        padding: 20px 0;
+        grid-row-gap: 20px;
+    }
+    .link {
+        place-self: center center;
+    }
+    .linkbox {
+        margin-left: 0;
+    }
+    .fav-grid {
+        gap: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .fav-grid {
+        gap: 20px;
+    }
+    .fav-grid>div {
+        width: 45px;
+        height: 45px;
+        border-radius: 5px;
+    }
+    .logo {
+        width: 150px;
+        height: auto;
+    }
+    .searchbox {
+        width: 180px;
+    }
+    .fav-name {
+        bottom: -15px;
+    }
 }
 
 /* 深色模式 */
@@ -259,7 +311,7 @@ a {text-decoration: none}
     /* 搜索内框 */
     .keyword {
         color: #999999;
-        background-color: #404040;
+        background-color: transparent;
     }
 
     /* 搜索图标特效 */
@@ -281,4 +333,3 @@ a {text-decoration: none}
 
     .end {color: #505050;}
 }
-
