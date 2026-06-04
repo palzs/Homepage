@@ -14,7 +14,7 @@ function updateIconStyle(activeEngine) {
     const activeDark = document.querySelector(`.${activeEngine}-icon.dark`);
 
     if (activeLight) activeLight.style.filter = "drop-shadow(0 0 3px #00000022) brightness(200%)";
-    if (activeDark) activeDark.style.filter = "drop-shadow(0 0 1.5px #9D2222) brightness(120%)";
+    if (activeDark) activeDark.style.filter = "drop-shadow(0 0 1.5px #555555) brightness(250%)";
 }
 
 // 初始化状态
@@ -67,3 +67,16 @@ const quotes = [
 // 正确、安全的获取 0 到 quotes.length - 1 的随机数
 const randIndex = Math.floor(Math.random() * quotes.length);
 $(".end").html(quotes[randIndex]);
+
+// 汉堡菜单切换 (仅移动端生效)
+$(".hamburger").on('click', function (e) {
+    $(".linkbox").fadeToggle(200);
+    e.stopPropagation(); // 防止点击事件冒泡到 document 触发关闭
+});
+
+// 点击页面空白处关闭汉堡菜单
+$(document).on('click', function () {
+    if (window.innerWidth <= 768) {
+        $(".linkbox").fadeOut(200);
+    }
+});
