@@ -208,6 +208,9 @@ a {text-decoration: none}
     color: #c0c0c0;
     text-align: center;
     padding: 0 20px;
+    /* 显式声明字号与行高，保证扩展/域名模式完全一致 */
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
 /* 书签区域 */
@@ -216,6 +219,11 @@ a {text-decoration: none}
     display: flex;
     justify-content: center;
     width: 100%;
+}
+
+/* 扩展模式且本地无书签：隐藏书签区（不展示默认静态书签） */
+.ext-mode.no-bookmarks .fav {
+    display: none;
 }
 
 /* 书签区域内嵌Grid */
@@ -276,6 +284,35 @@ a {text-decoration: none}
     .linkbox {
         display: flex !important;
     }
+
+    /* 扩展模式：fav 区限高 4 行（= 静态书签 25 项高度），书签再多也内部滚动，
+       保证页面保持一屏、尾部句子位置与域名模式完全一致 */
+    .ext-mode .fav-grid {
+        max-height: calc(70px * 4 + 35px * 3 + 12px);
+        padding-bottom: 12px;
+        overflow-y: auto;
+    }
+
+    /* 扩展模式：固定书签区行高并顶部对齐，使最后一行书签的阴影完整显示
+       （12px 底部留白），且书签区位置与域名模式完全一致 */
+    .ext-mode .fav {
+        height: calc(70px * 4 + 35px * 3 + 20px);
+        align-items: flex-start;
+    }
+
+    /* 扩展模式无书签：书签行移除，搜索区上移至约黄金比例位置（38.2% 视口高度） */
+    .ext-mode.no-bookmarks .container {
+        grid-template-rows: 1fr auto 1.85fr;
+        grid-template-areas:
+            '链接'
+            '搜索'
+            '页尾';
+    }
+
+    /* 扩展模式无书签：加大搜索引擎切换按钮与搜索框的间距 */
+    .ext-mode.no-bookmarks .searchbox {
+        margin-top: 14px;
+    }
 }
 
 /* 响应式设计 (移动端深度重构) */
@@ -287,6 +324,11 @@ a {text-decoration: none}
         justify-content: flex-start;
         padding: 40px 0 40px 0;
         gap: 30px;
+    }
+
+    /* 扩展模式无书签：移动端内容整体垂直居中 */
+    .ext-mode.no-bookmarks .container {
+        justify-content: center;
     }
 
     /* 汉堡按钮及下拉菜单设计 */
